@@ -4,7 +4,7 @@ import { TixInterface } from '../../models/tix-interface';
 import { UserWService } from "../../services/user-w.service";
 
 
-declare var $: any;
+//declare var $: any;
 
 @Component({
   selector: 'app-slider-home',
@@ -20,14 +20,18 @@ export class SliderHomeComponent implements OnInit {
   private tixs:TixInterface;
   loadAPI = null;
   url = "assets/themekit/scripts/glide.min.js";
+  url2 = "assets/plugins/js/jquery.min.js";
 	ngOnInit() {
   if (this._uw.loaded==true){
          this.loadAPI = new Promise(resolve => {
           console.log("resolving promise...");
+          // this.loadScript2();
           this.loadScript();
+          
         });
       }
     this.getAllTixs();
+    this._uw.loaded=true;
 
   }
 
@@ -40,12 +44,32 @@ export class SliderHomeComponent implements OnInit {
       node.charset = "utf-8";
       document.getElementsByTagName("head")[0].appendChild(node);
     }
+  public loadScript2() {
+      console.log("preparing to load...");
+      let node = document.createElement("script");
+      node.src = this.url2;
+      node.type = "text/javascript";
+      node.async = true;
+      node.charset = "utf-8";
+      document.getElementsByTagName("head")[0].appendChild(node);
+    }
 
     getAllTixs(){
-        this.dataApi
-        .getAllTixs()
-        .subscribe((tixs: TixInterface) => (this.tixs=tixs));this._uw.loaded=true;
+        this.dataApi.getAllTixs().subscribe((res:any) => {
+      if (res[0] === undefined){
+        console.log("no");
+//       this._uw.usersPending=false;
+       }else{
+  //      -- this._uw.usersPending=true;
+        this.tixs=res;            
+        }
+     });  
+    //    -- this.dataApi
+    //    -- .getAllTixs()
+    //    -- .subscribe((tixs: TixInterface) => (this.tixs=tixs));
+    //    -- // this._uw.loaded=true;
     }
+  
 
 
 }

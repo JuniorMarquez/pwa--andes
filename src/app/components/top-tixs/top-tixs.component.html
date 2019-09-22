@@ -1,101 +1,32 @@
-
-
-
-<section class="gray-bg">
-      <div class="container">
-        
-        <div class="row">
-          <div class="col-md-12">
-            <div class="heading">
-              <!-- <span class="theme-cl">Select Tour</span> -->
-              <h1 >Top Tixs and Activities</h1>
+<main style="padding-top: 0px;">
+<section class="section-base section-color" style="padding-top: 0px; background-color: black;">
+``<div class="container" style="padding-top: 0px;">      
+    <div  >
+      <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide *ngFor="let tix of tixs" class="glide__slide">
+            <div class="glide__slide" style="padding-left: 10px;padding-right: 10px;">
+                <div class="cnt-box cnt-box-info boxed text-uppercase">
+                            <div class="extra-field">Precio: {{tix.price}}</div>
+                            <a href="treks-single.html" class="img-box"><img src="assets/media/image-5.jpg" alt="" /></a>
+                            <div class="caption">
+                                
+                                <h2>{{tix.productName}}</h2>
+                                <div class="cnt-info">
+                                    <div><span>Dias</span><span>{{tix.days}}</span></div>
+                                    <div><span>Personas</span><span>{{tix.groupSize}}</span></div>
+                                    <div><span>Dificultad</span><span>{{tix.dificulty}}</span></div>
+                                </div>
+                                <p>{{tix.description}}
+                                </p>
+                                <div class="bottom-info">
+                                    {{tix.address}}
+                                </div>
+                            </div>
+                        </div>
             </div>
-          </div>
-        </div>
-        
-<div >
- 
-    <owl-carousel-o [options]="customOptions">
-
-
-
-    <ng-template carouselSlide *ngFor="let tix of tixs">
-      <div class="list-slider">
-          
-            <!-- Single Tour -->
-            <div class="list-slide-box">
-              <article class="tour-box style-1">
-              
-                <div class="tour-box-image">
-                  <figure  >
-                    <a routerLink="/tix-detail/{{tix.id}}">
-                      <img src="{{tix.images[0]}}" class="img-responsive listing-box-img" alt="{{tix.productName}}" />
-                      <div class="list-overlay"></div>
-                      <div class="entry-bookmark">                                   
-                        <a routerLink="/tix-detail/{{tix.id}}"><i class="ti-bookmark"></i></a>
-                      </div>
-                      <div class="tour-time">
-                        <i class="ti ti-car"></i><span>22h</span>
-                      </div>
-                      <h4 class="destination-place">
-                        <a routerLink="/tix-detail/{{tix.id}}">{{tix.productName}}</a>
-                      </h4>
-                      <span class="featured-tour"><i class="fa fa-star"></i></span>
-                      <a routerLink="/tix-detail/{{tix.id}}" class="list-like left"><i class="ti-heart"></i></a>
-                    </a>
-                  </figure>
-                </div>
-                
-                <div class="entry-meta">
-                  <div class="meta-item meta-author">
-                    <div class="coauthors">
-                      <span class="vcard author">
-                        <span class="fn">
-                          <a routerLink="/tix-detail/{{tix.id}}">Lisa Scholfield</a>
-                        </span>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="meta-item meta-comment fl-right">
-                    <i class="ti-comment-alt"></i><span>18</span>
-                  </div>
-                  <div class="meta-item meta-rating fl-right">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half"></i>
-                  </div>
-                </div>
-
-                <div class="inner-box">
-                  <div class="box-inner-ellipsis">
-                    <h4 class="entry-title">
-                      <a routerLink="/tix-detail/{{tix.id}}">New York</a>
-                    </h4>
-                    <div class="price-box">
-                      <div class="tour-price fl-right">
-                        <i class="ti ti-user"></i><span class="theme-cl f-bold">$240</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-              </article>
-            </div>
-          
-         
-          
-          </div>
-
-    </ng-template>  
-   
-  </owl-carousel-o>
-  
-</div>
-
-
-
-    
-      </div>
-    </section>
+          </ng-template>  
+      </owl-carousel-o>
+    </div> 
+  </div>
+</section>
+</main>

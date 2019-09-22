@@ -27,13 +27,13 @@ export class TopTixsComponent implements OnInit {
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
-        items: 3
+        items: 2
       },
       940: {
-        items: 4
+        items: 3
       }
     },
     nav: true
@@ -49,12 +49,12 @@ export class TopTixsComponent implements OnInit {
     }
 
 
- 	ngOnInit(): void {
+  ngOnInit(): void {
      this.getAllTixs();
-   		//this.filter();
-  		//$.getScript('assets/js/collage.js');
-		//$.getScript('assets/js/custom.js');
-		//this._ps.imagesG=[];
-		//this.product=[]	;	
-  	}
+      //this.filter();
+      //$.getScript('assets/js/collage.js');
+    //$.getScript('assets/js/custom.js');
+    //this._ps.imagesG=[];
+    //this.product=[] ; 
+    }
 }

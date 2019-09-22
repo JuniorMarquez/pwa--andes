@@ -25,6 +25,7 @@ isLogged:boolean=false;
 	cardsResult:any[]=[];
 	card:any={};
 	loaded:boolean=false;
+	tixs:any[]=[];
   constructor() { }
 }
 
