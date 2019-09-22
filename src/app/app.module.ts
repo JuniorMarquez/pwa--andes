@@ -79,6 +79,7 @@ import { AddtixsComponent } from './components/addtixs/addtixs.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { AlltixslistComponent } from './components/alltixslist/alltixslist.component';
 import { AlltixsleftComponent } from './components/alltixsleft/alltixsleft.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 
@@ -112,7 +113,8 @@ import { AlltixsleftComponent } from './components/alltixsleft/alltixsleft.compo
     AddtixsComponent,
     BookingComponent,
     AlltixslistComponent,
-    AlltixsleftComponent
+    AlltixsleftComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -33,99 +33,14 @@
             </div>
         </section>
 
-       <!--  <section class=" section-color">
-            <div class="container">
-                <ul class="slider" data-options="type:carousel,arrows:true,perView:3,perViewLg:2,perViewMd:1,gap:30,controls:out">
-                    <li  *ngFor="let tix of this.tixs">
-                        <div class="cnt-box cnt-box-info boxed text-uppercase" data-href="treks-single.html">
-                            <div class="extra-field">From ${{tix.price}}</div>
-                            <a href="treks-single.html" class="img-box"><img src="assets/media/image-5.jpg" alt="" /></a>
-                            <div class="caption">
-                                <h2>{{tix.poductName}}</h2>
-                                <div class="cnt-info">
-                                    <div><span>Days</span><span>{{tix.days}}</span></div>
-                                    <div><span>Group size</span><span>{{tix.groupSize}}</span></div>
-                                    <div><span>Difficulty</span><span>{{tix.dificulty}}</span></div>
-                                </div>
-                                <p>
-                                   {{tix.description}}
-                                </p>
-                                <div class="bottom-info">
-                                    {{tix.address}}
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div> 
-        </section> -->
-<!--  <section class="section-base section-color">
-            <div class="container">
-                <ul class="slider" data-options="type:carousel,arrows:true,perView:3,perViewLg:2,perViewMd:1,gap:30,controls:out">
-                    <li >
-                        <div class="cnt-box cnt-box-info boxed text-uppercase" data-href="treks-single.html">
-                            <div class="extra-field">From $49</div>
-                            <a href="treks-single.html" class="img-box"><img src="assets/media/image-5.jpg" alt="" /></a>
-                            <div class="caption">
-                                <h2>Piedras Blancas</h2>
-                                <div class="cnt-info">
-                                    <div><span>Days</span><span>3</span></div>
-                                    <div><span>Group size</span><span>10</span></div>
-                                    <div><span>Difficulty</span><span>Easy</span></div>
-                                </div>
-                                <p>
-                                    Monte bianco is a mountain located in the deep nature and rivers.
-                                </p>
-                                <div class="bottom-info">
-                                    Monte bianco, Alpes, Italy
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cnt-box cnt-box-info boxed text-uppercase" data-href="treks-single.html">
-                            <div class="extra-field">From $89</div>
-                            <a href="treks-single.html" class="img-box"><img src="assets/media/image-6.jpg" alt="" /></a>
-                            <div class="caption">
-                                <h2>Laguna del Mule</h2>
-                                <div class="cnt-info">
-                                    <div><span>Days</span><span>5</span></div>
-                                    <div><span>Group size</span><span>5</span></div>
-                                    <div><span>Difficulty</span><span>Medium</span></div>
-                                </div>
-                                <p>
-                                    Civetta is a mountain located in alps and is one of the most famous.
-                                </p>
-                                <div class="bottom-info">
-                                    Civetta, Alpes, Italy
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cnt-box cnt-box-info boxed text-uppercase" data-href="treks-single.html">
-                            <div class="extra-field">From $89</div>
-                            <a href="treks-single.html" class="img-box"><img src="assets/media/image-7.jpg" alt="" /></a>
-                            <div class="caption">
-                                <h2>Valle de los condes</h2>
-                                <div class="cnt-info">
-                                    <div><span>Days</span><span>1</span></div>
-                                    <div><span>Group size</span><span>15</span></div>
-                                    <div><span>Difficulty</span><span>Medium</span></div>
-                                </div>
-                                <p>
-                                    Nevegal is a mountain near a beautiful and hidden small village.
-                                </p>
-                                <div class="bottom-info">
-                                    Civetta, Alpes, Italy
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section> -->
-       <!--  <section class="section-base" >
+  
+
+    
+</main>
+     <!-- {{tixs | json}} - -->
+     <app-top-tixs></app-top-tixs>
+     <main>
+         <section class="section-base" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -268,13 +183,9 @@
                     </tbody>
                 </table>
             </div>
-        </section>  -->
-
-    
-</main>
-     <!-- {{tixs | json}} - -->
-     <app-top-tixs></app-top-tixs>
+        </section> 
+     </main>
     
     <!-- <app-catalog></app-catalog> -->
-    <!-- <app-pre-footer></app-pre-footer> -->
+    <app-pre-footer></app-pre-footer> 
     <app-footer></app-footer>

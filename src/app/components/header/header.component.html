@@ -3,8 +3,8 @@
       
         <!-- Start Logo Header Navigation -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"  style="color: black;">
-            <i class="fa fa-bars" style="color: black;"></i>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"  style="color: white;">
+            <i class="fa fa-bars" style="color: white;"></i>
           </button>
           <a class="navbar-brand" routerLink="/">
             <img src="assets/img/logo.png" class="logo logo-display" alt="thetixs">
@@ -20,7 +20,7 @@
           <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
           
             
-                <li><a routerLink="alltixs">All Tixs</a></li>
+
                 <li class="dropdown" >
                   
                   <a routerLink="mytixs"  *ngIf="this._uw.isLogged && this._uw.partner || this._uw.admin" class="dropdown-toggle" data-toggle="dropdown">My Tixs</a>
@@ -29,7 +29,7 @@
                   </ul>
                 </li>
 
-
+                   <li><a routerLink="about" style="font-weight: 600;" >QUIENES SOMOS</a></li>
                 <li><a routerLink="partners" *ngIf="this._uw.isLogged &&  this._uw.admin">Partners</a></li>
                 <li><a routerLink="affiliates"*ngIf="this._uw.isLogged &&  this._uw.admin">Affiliates</a></li>
                 <li><a routerLink="booking" *ngIf="this._uw.isLogged">Booking</a></li>
@@ -39,8 +39,8 @@
          
             <ul class="nav navbar-nav navbar-right"  *ngIf="!this._uw.isLogged" [hidden]="this._uw.isLogged">
 
-            <li class="br-right"><a  routerLink="login"  style="font-family: moderna;"><i class="login-icon ti-user"></i>Sign In</a></li>
-            <li class="sign-up"><a class="btn-signup red-btn" routerLink="signup" style="font-family: moderna;"  ><span class="ti-briefcase"></span>Sign Up</a></li> 
+          <!--   <li class="br-right"><a  routerLink="login"  style="font-family: moderna; background-color: yellow; color:black;"><i class="login-icon ti-user"></i>RESERVAR</a></li> -->
+            <li class="sign-up"><a class="btn-signup red-btn" routerLink="signup" style="font-family: moderna;background-color: yellow; color:black;"  ><span class="ti-briefcase"></span>Sign Up</a></li> 
 
           </ul>
           

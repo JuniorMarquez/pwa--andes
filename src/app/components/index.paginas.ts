@@ -17,3 +17,4 @@ export { AddtixsComponent } from "./addtixs/addtixs.component";
 export { BookingComponent } from "./booking/booking.component";
 export { AlltixslistComponent } from "./alltixslist/alltixslist.component";
 export { AlltixsleftComponent } from "./alltixsleft/alltixsleft.component";
+export { AboutComponent } from "./about/about.component";
