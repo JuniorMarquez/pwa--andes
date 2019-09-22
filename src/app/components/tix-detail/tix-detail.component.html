@@ -1,0 +1,574 @@
+<section class="profile-header-nav gray-bg padd-0 bb-1">
+	<div class="container">
+		<div class="row">
+			<div class="tr-list-detail">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-sm-8">
+				<div class="tab" role="tabpanel">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation class="active><a href="restaurant-detail.html#Photos" aria-controls="messages" role="tab" data-toggle="tab"><i class="ti-gallery"></i>Overview</a></li>
+					
+						<li role="presentation"><a href="restaurant-detail.html#Features" aria-controls="profile" role="tab" data-toggle="tab"><i class="ti-settings"></i>Features</a></li>
+						
+					</ul>
+					<!-- Tab panes -->
+				</div>
+			</div>		
+		</div>
+		<div class="row">
+				
+					<div class="col-md-8 col-sm-12">
+						<div class="tab-content tabs">
+							
+
+							<div role="tabpanel" class="tab-pane fade in active" id="Photos">
+								<div class="row">
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="fa fa-star-o"></i>Overview</h4>
+										</div>
+										<div class="tr-single-body">
+											<div class="row">
+											
+												<div class="col-md-6 col-sm-6">
+													<div class="list-thumb-box" *ngFor="let item of tix.images; let i=index;" >
+														<img 
+														src="{{item}}"  *ngIf="i === 0"class="img-responsive" alt="" />
+														<a href="restaurant-detail.html#" class="list-like left"><i class="ti-heart"></i></a>
+														<h5>4.8/<sub class="theme-cl">5</sub></h5>
+													</div>
+												</div>
+												
+												<div class="col-md-6 col-sm-6">
+													<div class="list-overview-detail">
+														<h5>{{tix.productName}}</h5>
+														{{tix.description}}
+														<!-- <ul class="extra-service">
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class=" ti-location-pin"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			Istanbul, Turkey, Newyork, 052 458
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class="ti-email"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			destination@gmail.com
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class="ti-headphone-alt"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			125 458 75849
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class="ti-share"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			110 Share
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class="ti-comment-alt"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			22 comments
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+														</ul> -->
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							
+							
+								
+								<!-- Description -->
+								<!-- <div class="row">
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-files"></i>Description</h4>
+										</div>
+										<div class="tr-single-body">
+											<p>{{tix.description}}</p>
+										</div>
+									</div>
+								</div> -->
+								
+								<!-- Amenities -->
+								
+								<div class="row">
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-gallery"></i>All Gallery</h4>
+										</div>
+										<div class="tr-single-body">
+											<ul class="gallery-list">
+												<li *ngFor="let image of tix.images">
+													<a data-fancybox="gallery" href="{{image}}">
+														<img src="{{image}}" class="img-responsive" alt="">
+													</a>
+												</li>
+
+
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div role="tabpanel" class="tab-pane fade in " id="Overview">
+								
+								<!-- Overview -->
+								<div class="row">
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="fa fa-star-o"></i>Overview</h4>
+										</div>
+										<div class="tr-single-body">
+											<div class="row">
+											
+												<div class="col-md-6 col-sm-6">
+													<div class="list-thumb-box">
+														<img src="assets/img/res/res-2.jpg" class="img-responsive" alt="" />
+														<a href="restaurant-detail.html#" class="list-like left"><i class="ti-heart"></i></a>
+														<h5>4.8/<sub class="theme-cl">5</sub></h5>
+													</div>
+												</div>
+												
+												<div class="col-md-6 col-sm-6">
+													<div class="list-overview-detail">
+														<h5>Green Vally Restaurant</h5>
+														<ul class="extra-service">
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class=" ti-location-pin"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			Istanbul, Turkey, Newyork, 052 458
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class="ti-email"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			destination@gmail.com
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class="ti-headphone-alt"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			125 458 75849
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class="ti-share"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			110 Share
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+															<li>
+																<div class="icon-box-icon-block">
+																	<a href="restaurant-detail.html#">
+																		<div class="icon-box-round">
+																			<i class="ti-comment-alt"></i>
+																		</div>
+																		<div class="icon-box-text">
+																			22 comments
+																		</div>
+																	</a>
+																</div>
+															</li>
+															
+														</ul>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							
+							
+								
+								<!-- Description -->
+								<div class="row">
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-files"></i>Description</h4>
+										</div>
+										<div class="tr-single-body">
+											<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus..</p>
+											<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+											<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam.</p>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Amenities -->
+								<div class="row">
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-crown"></i>Amenities</h4>
+										</div>
+										<div class="tr-single-body">
+											<ul class="amenities third">
+												<li>Satellite TV</li>
+												<li>Coffeemaker</li>
+												<li>Hair Dryer</li>
+												<li>Swimming Pool</li>
+												<li>Room Service</li>
+												<li>Luxury Bedding</li>
+												<li>Good Showers</li>
+												<li>Free Parking</li>
+												<li>Free Wifi</li>
+												<li>Bath towel</li>
+												<li>Free Coffee</li>
+												<li>Pets Allow</li>
+												<li>Hot Water</li>
+												<li>Attached garage </li>
+												<li>Elevator</li>
+												<li>Spa/Sauna</li>
+												<li>Indoor pool </li>
+												<li>Security cameras </li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+							
+								
+							</div>
+							
+							<!-- ============ Features =================== -->
+							<div role="tabpanel" class="tab-pane fade in" id="Features">
+								
+								<div class="row">
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-crown"></i>Amenities</h4>
+										</div>
+										<div class="tr-single-body">
+											<ul class="amenities third">
+												<li>Satellite TV</li>
+												<li>Coffeemaker</li>
+												<li>Hair Dryer</li>
+												<li>Swimming Pool</li>
+												<li>Room Service</li>
+												<li>Luxury Bedding</li>
+												<li>Good Showers</li>
+												<li>Free Parking</li>
+												<li>Free Wifi</li>
+												<li>Bath towel</li>
+												<li>Free Coffee</li>
+												<li>Pets Allow</li>
+												<li>Hot Water</li>
+												<li>Attached garage </li>
+												<li>Elevator</li>
+												<li>Spa/Sauna</li>
+												<li>Indoor pool </li>
+												<li>Security cameras </li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Extra features -->
+								<div class="row">
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-thumb-up"></i>Extra Features</h4>
+										</div>
+										<div class="tr-single-body">
+											
+											<ul class="simple-features-list">
+												<li>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
+												<li>Minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</li>
+												<li>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain.</li>
+												<li>Pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes.</li>
+												<li>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
+												<li>Minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</li>
+												<li>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain.</li>
+												<li>Pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes.</li>
+											</ul>
+											
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							
+						
+							
+							
+						
+						</div>
+					</div>
+				
+					<!-- Sidebar Start -->
+					<div class="col-md-4 col-sm-12">
+						
+						
+						<!-- overview & booking Form -->
+						<div class="tr-single-box">
+							<div class="tr-single-header">
+								<div class="entry-meta">
+									<div class="meta-item meta-comment fl-right">
+										<div class="view-box">
+											<div class="fl-right">
+												<h4 class="font-20"><span class="theme-cl font-20">$</span>216<sub>/Per Persion</sub></h4>
+											</div>
+										</div>
+									</div>
+									<div class="meta-item meta-author">
+										<div class="hotel-review entry-location">
+											<span class="review-status bg-success"><i class="ti-check"></i></span>
+											<h6><span class="cl-success font-bold">Good</span>1362 Review</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tr-single-body">
+								<form class="book-form">
+								
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label>Check In</label>
+												<input type="text" name="checkin" id="checkin" class="form-control" value="Check in">
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label>Check Out</label>
+												<input type="text" name="checkout" id="checkout" class="form-control" value="Check out">
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label>Adult</label>
+												<input type="number" name="adult" value="1" class="form-control">
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label>Children</label>
+												<input type="number" name="children" value="0" class="form-control">
+											</div>
+										</div>
+									</div>
+									
+									<!-- <div class="row">
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label>Room</label>
+												<div class="sl-side">
+													<select class="wide form-control">
+														<option data-display="Room">1</option>
+														<option value="1">2</option>
+														<option value="2">3</option>
+														<option value="3">4</option>
+														<option value="4">5</option>
+														<option value="4">5</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label>Night</label>
+												<div class="sl-side">
+													<select class="wide form-control">
+														<option data-display="Night">1</option>
+														<option value="1">2</option>
+														<option value="2">3</option>
+														<option value="3">4</option>
+														<option value="4">5</option>
+														<option value="4">5</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div> -->
+									
+									<!-- <div class="row">
+										<div class="col-xs-12">
+											<button type="button" class="btn btn-default full-width text-left" data-toggle="collapse" data-target="#extra-service">Choose Extra Amenities<i class="ti-settings fl-right mrg-top-5"></i></button>
+											<div id="extra-service" class="collapse">
+												<div class="extra-features">
+													<ul class="extra-service half">
+													
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="1">
+																<label for="1"></label>
+															</span>
+															Satellite TV
+														</li>
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="2">
+																<label for="2"></label>
+															</span>
+															Coffeemaker
+														</li>
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="3">
+																<label for="3"></label>
+															</span>
+															Luxury Bedding
+														</li>
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="4">
+																<label for="4"></label>
+															</span>
+															Swimming Pool
+														</li>
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="5">
+																<label for="5"></label>
+															</span>
+															Free Parking
+														</li>
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="6">
+																<label for="6"></label>
+															</span>
+															Free Wifi
+														</li>
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="7">
+																<label for="7"></label>
+															</span>
+															Pets Allow
+														</li>
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="8">
+																<label for="8"></label>
+															</span>
+															Elevator
+														</li>
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="9">
+																<label for="9"></label>
+															</span>
+															Spa/Sauna 
+														</li>
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="11">
+																<label for="11"></label>
+															</span>
+															Security cameras 
+														</li>
+														
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div> -->
+									
+									<div class="row">
+										<div class="col-xs-12 mrg-top-15">
+											<a href="restaurant-detail.html#" class="btn btn-arrow theme-btn full-width">Book now</a>		
+										</div>
+									</div>
+									
+								</form>
+							</div>
+						</div>
+						
+					
+						
+					</div>
+					<!-- /col-md-4 -->
+		</div>
+	</div>
+</section>
+<app-pre-footer></app-pre-footer>

@@ -1,0 +1,160 @@
+<section class="dashboard gray-bg padd-0 mrg-top-50 " style="min-height: 600px;">
+			<div class="container-fluid" >
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-9">
+						<div class="row mrg-0 mrg-top-20">
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									
+									<h3 class="dashboard-title">
+										<span>
+											<a (click)="reset()" >
+										 		<i class=" ti-angle-left"></i>
+										 	</a>
+										 </span> 
+										Add Tix
+										
+									</h3>
+								</div>
+								<div class="tr-single-body"  >
+									<form  class="form"[formGroup]="ngFormAddtixs" (ngSubmit) ="sendTix()" >
+										<aw-wizard>
+											<aw-wizard-step stepTitle="Tix">
+												<div class="row" > 
+													<div class="col-md-4 col-xs-12">
+														
+															<div class="form-group">
+																<label for="productName">Tix Name</label>
+																<input type="text" class="form-control" id="productName" formControlName="productName" placeholder="Tix name" [(ngModel)]="tix.productName"
+																[ngClass]="{ 'is-invalid': submitted && fval.productName.errors }"
+																required>
+																<div *ngIf="submitted && fval.productName.errors" class="invalid-feedback">
+																	<div *ngIf="fval.productName.errors.required" class="errorLabel">
+																	* The Tix name is required and must be a valid name
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+													<div class="col-md-12 col-xs-12">
+														<div class="form-group">
+															<label for="description">Description</label>
+															<textarea class="form-control height-80" id="description" formControlName="description" placeholder="Description" [(ngModel)]="tix.description"
+															[ngClass]="{ 'is-invalid': submitted && fval.description.errors }"
+															required></textarea>
+															<div *ngIf="submitted && fval.description.errors" class="invalid-feedback">
+																<div *ngIf="fval.description.errors.required" class="errorLabel">
+																* The Description is required 
+																</div>
+
+															</div>
+														</div>
+													</div>
+
+
+
+													<div class="col-md-4 col-xs-12">
+														<div class="form-group">
+															<label for="notes">Notes </label>
+															<input type="text" class="form-control" id="notes" formControlName="notes" placeholder="Notes" [(ngModel)]="tix.notes"
+															[ngClass]="{ 'is-invalid': submitted && fval.notes.errors }"
+															required>
+															<div *ngIf="submitted && fval.notes.errors" class="invalid-feedback">
+																<div *ngIf="fval.notes.errors.required" class="errorLabel">
+																* The notes is required
+																</div>
+
+															</div>
+														</div>
+													</div>
+														
+												</div>								
+												<button type="button" awNextStep>next</button>
+											  </aw-wizard-step>
+
+											  <aw-wizard-step stepTitle="more" awOptionalStep>
+											      <div class="row" > 
+											      	<div class="col-md-4 col-xs-12">
+														<div class="form-group">
+															<label for="category">Category </label>
+															<input type="text" class="form-control" id="category" formControlName="category" placeholder="Category" [(ngModel)]="tix.category"
+															[ngClass]="{ 'is-invalid': submitted && fval.category.errors }"
+															required>
+															<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
+																<div *ngIf="fval.category.errors.required" class="errorLabel">
+																* The category is required
+																</div>
+
+															</div>
+														</div>
+													</div>
+
+													
+														
+														
+												</div>
+											    <button type="button" awPreviousStep>previous</button>
+											    <button type="button"  type="submitt"  awNextStep>next</button>
+											  </aw-wizard-step>
+											 
+											  <aw-wizard-step stepTitle="Finish">
+											    <div class="row">
+
+											    	<div class="col-md-12 text-center" *ngIf="this._uw.errorFormAddtixs">
+														<i class="ti-thumb-down cl-danger font-50"></i>
+														<h3 class="cl-danger">Error!</h3>
+														
+
+															<div *ngIf="submitted && fval.productName.errors" class="invalid-feedback">
+																	<div *ngIf="fval.productName.errors.required" class="errorLabel">
+																	* The Tix name is required and must be a valid name
+																	</div>
+
+															</div>
+
+															<div *ngIf="submitted && fval.description.errors" class="invalid-feedback">
+																<div *ngIf="fval.description.errors.required" class="errorLabel">
+																* The Description is required 
+																</div>
+
+															</div>
+
+															<div *ngIf="submitted && fval.notes.errors" class="invalid-feedback">
+																<div *ngIf="fval.notes.errors.required" class="errorLabel">
+																* The notes is required
+																</div>
+
+															</div>
+
+
+															<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
+																<div *ngIf="fval.category.errors.required" class="errorLabel">
+																* The category is required
+																</div>
+
+															</div>								
+														
+													</div>
+
+
+													<div class="col-md-12 text-center" *ngIf="!this._uw.errorFormAddtixs">
+														<i class="ti-thumb-up cl-success font-50"></i>
+														<h3 class="cl-success">Congratulations!</h3>
+														<p><strong></strong> The registration has been submitted successfully</p>
+													</div>
+												</div>
+											    <button type="button" awPreviousStep>Previous</button>
+											    <button type="button" (click)="finish()">Finish</button>
+											  </aw-wizard-step>
+										</aw-wizard>
+									</form>
+								</div>
+					
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</section>
+<app-pre-footer></app-pre-footer>

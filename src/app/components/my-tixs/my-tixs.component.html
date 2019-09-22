@@ -1,0 +1,558 @@
+
+		<!-- ======================= Start Navigation admin ===================== -->
+
+	
+		<!-- ======================= End Navigation ===================== -->
+
+		
+		<!-- ======================= dashboard admin ===================== -->
+		<section class="dashboard  padd-0 mrg-top-50">
+			<div class="container">
+				<div class="row">
+					
+					 
+					
+					<div class="col-lg-12 col-md-12 col-sm-9 " *ngIf="this._uw.admin">
+						<div class="row mrg-0 mrg-top-20">
+							<div class="tr-single-header">
+								<h3 class="dashboard-title">Dashboard</h3>
+							</div>
+							<div class="tr-single-body">
+							
+								<!-- row -->
+								<div class="row">
+									
+									<div class="col-md-6 col-sm-6">
+																				
+										<div class="col-md-12 col-sm-6">
+											<div class="widget simple-widget">
+												<div class="widget-caption danger">
+													<div class="row">
+														<div class="col-xs-4 padd-r-0">
+															<i class="cl-danger icon ti-shopping-cart-full"></i>
+														</div>
+														<div class="col-xs-8">
+															<div class="widget-detail">
+																<h3>412</h3>
+																<span>Happy Customer</span>
+															</div>
+														</div>
+														<div class="col-xs-12">
+															<div class="widget-line">
+																<span style="width:50%;" class="bg-danger widget-horigental-line"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-md-12 col-sm-6">
+											<div class="widget simple-widget">
+												<div class="widget-caption warning">
+													<div class="row">
+														<div class="col-xs-4 padd-r-0">
+															<i class="cl-success icon ti-medall"></i>
+														</div>
+														<div class="col-xs-8">
+															<div class="widget-detail">
+																<h3>870</h3>
+																<span>World Award</span>
+															</div>
+														</div>
+														<div class="col-xs-12">
+															<div class="widget-line">
+																<span style="width:60%;" class="bg-success widget-horigental-line"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-md-12 col-sm-6">
+											<div class="widget simple-widget">
+												<div class="widget-caption purple">
+													<div class="row">
+														<div class="col-xs-4 padd-r-0">
+															<i class="cl-purple icon ti-briefcase"></i>
+														</div>
+														<div class="col-xs-8">
+															<div class="widget-detail">
+																<h3>4770</h3>
+																<span>Total Sales</span>
+															</div>
+														</div>
+														<div class="col-xs-12">
+															<div class="widget-line">
+																<span style="width:40%;" class="bg-purple widget-horigental-line"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-12" *ngIf="this._uw.admin">
+										<div class="tr-single-box">
+											<div class="tr-single-header">
+												<h5>New members</h5>
+											</div>
+											<div class="ground-list ground-list-hove">
+
+
+												<div class="ground ground-single-list" *ngFor="let card of cards">
+													<a href="dashboard.html#">
+														<img class="ground-avatar" src="assets/img/user-3.jpg" alt="...">
+														<span class="profile-status bg-online pull-right"></span>
+													</a>
+
+													<div class="ground-content">
+														<h6><a href="">{{card.name}}</a></h6>
+														<small class="text-fade">partner</small>
+													</div>
+
+													<div class="ground-right">
+														<span class="small"></span>
+													</div>
+												</div>
+												
+												
+											</div>
+										</div>
+									</div> 
+									<div class="col-md-3 col-sm-12" *ngIf="this._uw.admin">
+										<div class="tr-single-box">
+											<div class="tr-single-header">
+												<h5>New members</h5>
+											</div>
+											<div class="ground-list ground-list-hove">
+
+
+												<div class="ground ground-single-list" *ngFor="let card of cards">
+													<a href="dashboard.html#">
+														<img class="ground-avatar" src="assets/img/user-3.jpg" alt="...">
+														<span class="profile-status bg-online pull-right"></span>
+													</a>
+
+													<div class="ground-content">
+														<h6><a href="">{{card.name}}</a></h6>
+														<small class="text-fade">partner</small>
+													</div>
+
+													<div class="ground-right">
+														<span class="small"></span>
+													</div>
+												</div>
+												
+												
+											</div>
+										</div>
+									</div> 
+								</div>
+								<!-- /row -->
+								
+								<!-- row -->
+								<div class="row">
+									
+									<!-- <div class="col-md-8 col-sm-12">
+										<div class="tr-single-box">
+											<div class="tr-single-header">
+												<h4 class="mb-0">Extra Area Chart</h4>
+											</div>
+												<div class="guide-container">
+													<div class="guide-container-box">
+														<div class="fguide-thumb">
+															<img src="assets/img/user-1.jpg" class="img-responsive img-circle" alt="">
+															<p class="padd-15 text-center"><i class="fa fa-star cl-warning"></i>4.7/<span>5</span></p>
+														</div>
+														<div class="fguide-detail">
+															<h4>Adam Dicluver</h4>
+															<ul class="extra-service">
+																<li>
+																	<div class="icon-box-icon-block">
+																		<a href="hire-guider.html#">
+																			<div class="icon-box-round">
+																				<i class="ti-user"></i>
+																			</div>
+																			<div class="icon-box-text">
+																				<strong>experience</strong>
+																				5 Year
+																			</div>
+																		</a>
+																	</div>
+																</li>
+																
+																<li>
+																	<div class="icon-box-icon-block">
+																		<a href="hire-guider.html#">
+																			<div class="icon-box-round">
+																				<i class="ti-timer"></i>
+																			</div>
+																			<div class="icon-box-text">
+																				<strong>Hire</strong>
+																				10,000
+																			</div>
+																		</a>
+																	</div>
+																</li>
+																
+																<li>
+																	<div class="icon-box-icon-block">
+																		<a href="hire-guider.html#">
+																			<div class="icon-box-round">
+																				<i class="ti-eye"></i>
+																			</div>
+																			<div class="icon-box-text">
+																				<strong>View</strong>
+																				16,000
+																			</div>
+																		</a>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="guide-container-links">
+														<a href="guide-detail.html" class="btn btn-default"><i class="ti-user mrg-r-5"></i>View Profile</a>
+														<a href="guide-detail.html" class="btn btn-default"><i class="ti-user mrg-r-5"></i>Send Message</a>
+													</div>
+												</div>
+										</div>
+									</div>
+									 -->
+									
+								</div>
+								<!-- /row -->
+								
+							</div>
+						
+						</div>
+					</div>
+
+					<div class="col-lg-12 col-md-12 col-sm-12" *ngIf="this._uw.partner">
+						<div class="row mrg-0 mrg-top-20">
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h3 class="dashboard-title">Manage Destination</h3>
+								</div>
+								<div class="tr-single-body">
+									<div class="row">
+										
+										<!-- Single Destination -->
+										<div class="col-md-4 col-sm-6">
+											<article class="destination-box style-1">
+
+												<div class="destination-box-image">
+													<figure>
+														<a href="destination-detail.html">
+															<img src="assets/img/destination/des-4.jpg" class="img-responsive listing-box-img" alt="" />
+															<div class="list-overlay"></div>
+														</a>
+														<div class="discount-flick">-12%</div>
+														<h4 class="destination-place">
+															<a href="destination-detail.html">Marrakech, Morroco</a>
+														</h4>
+														<a href="manage-destinations.html#" class="list-like left"><i class="ti-heart"></i></a>
+													</figure>
+												</div>
+												
+												<div class="entry-meta">
+													<div class="meta-item meta-rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-half"></i>
+													</div>
+													<div class="meta-item meta-comment fl-right">
+														<span class="text-through">$1856</span><span class="real-price padd-l-10 font-bold">$1750</span>
+													</div>
+												</div>
+
+												<div class="inner-box">
+													<div class="box-inner-ellipsis">
+														<h4 class="entry-location">
+															<a href="destination-detail.html">Saudi Arabia</a>
+														</h4>
+														<div class="price-box">
+															<div class="destination-price fl-right">
+																<a href="manage-destinations.html#"><i class="theme-cl ti-arrow-right"></i></a>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</article>
+										</div>
+										
+										<!-- Single Destination -->
+										<div class="col-md-4 col-sm-6">
+											<article class="destination-box style-1">
+
+												<div class="destination-box-image">
+													<figure>
+														<a href="destination-detail.html">
+															<img src="assets/img/destination/des-5.jpg" class="img-responsive listing-box-img" alt="" />
+															<div class="list-overlay"></div>
+														</a>
+														<div class="discount-flick">-12%</div>
+														<h4 class="destination-place">
+															<a href="destination-detail.html">New York City, New York</a>
+														</h4>
+														<a href="manage-destinations.html#" class="list-like left"><i class="ti-heart"></i></a>
+													</figure>
+												</div>
+												
+												<div class="entry-meta">
+													<div class="meta-item meta-rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-half"></i>
+													</div>
+													<div class="meta-item meta-comment fl-right">
+														<span class="text-through">$4525</span><span class="real-price padd-l-10 font-bold">$4258</span>
+													</div>
+												</div>
+
+												<div class="inner-box">
+													<div class="box-inner-ellipsis">
+														<h4 class="entry-location">
+															<a href="destination-detail.html">Switzerland</a>
+														</h4>
+														<div class="price-box">
+															<div class="destination-price fl-right">
+																<a href="manage-destinations.html#"><i class="theme-cl ti-arrow-right"></i></a>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</article>
+										</div>
+										
+										<!-- Single Destination -->
+										<div class="col-md-4 col-sm-6">
+											<article class="destination-box style-1">
+
+												<div class="destination-box-image">
+													<figure>
+														<a href="destination-detail.html">
+															<img src="assets/img/destination/des-6.jpg" class="img-responsive listing-box-img" alt="" />
+															<div class="list-overlay"></div>
+														</a>
+														<div class="discount-flick">-12%</div>
+														<h4 class="destination-place">
+															<a href="destination-detail.html">Halifax, Nova Scotia </a>
+														</h4>
+														<a href="manage-destinations.html#" class="list-like left"><i class="ti-heart"></i></a>
+													</figure>
+												</div>
+												
+												<div class="entry-meta">
+													<div class="meta-item meta-rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-half"></i>
+													</div>
+													<div class="meta-item meta-comment fl-right">
+														<span class="text-through">$7802</span><span class="real-price padd-l-10 font-bold">$7581</span>
+													</div>
+												</div>
+
+												<div class="inner-box">
+													<div class="box-inner-ellipsis">
+														<h4 class="entry-location">
+															<a href="destination-detail.html">Singapore</a>
+														</h4>
+														<div class="price-box">
+															<div class="destination-price fl-right">
+																<a href="manage-destinations.html#"><i class="theme-cl ti-arrow-right"></i></a>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</article>
+										</div>
+										
+										<!-- Single Destination -->
+										<div class="col-md-4 col-sm-6">
+											<article class="destination-box style-1">
+
+												<div class="destination-box-image">
+													<figure>
+														<a href="destination-detail.html">
+															<img src="assets/img/destination/des-7.jpg" class="img-responsive listing-box-img" alt="" />
+															<div class="list-overlay"></div>
+														</a>
+														<div class="discount-flick">-12%</div>
+														<h4 class="destination-place">
+															<a href="destination-detail.html">San Jose, Costa Rica</a>
+														</h4>
+														<a href="manage-destinations.html#" class="list-like left"><i class="ti-heart"></i></a>
+													</figure>
+												</div>
+												
+												<div class="entry-meta">
+													<div class="meta-item meta-rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-half"></i>
+													</div>
+													<div class="meta-item meta-comment fl-right">
+														<span class="text-through">$2300</span><span class="real-price padd-l-10 font-bold">$2250</span>
+													</div>
+												</div>
+
+												<div class="inner-box">
+													<div class="box-inner-ellipsis">
+														<h4 class="entry-location">
+															<a href="destination-detail.html">New York, US</a>
+														</h4>
+														<div class="price-box">
+															<div class="destination-price fl-right">
+																<a href="manage-destinations.html#"><i class="theme-cl ti-arrow-right"></i></a>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</article>
+										</div>
+										
+										<!-- Single Destination -->
+										<div class="col-md-4 col-sm-6">
+											<article class="destination-box style-1">
+
+												<div class="destination-box-image">
+													<figure>
+														<a href="destination-detail.html">
+															<img src="assets/img/destination/des-8.jpg" class="img-responsive listing-box-img" alt="" />
+															<div class="list-overlay"></div>
+														</a>
+														<div class="discount-flick">-12%</div>
+														<h4 class="destination-place">
+															<a href="destination-detail.html">Casablanca, Morocco</a>
+														</h4>
+														<a href="manage-destinations.html#" class="list-like left"><i class="ti-heart"></i></a>
+													</figure>
+												</div>
+												
+												<div class="entry-meta">
+													<div class="meta-item meta-rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-half"></i>
+													</div>
+													<div class="meta-item meta-comment fl-right">
+														<span class="text-through">$2650</span><span class="real-price padd-l-10 font-bold">$2563</span>
+													</div>
+												</div>
+
+												<div class="inner-box">
+													<div class="box-inner-ellipsis">
+														<h4 class="entry-location">
+															<a href="destination-detail.html">Casablanca</a>
+														</h4>
+														<div class="price-box">
+															<div class="destination-price fl-right">
+																<a href="manage-destinations.html#"><i class="theme-cl ti-arrow-right"></i></a>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</article>
+										</div>
+										
+										<!-- Single Destination -->
+										<div class="col-md-4 col-sm-6">
+											<article class="destination-box style-1">
+
+												<div class="destination-box-image">
+													<figure>
+														<a href="destination-detail.html">
+															<img src="assets/img/destination/des-9.jpg" class="img-responsive listing-box-img" alt="" />
+															<div class="list-overlay"></div>
+														</a>
+														<div class="discount-flick">-12%</div>
+														<h4 class="destination-place">
+															<a href="destination-detail.html">London, United Kingdom</a>
+														</h4>
+														<a href="manage-destinations.html#" class="list-like left"><i class="ti-heart"></i></a>
+													</figure>
+												</div>
+												
+												<div class="entry-meta">
+													<div class="meta-item meta-rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-half"></i>
+													</div>
+													<div class="meta-item meta-comment fl-right">
+														<span class="text-through">$5800</span><span class="real-price padd-l-10 font-bold">$5682</span>
+													</div>
+												</div>
+
+												<div class="inner-box">
+													<div class="box-inner-ellipsis">
+														<h4 class="entry-location">
+															<a href="destination-detail.html">United Kingdom</a>
+														</h4>
+														<div class="price-box">
+															<div class="destination-price fl-right">
+																<a href="manage-destinations.html#"><i class="theme-cl ti-arrow-right"></i></a>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</article>
+										</div>
+										
+									</div>
+									
+									<div class="row">
+										<ul class="pagination">
+											<li class="page-item">
+											  <a class="page-link" href="manage-destinations.html#" aria-label="Previous">
+												<span class="ti-arrow-left"></span>
+												<span class="sr-only">Previous</span>
+											  </a>
+											</li>
+											<li class="page-item"><a class="page-link" href="manage-destinations.html#">1</a></li>
+											<li class="page-item"><a class="page-link" href="manage-destinations.html#">2</a></li>
+											<li class="page-item active"><a class="page-link" href="manage-destinations.html#">3</a></li>
+											<li class="page-item"><a class="page-link" href="manage-destinations.html#">4</a></li>
+											<li class="page-item"><a class="page-link" href="manage-destinations.html#">5</a></li>
+											<li class="page-item">
+											  <a class="page-link" href="manage-destinations.html#" aria-label="Next">
+												<span class="ti-arrow-right"></span>
+												<span class="sr-only">Next</span>
+											  </a>
+											</li>
+										</ul>
+									</div>
+				
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+			 <app-pre-footer></app-pre-footer>
+
+		<!-- ======================= End dashboadr admin ===================== -->

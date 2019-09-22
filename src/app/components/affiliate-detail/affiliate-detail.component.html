@@ -1,0 +1,291 @@
+	<section class=" ">
+			<div class="container">
+				<div class="row">
+				
+				<div class="row mrg-0">
+							<div class="tr-single-box short-box">
+								<div class="col-sm-3 hidden-xs align-self-center">
+									<h4>Affiliate detail</h4>
+								</div>
+								
+								<div class="col-sm-9 text-right">
+								
+									
+
+									<div class="btn-group">
+										
+										 <a routerLink="/affiliates"  class="btn btn-default">
+											 <i class="ti-flix ti-angle-left"></i>All affiliates
+										 </a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					<div class="col-md-8 col-sm-8">
+						<div class="">
+							<div class="tr-single-box">
+								<div class="tr-single-body">
+								
+									<div class="guider-box-detail">
+										<div class="guider-box-thumb" style="
+										background-color: white;">
+											<img src="assets/img/affiliate.jpg " class="img-responsive img-circle" alt="" />
+										</div>
+										<div class="guider-box-detail-content">
+											<h4>{{card.name}}<sup class="theme-cl "></sup></h4>
+											<p>{{card.status}}						
+											</p>
+			
+											<div class="icon-box-icon-block">
+												<a >
+													<div *ngIf="card.status == 'pending'" routerLink="/affiliate-detail/{{card.id}}" class="icon-box-round">
+														<i   class="ti-timer"></i>
+													</div>
+													<div  class="icon-box-round bg-danger" style="color: white;">
+														<i   class="ti-trash"></i>
+													</div>
+													<div *ngIf="card.status == 'pending'" class="icon-box-round bg-success" style="color: white;">
+														<i   class="ti-check"></i>
+													</div>
+												</a>
+											</div>	
+										</div>
+										<div class="pr-table">
+											<ul>
+												<li><strong>Company address:</strong>{{card.companyAddress}}
+												</li>
+												<li><strong>Country:</strong>{{card.country}}</li>
+												<li><strong>City:</strong>{{card.city}}</li>
+										
+											</ul>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						
+						<!-- Review -->
+						
+					</div>
+				
+					<!-- Sidebar Start -->
+					<div class="col-md-4 col-sm-4">
+						
+						<!-- Tourist Overview -->
+						<div class="tr-single-box">
+							<div class="tr-single-header">
+								<h4>Contact Info<sup class="cl-success">Info</sup></h4>
+							</div>
+							
+							<div class="tr-single-body">
+								<ul class="extra-service half">
+									<li>
+										<div class="icon-box-icon-block">
+											<a href="guide-detail.html#">
+												<div class="icon-box-round">
+													<i class="ti-mobile"></i>
+												</div>
+												<div class="icon-box-text">
+													{{card.phone}}
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="icon-box-icon-block">
+											<a href="guide-detail.html#">
+												<div class="icon-box-round">
+													<i class="ti-email"></i>
+												</div>
+												<div class="icon-box-text">
+													email
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									
+									
+									
+									
+								</ul>
+							</div>
+							
+						</div>
+						
+						<!-- overview & booking Form -->
+						
+						
+					
+						
+						<!-- Share this -->
+				
+						
+					</div>
+
+
+					<div class="col-md-8 col-sm-8">
+								
+						<!-- Guide Detail -->
+						
+						
+						
+						
+						
+						<!-- Review -->
+						<div class="">
+							<div class="tr-single-box">
+								<div class="tr-single-header" data-toggle="collapse" data-target="#review-pannel" aria-expanded="true">
+									<h4><i class="ti-write"></i>All Review<i class="ti-menu fl-right"></i></h4>
+								</div>
+								<div class="tr-single-body collapse" id="review-pannel" aria-expanded="false">
+									
+									<!-- Single Review -->
+									<div class="review-box">
+										<div class="review-thumb">
+											<img src="assets/img/user-1.jpg" class="img-responsive img-circle" alt="" />
+										</div>
+										
+										<div class="review-box-content">
+											<div class="reviewer-rate">
+												<p><i class="fa fa-star cl-warning"></i>4.7/<span>5</span></p>
+											</div>
+											<div class="review-user-info">
+												<h4>Daniel Dicoss</h4>
+												<p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+											</div>
+											<div class="review-lc text-right">
+												<a href="guide-detail.html#"><i class="ti-heart"></i>87</a>
+												<a href="guide-detail.html#"><i class="ti-comment"></i>52</a>
+											</div>
+										</div>
+										
+									</div>
+									
+									<!-- Single Review -->
+									<div class="review-box">
+										<div class="review-thumb">
+											<img src="assets/img/user-2.jpg" class="img-responsive img-circle" alt="" />
+										</div>
+										
+										<div class="review-box-content">
+											<div class="reviewer-rate">
+												<p><i class="fa fa-star cl-warning"></i>4.4/<span>5</span></p>
+											</div>
+											<div class="review-user-info">
+												<h4>Archita Singh</h4>
+												<p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+											</div>
+											<div class="review-lc text-right">
+												<a href="guide-detail.html#"><i class="ti-heart"></i>65</a>
+												<a href="guide-detail.html#"><i class="ti-comment"></i>78</a>
+											</div>
+										</div>
+										
+									</div>
+									
+									<!-- Single Review -->
+									<div class="review-box">
+										<div class="review-thumb">
+											<img src="assets/img/user-3.jpg" class="img-responsive img-circle" alt="" />
+										</div>
+										
+										<div class="review-box-content">
+											<div class="reviewer-rate">
+												<p><i class="fa fa-star cl-warning"></i>5.0/<span>5</span></p>
+											</div>
+											<div class="review-user-info">
+												<h4>Devesh Patri</h4>
+												<p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+											</div>
+											<div class="review-lc text-right">
+												<a href="guide-detail.html#"><i class="ti-heart"></i>110</a>
+												<a href="guide-detail.html#"><i class="ti-comment"></i>47</a>
+											</div>
+										</div>
+										
+									</div>
+									
+									<!-- Single Review -->
+									<div class="review-box">
+										<div class="review-thumb">
+											<img src="assets/img/user-4.jpg" class="img-responsive img-circle" alt="" />
+										</div>
+										
+										<div class="review-box-content">
+											<div class="reviewer-rate">
+												<p><i class="fa fa-star cl-warning"></i>4.9/<span>5</span></p>
+											</div>
+											<div class="review-user-info">
+												<h4>Ruchi Sethi</h4>
+												<p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+											</div>
+											<div class="review-lc text-right">
+												<a href="guide-detail.html#"><i class="ti-heart"></i>120</a>
+												<a href="guide-detail.html#"><i class="ti-comment"></i>36</a>
+											</div>
+										</div>
+										
+									</div>
+									
+									<!-- Single Review -->
+									<div class="review-box">
+										<div class="review-thumb">
+											<img src="assets/img/user-5.jpg" class="img-responsive img-circle" alt="" />
+										</div>
+										
+										<div class="review-box-content">
+											<div class="reviewer-rate">
+												<p><i class="fa fa-star cl-warning"></i>4.8/<span>5</span></p>
+											</div>
+											<div class="review-user-info">
+												<h4>Duke Divalkis</h4>
+												<p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+											</div>
+											<div class="review-lc text-right">
+												<a href="guide-detail.html#"><i class="ti-heart"></i>80</a>
+												<a href="guide-detail.html#"><i class="ti-comment"></i>70</a>
+											</div>
+										</div>
+										
+									</div>
+									
+									<!-- Single Review -->
+									<div class="review-box">
+										<div class="review-thumb">
+											<img src="assets/img/user-6.jpg" class="img-responsive img-circle" alt="" />
+										</div>
+										
+										<div class="review-box-content">
+											<div class="reviewer-rate">
+												<p><i class="fa fa-star cl-warning"></i>4.7/<span>5</span></p>
+											</div>
+											<div class="review-user-info">
+												<h4>Shilka Rai</h4>
+												<p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+											</div>
+											<div class="review-lc text-right">
+												<a href="guide-detail.html#"><i class="ti-heart"></i>120</a>
+												<a href="guide-detail.html#"><i class="ti-comment"></i>140</a>
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+							</div>
+						
+						</div>
+					</div>
+					<!-- /col-md-4 -->
+				</div>
+			</div>
+		</section>
+		<!-- <app-pre-footer style=" position:fixed;bottom:0px;width:100%;"></app-pre-footer> -->

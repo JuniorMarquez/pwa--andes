@@ -1,0 +1,89 @@
+  <nav class="navbar navbar-default navbar-mobile navbar-fixed light bootsnav">
+      <div class="container">
+      
+        <!-- Start Logo Header Navigation -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"  style="color: black;">
+            <i class="fa fa-bars" style="color: black;"></i>
+          </button>
+          <a class="navbar-brand" routerLink="/">
+            <img src="assets/img/logo.png" class="logo logo-display" alt="thetixs">
+            <img src="assets/img/logo.png" class="logo logo-scrolled" alt="thetixs">
+          </a>
+
+        </div>
+        <!-- End Logo Header Navigation -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-menu">
+        
+          <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
+          
+            
+                <li><a routerLink="alltixs">All Tixs</a></li>
+                <li class="dropdown" >
+                  
+                  <a routerLink="mytixs"  *ngIf="this._uw.isLogged && this._uw.partner || this._uw.admin" class="dropdown-toggle" data-toggle="dropdown">My Tixs</a>
+                  <ul class="dropdown-menu animated fadeOutUp" *ngIf="this._uw.isLogged && this._uw.partner || this._uw.admin"  >
+                    <li><a routerLink="addtixs" *ngIf="this._uw.isLogged">Add Tix</a></li>
+                  </ul>
+                </li>
+
+
+                <li><a routerLink="partners" *ngIf="this._uw.isLogged &&  this._uw.admin">Partners</a></li>
+                <li><a routerLink="affiliates"*ngIf="this._uw.isLogged &&  this._uw.admin">Affiliates</a></li>
+                <li><a routerLink="booking" *ngIf="this._uw.isLogged">Booking</a></li>
+
+                
+          </ul>
+         
+            <ul class="nav navbar-nav navbar-right"  *ngIf="!this._uw.isLogged" [hidden]="this._uw.isLogged">
+
+            <li class="br-right"><a  routerLink="login"  style="font-family: moderna;"><i class="login-icon ti-user"></i>Sign In</a></li>
+            <li class="sign-up"><a class="btn-signup red-btn" routerLink="signup" style="font-family: moderna;"  ><span class="ti-briefcase"></span>Sign Up</a></li> 
+
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right" [hidden]="!this._uw.isLogged">
+            <li class="dropdown dash-link"><a  class="dropdown-toggle"><img src="assets/img/user-3.jpg" class="img-responsive avatar" alt="" />Hi, {{this._uw.name}}</a> 
+              <ul class="dropdown-menu left-nav">
+                <li><a routerLink="mytixs" >My Tixs</a></li>
+                <li *ngIf="this._uw.affiliate || this._uw.partner"><a routerLink="profile">My Profile</a></li>
+                <li><a (click)="onLogout()">Sign out</a></li>
+              </ul>
+            </li>
+          </ul>
+
+            
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>   
+    </nav>
+      <!-- Sign Up Window Code -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" id="myModalLabel1">
+          <div class="modal-body">
+            <div class="text-center"><img src="assets/img/logo.png" class="img-responsive" alt=""></div>
+              
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-advance theme-bg" role="tablist">
+              <li class="nav-item active">
+                <a class="nav-link" data-toggle="tab" href="about-us.html#employer" role="tab">
+                <i class="ti-user"></i> Partner</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="about-us.html#candidate" role="tab">
+                <i class="ti-user"></i> Affiliate</a>
+              </li>
+            </ul>
+            <!-- Nav tabs -->
+              
+            <!-- Tab panels -->
+          
+            <!-- Tab panels -->
+          </div>
+        </div>
+      </div>
+    </div>   
+    <!-- End Sign Up Window -->

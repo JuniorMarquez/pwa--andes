@@ -1,0 +1,118 @@
+<section class="gray-bg">
+			<div class="container">
+			
+				<!-- Row -->
+				<div class="row mrg-0">
+					<div class="tr-single-box short-box">
+						<div class="col-sm-3 hidden-xs align-self-center">
+							<h4>Shorty By</h4>
+						</div>
+						
+						<div class="col-sm-9 text-right">
+						
+							<div class="btn-group mr-lg-2">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Short By
+								</button>
+								<div class="dropdown-menu pull-right animated flipInX">
+									<a routerLink="../alltixsleft">Accending</a>
+									<a routerLink="../alltixslist">Decending</a>
+									<a href="tour-grid.html#">By Date</a>
+								</div>
+							</div>
+
+							
+							
+							<div class="btn-group">
+								 <a routerLink="../alltixsleft" class="btn btn-default tooltips">
+									 <i class="ti-flix ti-filter"></i>
+								 </a>
+							</div>
+
+							<div class="btn-group">
+								 <a routerLink="../alltixslist" class="btn btn-default tooltips">
+									 <i class="ti-flix ti-view-list-alt"></i>
+								 </a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Row -->
+				
+				<div class="row">
+					
+					<!-- Single Tour -->
+					<div class="col-lg-3 col-md-4 col-xs-6" *ngFor="let tix of tixs">
+            <article class="destination-box style-1">
+
+              <div class="destination-box-image" >
+                <figure >
+                  <a routerLink="/tix-detail/{{tix.id}}">
+                    <img src="{{tix.images[0]}}" class="img-responsive listing-box-img" alt="{{tix.productName}}"  />
+                    <div class="list-overlay" ></div>
+                  </a>
+                  <div class="discount-flick">new</div>
+                  <h4 class="destination-place">
+                    <a routerLink="/tix-detail/{{tix.id}}">{{tix.productName}}</a>
+                  </h4>
+                  <a routerLink="/tix-detail/{{tix.id}}" class="list-like left"><i class="ti-heart"></i></a>
+                </figure>
+              </div>
+              
+              <div class="entry-meta">
+                <div class="meta-item meta-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="meta-item meta-comment fl-right">
+                  <span class="text">FROM</span><span class="real-price padd-l-10 font-bold">$7581</span>
+                </div>
+              </div>
+
+              <div class="inner-box">
+                <div class="box-inner-ellipsis">
+                  <h4 class="entry-location">
+                    <a routerLink="/tix-detail/{{tix.id}}">Singapore</a>
+                  </h4>
+                  <div class="price-box">
+                    <div class="destination-price fl-right">
+                      <a routerLink="/tix-detail/{{tix.id}}">
+                          <i class="theme-cl ti-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </article>
+          </div>
+				
+					
+				</div>
+				
+				<div class="row">
+					<ul class="pagination">
+						<li class="page-item">
+						  <a class="page-link" href="tour-grid.html#" aria-label="Previous">
+							<span class="ti-arrow-left"></span>
+							<span class="sr-only">Previous</span>
+						  </a>
+						</li>
+						<li class="page-item"><a class="page-link" href="tour-grid.html#">1</a></li>
+						<li class="page-item"><a class="page-link" href="tour-grid.html#">2</a></li>
+						<li class="page-item active"><a class="page-link" href="tour-grid.html#">3</a></li>
+						<li class="page-item"><a class="page-link" href="tour-grid.html#">4</a></li>
+						<li class="page-item"><a class="page-link" href="tour-grid.html#">5</a></li>
+						<li class="page-item">
+						  <a class="page-link" href="tour-grid.html#" aria-label="Next">
+							<span class="ti-arrow-right"></span>
+							<span class="sr-only">Next</span>
+						  </a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</section>

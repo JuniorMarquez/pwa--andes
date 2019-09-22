@@ -1,0 +1,61 @@
+
+<section class="  ">
+	<div class="container">
+		<div class="row">
+			
+			 <div class="row mrg-0 " >
+							<div class="tr-single-box short-box">
+								<div class="col-sm-3 hidden-xs align-self-center">
+									<h4>Affiliates</h4>
+								</div>
+								
+								<div class="col-sm-9 text-right">
+									<div class="btn-group mr-lg-2">
+										<div class="btn-group">
+											 <a (click)="getActive()" class="btn btn-default tooltips">
+												 Active
+											 </a>
+										</div>
+
+										<div class="btn-group">
+											 <a (click)="getPending()" class="btn btn-default tooltips">
+												 Pending
+											 </a>
+										</div>
+									</div>
+									
+								</div>
+							
+							</div>
+			</div>
+			<div class="caption text-center cl-dark" *ngIf="cards?.length < 1">
+						<h2>No records</h2>
+						
+					</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" *ngFor="let card of cards">
+				<div class="guide-container">
+					<div class="guide-container-box row " style=" border-bottom: 0px solid #f4f5f7 ">
+						<div class="col-md-5 col-xs-5">
+							<img src="assets/img/affiliate.jpg" class="img-responsive img-circle" alt="">
+						</div>
+						<div class="col-md-7 col-xs-7">
+							<h4>{{card.name}}</h4>		
+							<div class="icon-box-icon-block">
+								<a >
+									<div routerLink="/affiliate-detail/{{card.id}}" class="icon-box-round">
+										<i   class="ti-eye"></i>
+									</div>
+									<div *ngIf="card.status == 'pending'" class="icon-box-round bg-success" style="color: white;">
+										<i   class="ti-check"></i>
+									</div>
+								</a>
+							</div>									
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>								
+</section>
+<!-- <app-pre-footer style=" bottom:0px;width:100%;"></app-pre-footer> -->
