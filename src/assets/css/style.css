@@ -58,7 +58,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p a {
-    color: #0400ff
+    color: #f7ff00
 }
 
 a {
@@ -132,7 +132,7 @@ a.btn.call-btn {
     background: #fff;
     border-radius: 4px;
     padding: .8em 2em;
-    color: #0400ff
+    color: #f7ff00
 }
 
 .heading.light h1,.heading.light p,.image-title .page-title-wrap>* {
@@ -164,7 +164,7 @@ a.btn.call-btn {
 }
 
 .daterangepicker td.active,.daterangepicker td.active:hover {
-    background-color: #0400ff
+    background-color: #f7ff00
 }
 
 ol,ul {
@@ -350,31 +350,31 @@ button:focus,button:hover,input:focus,input:hover {
 
 .btn-general-white-bg {
     background: #fff;
-    color: #0400ff;
+    color: #f7ff00;
     border-color: #fff
 }
 
 .btn-general-theme-bg,.btn-general-white-bg:focus,.btn-general-white-bg:hover {
-    background: #0400ff;
+    background: #f7ff00;
     color: #fff;
-    border-color: #0400ff
+    border-color: #f7ff00
 }
 
 .btn-general-theme-bg:focus,.btn-general-theme-bg:hover {
     background: #fff;
-    color: #0400ff;
+    color: #f7ff00;
     border-color: #fff
 }
 
 .btn-general-theme-trans-bg {
     background: rgba(255,58,114,.1);
-    border-color: #0400ff;
-    color: #0400ff
+    border-color: #f7ff00;
+    color: #f7ff00
 }
 
 .btn-general-theme-trans-bg:focus,.btn-general-theme-trans-bg:hover {
     background: rgba(255,58,114,1);
-    border-color: #0400ff;
+    border-color: #f7ff00;
     color: #fff
 }
 
@@ -425,7 +425,7 @@ button:focus,button:hover,input:focus,input:hover {
 }
 
 .form-control:focus,.form-control:hover {
-    border: 1px solid #0400ff;
+    border: 1px solid #f7ff00;
     -webkit-box-shadow: 0 1px 1px rgba(7,177,7,.075);
     box-shadow: 0 1px 1px rgba(7,177,7,.075);
     outline: 0
@@ -462,11 +462,11 @@ nav.navbar.navbar-default.navbar-fixed.white.bootsnav.shadow.on.menu-center.no-f
 }
 
 .btn.btn-primary,.btn.btn-primary:focus,.btn.btn-primary:hover {
-    border: 1px solid #0400ff;
+    border: 1px solid #f7ff00;
     border-radius: 0;
     width: 100%;
     height: 46px;
-    background: #0400ff;
+    background: #f7ff00;
     text-transform: capitalize;
     font-size: 16px
 }
@@ -492,7 +492,7 @@ nav.navbar.navbar-default.navbar-fixed.white.bootsnav.shadow.on.menu-center.no-f
 
 .bootstrap-select.btn-group .dropdown-menu li a:hover {
     box-shadow: none;
-    background: #0400ff;
+    background: #f7ff00;
     color: #fff
 }
 
@@ -514,7 +514,7 @@ button.btn.dropdown-toggle.btn-default {
 }
 
 .dropdown-menu>.active>a,.dropdown-menu>.active>a:focus,.dropdown-menu>.active>a:hover {
-    background-color: #0400ff
+    background-color: #f7ff00
 }
 
 .chosen-container-single .chosen-single {
@@ -698,8 +698,8 @@ button.btn.dropdown-toggle.btn-default {
     z-index: 2;
     color: #fff;
     cursor: pointer;
-    background-color: #0400ff;
-    border-color: #0400ff
+    background-color: #f7ff00;
+    border-color: #f7ff00
 }
 
 .pagination li:first-child a,.pagination li:last-child a {
@@ -794,7 +794,7 @@ table.table td .label {
 }
 
 .theme-bg {
-    background: #0400ff
+    background: #f7ff00
 }
 
 footer.dark-bg {
@@ -811,11 +811,11 @@ footer.dark-bg {
 }
 
 .theme-cl {
-    color: #0400ff!important
+    color: #f7ff00!important
 }
 
 a.theme-cl:focus,a.theme-cl:hover {
-    color: #0400ff
+    color: #f7ff00
 }
 
 .theme-overlap {
@@ -826,7 +826,7 @@ a.theme-cl:focus,a.theme-cl:hover {
 }
 
 .theme-overlap:before {
-    background: #0400ff;
+    background: #f7ff00;
     opacity: .8;
     content: "";
     display: block;
@@ -848,8 +848,8 @@ a.theme-cl:focus,a.theme-cl:hover {
 }
 
 .theme-btn {
-    background: #0400ff;
-    border: 1px solid #0400ff;
+    background: #f7ff00;
+    border: 1px solid #f7ff00;
     color: #fff
 }
 
@@ -900,48 +900,48 @@ a.theme-cl:focus,a.theme-cl:hover {
 
 .theme-btn:focus,.theme-btn:hover {
     color: #fff;
-    background: #0400ff;
-    border: 1px solid #0400ff
+    background: #f7ff00;
+    border: 1px solid #f7ff00
 }
 
 .btn.theme-btn-outlined,a.theme-btn-outlined {
     background: 0 0;
-    border: 1px solid #0400ff;
-    color: #0400ff
+    border: 1px solid #f7ff00;
+    color: #f7ff00
 }
 
 .btn.theme-btn-outlined:focus,.btn.theme-btn-outlined:hover,a.theme-btn-outlined:focus,a.theme-btn-outlined:hover {
-    background: #0400ff;
-    border-color: #0400ff;
+    background: #f7ff00;
+    border-color: #f7ff00;
     color: #fff
 }
 
 .btn.theme-btn-trans-radius,a.theme-btn-trans-radius {
     background: rgba(255,58,114,.1);
-    color: #0400ff;
+    color: #f7ff00;
     border-radius: 50px;
-    border: 1px solid #0400ff
+    border: 1px solid #f7ff00
 }
 
 .btn.theme-btn-trans-radius:focus,.btn.theme-btn-trans-radius:hover,a.theme-btn-trans-radius:focus,a.theme-btn-trans-radius:hover {
     background: rgba(255,58,114,1);
     color: #fff;
     border-radius: 50px;
-    border: 1px solid #0400ff
+    border: 1px solid #f7ff00
 }
 
 .btn.theme-btn-trans,a.theme-btn-trans {
     background: rgba(255,58,114,.1);
-    color: #0400ff;
+    color: #f7ff00;
     border-radius: 2px;
-    border: 1px solid #0400ff
+    border: 1px solid #f7ff00
 }
 
 .btn.theme-btn-trans:focus,.btn.theme-btn-trans:hover,a.theme-btn-trans:focus,a.theme-btn-trans:hover {
     background: rgba(255,58,114,1);
     color: #fff;
     border-radius: 2px;
-    border: 1px solid #0400ff
+    border: 1px solid #f7ff00
 }
 
 .btn.btn-light-outlined,a.btn-light-outlined {
@@ -953,18 +953,18 @@ a.theme-cl:focus,a.theme-cl:hover {
 .btn.btn-light-outlined:focus,.btn.btn-light-outlined:hover,a.btn-light-outlined:focus,a.btn-light-outlined:hover {
     background: rgba(255,255,255,1);
     border: 1px solid #fff;
-    color: #0400ff
+    color: #f7ff00
 }
 
 .btn.light-btn,a.light-btn {
     background: #fff;
     border: 1px solid #fff;
-    color: #0400ff
+    color: #f7ff00
 }
 
 .btn.light-btn:focus,.btn.light-btn:hover,a.light-btn:focus,a.light-btn:hover {
-    background: #0400ff;
-    border: 1px solid #0400ff;
+    background: #f7ff00;
+    border: 1px solid #f7ff00;
     color: #fff
 }
 
@@ -2190,8 +2190,8 @@ html body .label-default {
 }
 
 .custom-checkbox input[type=checkbox]:checked+label:before {
-    border-color: #0400ff;
-    background: #0400ff
+    border-color: #f7ff00;
+    background: #f7ff00
 }
 
 .custom-checkbox input[type=checkbox]:checked+label:after {
@@ -2236,7 +2236,7 @@ html body .label-default {
     content: '';
     width: 10px;
     height: 10px;
-    background: #0400ff;
+    background: #f7ff00;
     position: absolute;
     top: 4px;
     left: 4px;
@@ -2537,7 +2537,7 @@ nav.navbar.bootsnav ul.nav>li>a {
 }
 
 nav.navbar.bootsnav ul.nav>li.active>a,nav.navbar.bootsnav ul.nav>li>a:hover {
-    color: #0400ff
+    color: #f7ff00
 }
 
 @media (min-width: 1024px) {
@@ -2556,13 +2556,13 @@ nav.navbar.bootsnav ul.nav>li.active>a,nav.navbar.bootsnav ul.nav>li>a:hover {
 }
 
 nav.navbar.bootsnav li.dropdown a:focus,nav.navbar.bootsnav li.dropdown a:hover,nav.navbar.bootsnav li.dropdown ul.dropdown-menu>li a:focus,nav.navbar.bootsnav li.dropdown ul.dropdown-menu>li a:hover {
-    color: #0400ff!important
+    color: #f7ff00!important
 }
 
 nav.navbar.bootsnav ul.nav>li>a.btn-signup.red-btn {
-    background: #0400ff!important;
+    background: #f7ff00!important;
     padding: 11px 20px;
-    color: #fff!important;
+    color: black!important;
     border-radius: 2px;
     margin-top: 13px
 }
@@ -2677,7 +2677,7 @@ i.login-icon {
 
 .multi-option-booking .nav>li>a:focus,.multi-option-booking .nav>li>a:hover {
     text-decoration: none;
-    background-color: #0400ff;
+    background-color: #f7ff00;
     border: none;
     color: #fff
 }
@@ -2685,7 +2685,7 @@ i.login-icon {
 .multi-option-booking .nav-tabs>li.active>a,.multi-option-booking .nav-tabs>li.active>a:focus,.multi-option-booking .nav-tabs>li.active>a:hover {
     color: #fff;
     cursor: default;
-    background-color: #0400ff;
+    background-color: #f7ff00;
     border: none
 }
 
@@ -2952,7 +2952,7 @@ i.login-icon {
 
 .nav-tabs.nav-advance>li.active>a,.nav-tabs.nav-advance>li>a:focus,.nav-tabs.nav-advance>li>a:hover {
     background: #fff!important;
-    color: #0400ff!important
+    color: #f7ff00!important
 }
 
 .tab-content>.tab-pane {
@@ -2964,7 +2964,7 @@ i.login-icon {
 }
 
 .half-bg:before {
-    background: #0400ff;
+    background: #f7ff00;
     position: absolute;
     left: 0;
     top: 0;
@@ -3040,9 +3040,9 @@ i.login-icon {
 }
 
 .simple-tab-style .nav-tabs>li.active>a,.simple-tab-style .nav-tabs>li.active>a:focus,.simple-tab-style .nav-tabs>li.active>a:hover {
-    background: #0400ff;
+    background: #f7ff00;
     color: #fff;
-    border: 1px solid #0400ff
+    border: 1px solid #f7ff00
 }
 
 .simple-tab-style .tab-content h4 {
@@ -3089,7 +3089,7 @@ i.login-icon {
 }
 
 #accordion .panel-title a.collapsed:hover,#accordion .panel-title a:before,#accordion .panel-title a:hover,#accordion .panel-title a:hover:before {
-    color: #0400ff
+    color: #f7ff00
 }
 
 #accordion .panel-body {
@@ -3172,7 +3172,7 @@ a.btn.btn-pricing {
 }
 
 .active a.btn.btn-pricing {
-    background: #0400ff;
+    background: #f7ff00;
     border-color: #ff3a5f
 }
 
@@ -3227,7 +3227,7 @@ a.btn.btn-pricing {
     font-family: FontAwesome;
     font-size: 12px;
     opacity: 1;
-    color: #0400ff;
+    color: #f7ff00;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -3676,7 +3676,7 @@ ul.list-inline.social li i:focus,ul.list-inline.social li i:hover {
 
 .footer h4 {
     font-size: 15px;
-    color: #0400ff;
+    color: #f7ff00;
     margin-bottom: 30px
 }
 
@@ -3725,9 +3725,9 @@ ul.list-inline.social li i:focus,ul.list-inline.social li i:hover {
 }
 
 .footer .f-social-box ul li a i:focus,.footer .f-social-box ul li a i:hover {
-    background: #0400ff;
+    background: #f7ff00;
     color: #fff!important;
-    border-color: #0400ff
+    border-color: #f7ff00
 }
 
 .footer .f-app-box ul li a {
@@ -3752,7 +3752,7 @@ footer .input-group {
 }
 
 footer.footer .input-group-btn .btn {
-    color: #0400ff
+    color: #f7ff00
 }
 
 footer .btn.btn-default,footer .btn.btn-default:focus,footer .btn.btn-default:hover,footer input.form-control,footer input.form-control:focus,footer input.form-control:hover {
@@ -3888,7 +3888,7 @@ footer .btn.btn-default,footer .btn.btn-default:focus,footer .btn.btn-default:ho
     border-radius: 50%;
     line-height: 98px;
     font-size: 35px;
-    color: #0400ff;
+    color: #f7ff00;
     background: #f5f9fc;
     border-color: #f5f9fc
 }
@@ -3910,7 +3910,7 @@ footer .btn.btn-default,footer .btn.btn-default:focus,footer .btn.btn-default:ho
     line-height: 30px;
     width: 30px;
     height: 30px;
-    background: #0400ff;
+    background: #f7ff00;
     font-size: 14px;
     border-radius: 50%;
     color: #fff
@@ -5230,7 +5230,7 @@ span.user-status {
 
 .profile-header-nav .nav-tabs li a:hover {
     background: #fff;
-    color: #0400ff;
+    color: #f7ff00;
     opacity: 1
 }
 
@@ -5249,7 +5249,7 @@ span.user-status {
 }
 
 .profile-header-nav .nav-tabs li.active a,.profile-header-nav .nav-tabs li.active a:focus,.profile-header-nav .nav-tabs li.active a:hover {
-    color: #0400ff;
+    color: #f7ff00;
     opacity: 1;
     background: 0 0;
     border-right: 1px dashed #dee2ea
@@ -6280,7 +6280,7 @@ header.payment-card-header .pull-right img {
 
 .dashboard-navigation .nav-tabs li a:hover {
     background: #fff;
-    color: #0400ff;
+    color: #f7ff00;
     opacity: 1
 }
 
@@ -6300,7 +6300,7 @@ header.payment-card-header .pull-right img {
 }
 
 .dashboard-navigation .nav-tabs li.active a,.dashboard-navigation .nav-tabs li.active a:focus,.dashboard-navigation .nav-tabs li.active a:hover {
-    color: #0400ff;
+    color: #f7ff00;
     opacity: 1;
     background: 0 0;
     border-bottom: 1px dashed #dee2ea
@@ -6398,12 +6398,12 @@ header.payment-card-header .pull-right img {
 }
 
 #dashboard-menu li.active>a {
-    color: #0400ff
+    color: #f7ff00
 }
 
 #dashboard-menu li>a:focus,#dashboard-menu li>a:hover {
     background: #fff;
-    color: #0400ff
+    color: #f7ff00
 }
 
 #dashboard-menu li ul {
