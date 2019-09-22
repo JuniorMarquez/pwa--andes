@@ -1,15 +1,15 @@
-<div class="theme-bg log-screen" style="background-image:url(assets/img/banner-log.webp);">
+<div class="theme-bg log-screen" style="background-image:url(assets/img/banner-log.png);">
 	
 		<section class="log-wrapper">
 			<div class="container">
 				<div class="col-md-4 col-md-push-8">
-					<h3 class="log-title" >Sign in</h3>
+					<h3 class="log-title"style="color:black;" >Andes Pro Adventures Administrator</h3>
 					<form class="form"[formGroup]="ngFormLogin" (ngSubmit) ="onLogin()" >
 						<div class="alert alert-danger" role="alert"*ngIf="isError">
 							Something is wrong!
 						</div>
 						<div class="form-group">
-							<label for="inputEmail">Email</label>
+							<label for="inputEmail" style="color:black;">Email</label>
 							<input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" [(ngModel)]="user.email"required [ngClass]="{ 'is-invalid': submitted && fval.email.errors }">
 									<div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
 									<div *ngIf="fval.email.errors.required">Email is required</div>
@@ -17,7 +17,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputEmail">Password</label>
+							<label for="inputEmail" style="color:black;">Password</label>
 							<input type="password" class="form-control" id="password" placeholder="*******" formControlName="password" [(ngModel)]="user.password" [ngClass]="{ 'is-invalid': submitted && fval.password.errors}"  required>
 							<div *ngIf="submitted && fval.password.errors"class="invalid-feedback">
 									<div ngClass="fval.password.errors.required">
@@ -30,11 +30,11 @@
 						<div class="form-group">
 							<div class="row">
 								<div class="col-md-6 col-sm-6">
-									<button type="submit" class="btn btn-dark">Sign in</button>
+									<button type="submit" class="btn btn-dark" style="color:black;">Sign in</button>
 								</div>
-								<div class="col-md-6 col-sm-6">
+								<!-- <div class="col-md-6 col-sm-6">
 									<p>Are you new? <a routerLink="/signup">Click here</a></p>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</form>
