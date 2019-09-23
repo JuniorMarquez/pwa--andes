@@ -28,6 +28,7 @@
     "@wkoza/ngx-upload": "^8.0.4",
     "angular-archwizard": "^5.0.0",
     "jquery": "^3.4.1",
+    "ngx-image-uploader": "^6.0.0-beta.1",
     "ngx-owl-carousel-o": "^2.0.1",
     "ngx-slick-carousel": "^0.4.6",
     "rxjs": "~6.4.0",
