@@ -13,6 +13,7 @@ export class AffiliateDetailComponent implements OnInit {
 
   constructor(public scrollTopService:ScrollTopService, private dataApi: DataApiService,private route:ActivatedRoute) { }
 	public card:CardInterface= {
+		id:'',
 		userd:'',
 		phone:'',
 		companyAddress:'',

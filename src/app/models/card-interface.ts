@@ -1,4 +1,5 @@
 export interface CardInterface{
+	id?:string;
 	type?:string;
 	userd?:string;
 	name?:string;
