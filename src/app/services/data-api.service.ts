@@ -110,7 +110,7 @@ export class DataApiService {
 		//console.log(token);
 		const url_api='http://192.168.0.107:3004/api/card';
 		return this.http
-		.post<CardInterface>(url_api, card,{headers: this.headers})
+		.post<CardInterface>(url_api, card)
 		.pipe(map(data => data));
 	}
 

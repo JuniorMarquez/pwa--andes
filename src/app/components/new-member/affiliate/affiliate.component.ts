@@ -78,7 +78,7 @@ ngOnInit() {
       let val=(this.user.id).toString();
       this.card = this.ngFormAffiliate.value;
       this.card.userd="a"+val;
-      this.card.type="affiliateType";
+      this.card.type="memberType";
       this.card.status="pending";
       this.card.name=this.user.name;
       this.dataApiService.saveCard(this.card)
