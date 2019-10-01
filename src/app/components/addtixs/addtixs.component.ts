@@ -70,6 +70,9 @@ public tix : TixInterface ={
       description:"",
       desLg:"",
       notes:"",
+      address:"",
+      dificulty:"",
+      tips:"",
       category:"",
       status:"",
       images:[]
@@ -85,8 +88,10 @@ public tix : TixInterface ={
   	 this.ngFormAddtixs = this.formBuilder.group({
       productName: ['', [Validators.required]],
       description: ['', [Validators.required]],
+      address: ['', [Validators.required]],
+      dificulty: ['', [Validators.required]],
        desLg: ['', [Validators.required]],
-      notes: ['', [Validators.required]],
+       tips: ['', [Validators.required]],
       category: ['', [Validators.required]]
       });
   }

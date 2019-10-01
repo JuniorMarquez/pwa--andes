@@ -19,11 +19,11 @@
 										
 									</h3>
 								</div>
-								<div class="row tr-single-body"  >
+								<div class=" tr-single-body"  >
 
 									<div class="col-md-4 " style="
-									padding: 15px 15px 30px 15px; background:#fafbfd!important; border-radius: 10px;
-									margin-left: 30px;
+									padding: 15px 15px 15px 15px; background:#fafbfd!important; border-radius: 10px;
+									/*margin-left: 30px;*/
 									">
 									
 
@@ -51,7 +51,7 @@
 	<button  (click)="uploader.removeFile(fileItem)">Remove</button>
 </ng-template> -->
 									</div>
-									<div class="col-md-7">
+									<div class="col-md-8">
 												<form  class="form"[formGroup]="ngFormAddtixs" (ngSubmit) ="sendTix()" >
 											
 											<aw-wizard>
@@ -73,11 +73,25 @@
 																	</div>
 																</div>
 														</div>
+														<div class="col-md-4 col-xs-12">
+															<div class="form-group">
+																<label for="category">Categoria </label>
+																<input type="text" class="form-control" id="category" formControlName="category" placeholder="Category" [(ngModel)]="tix.category"
+																[ngClass]="{ 'is-invalid': submitted && fval.category.errors }"
+																required>
+																<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
+																	<div *ngIf="fval.category.errors.required" class="errorLabel">
+																	* La categoria es requerida
+																	</div>
 
-														<div class="col-md-8 col-xs-12">
+																</div>
+															</div>
+														</div>
+
+														<div class="col-md-6 col-xs-12">
 															<div class="form-group">
 																<label for="description">Descripcion corta</label>
-																<textarea class="form-control height-60" id="description" formControlName="description" placeholder="Descripcion corta" [(ngModel)]="tix.description"
+																<textarea class="form-control height-120" id="description" formControlName="description" placeholder="Descripcion corta" [(ngModel)]="tix.description"
 																[ngClass]="{ 'is-invalid': submitted && fval.description.errors }"
 																required></textarea>
 																<div *ngIf="submitted && fval.description.errors" class="invalid-feedback">
@@ -88,36 +102,44 @@
 																</div>
 															</div>
 														</div>
-
-															<div class="col-md-4 col-xs-12">
+														<div class="col-md-6 col-xs-12">
 															<div class="form-group">
-																<label for="category">Category </label>
-																<input type="text" class="form-control" id="category" formControlName="category" placeholder="Category" [(ngModel)]="tix.category"
-																[ngClass]="{ 'is-invalid': submitted && fval.category.errors }"
+																<label for="address">Direccion </label>
+																<input type="text" class="form-control" id="address" formControlName="address" placeholder="Direccion" [(ngModel)]="tix.address"
+																[ngClass]="{ 'is-invalid': submitted && fval.address.errors }"
 																required>
-																<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
-																	<div *ngIf="fval.category.errors.required" class="errorLabel">
-																	* The category is required
+																<div *ngIf="submitted && fval.address.errors" class="invalid-feedback">
+																	<div *ngIf="fval.address.errors.required" class="errorLabel">
+																	* La direccion es requerida
+																	</div>
+
+																</div>
+															</div>
+															<div class="form-group">
+																<label for="dificulty">Dificultad </label>
+																<input type="text" class="form-control" id="dificulty" formControlName="dificulty" placeholder="Dificultad" [(ngModel)]="tix.dificulty"
+																[ngClass]="{ 'is-invalid': submitted && fval.dificulty.errors }"
+																required>
+																<div *ngIf="submitted && fval.dificulty.errors" class="invalid-feedback">
+																	<div *ngIf="fval.dificulty.errors.required" class="errorLabel">
+																	* La direccion es requerida
 																	</div>
 
 																</div>
 															</div>
 														</div>
+															
+															
 
 
 
-														<div class="col-md-4 col-xs-12">
+														<div class="col-md-12 col-xs-12">
 															<div class="form-group">
-																<label for="notes">Notes </label>
-																<input type="text" class="form-control" id="notes" formControlName="notes" placeholder="Notes" [(ngModel)]="tix.notes"
-																[ngClass]="{ 'is-invalid': submitted && fval.notes.errors }"
+																<label for="notes">Notas o puntos importantes </label>
+																<input type="text" class="form-control" id="notes"  placeholder="Notas" 
+																
 																required>
-																<div *ngIf="submitted && fval.notes.errors" class="invalid-feedback">
-																	<div *ngIf="fval.notes.errors.required" class="errorLabel">
-																	* The notes is required
-																	</div>
-
-																</div>
+																
 															</div>
 														</div>
 															
@@ -136,6 +158,20 @@
 																<div *ngIf="submitted && fval.desLg.errors" class="invalid-feedback">
 																	<div *ngIf="fval.desLg.errors.required" class="errorLabel">
 																	* Cuentanos con mayor detalle 
+																	</div>
+
+																</div>
+															</div>
+														</div>
+														<div class="col-md-12 col-xs-12">
+															<div class="form-group">
+																<label for="tips">Tips o recomendaciones para el tour</label>
+																<textarea class="form-control height-280" id="tips" formControlName="tips" placeholder="Descripcion larga" [(ngModel)]="tix.tips"
+																[ngClass]="{ 'is-invalid': submitted && fval.tips.errors }"
+																required></textarea>
+																<div *ngIf="submitted && fval.tips.errors" class="invalid-feedback">
+																	<div *ngIf="fval.tips.errors.required" class="errorLabel">
+																	* Comenta las recomendaciones que AndesProAdventures da a los clientes para este tour en particular
 																	</div>
 
 																</div>
@@ -173,12 +209,7 @@
 
 																</div>
 
-																<div *ngIf="submitted && fval.notes.errors" class="invalid-feedback">
-																	<div *ngIf="fval.notes.errors.required" class="errorLabel">
-																	* The notes is required
-																	</div>
-
-																</div>
+																
 
 
 																<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
