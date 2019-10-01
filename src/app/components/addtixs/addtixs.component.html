@@ -6,7 +6,7 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-9">
 						<div class="row mrg-0 mrg-top-20">
-							<div class="tr-single-box">
+							<div class="tr-single-box col-md-12">
 								<div class="tr-single-header">
 									
 									<h3 class="dashboard-title">
@@ -73,19 +73,26 @@
 																	</div>
 																</div>
 														</div>
+														
 														<div class="col-md-4 col-xs-12">
-															<div class="form-group">
-																<label for="category">Categoria </label>
-																<input type="text" class="form-control" id="category" formControlName="category" placeholder="Category" [(ngModel)]="tix.category"
+															<label>Categoria</label>
+															<div class="sl-box">
+																<select class="form-control wide"   id="category" formControlName="category" placeholder="Category" [(ngModel)]="tix.category"
 																[ngClass]="{ 'is-invalid': submitted && fval.category.errors }"
 																required>
-																<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
+																	<option>Caminatas</option>
+																	<option>Escaladas</option>
+																	<option>Escursiones</option>
+																	<option>montañismo </option>
+																	<option>Raffting</option>
+																</select>
+															</div>
+															<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
 																	<div *ngIf="fval.category.errors.required" class="errorLabel">
 																	* La categoria es requerida
 																	</div>
 
 																</div>
-															</div>
 														</div>
 
 														<div class="col-md-6 col-xs-12">
@@ -147,7 +154,7 @@
 													<button type="button" awNextStep>next</button>
 												  </aw-wizard-step>
 
-												  <aw-wizard-step stepTitle="more" awOptionalStep>
+												  <aw-wizard-step stepTitle="Detalle" awOptionalStep>
 												      <div class="row" > 
 												      	<div class="col-md-12 col-xs-12">
 															<div class="form-group">
@@ -166,7 +173,7 @@
 														<div class="col-md-12 col-xs-12">
 															<div class="form-group">
 																<label for="tips">Tips o recomendaciones para el tour</label>
-																<textarea class="form-control height-280" id="tips" formControlName="tips" placeholder="Descripcion larga" [(ngModel)]="tix.tips"
+																<textarea class="form-control height-100" id="tips" formControlName="tips" placeholder="Tips" [(ngModel)]="tix.tips"
 																[ngClass]="{ 'is-invalid': submitted && fval.tips.errors }"
 																required></textarea>
 																<div *ngIf="submitted && fval.tips.errors" class="invalid-feedback">
@@ -184,10 +191,137 @@
 															
 													</div>
 												    <button type="button" awPreviousStep>previous</button>
-												    <button type="button"  type="submit"  awNextStep>next</button>
+												    <button type="button"  awNextStep>next</button>
 												  </aw-wizard-step>
-												 
-												  <aw-wizard-step stepTitle="Finish">
+
+
+
+
+												 <aw-wizard-step stepTitle="Caracteristicas" awOptionalStep>
+												 	
+								
+													<div class="row">
+														<div class="col-md-12">
+															<ul class="add-amenities">
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="1">
+																		<label for="1"></label>
+																	</span>Traslado ida y vuelta
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="2">
+																		<label for="2"></label>
+																	</span>Snack durante el traslado
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="3">
+																		<label for="3"></label>
+																	</span>Café, té o chocolate caliente
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="4">
+																		<label for="4"></label>
+																	</span>Fotos durante el viaje
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="5">
+																		<label for="5"></label>
+																	</span>Guia de AndesProAdventures
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="6">
+																		<label for="6"></label>
+																	</span>Seguro de pasajeros
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="7">
+																		<label for="7"></label>
+																	</span>Botiquín de primeros auxilios
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="8">
+																		<label for="8"></label>
+																	</span> Todo el equipamiento de Rafting
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="9">
+																		<label for="9"></label>
+																	</span>kayakistas de seguridad
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="0">
+																		<label for="0"></label>
+																	</span>Charla de seguridad y de remado
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="11">
+																		<label for="11"></label>
+																	</span>Lockers para guardar tus pertenencias
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="12">
+																		<label for="12"></label>
+																	</span>Duchas al aire libre y camerinos
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="13">
+																		<label for="13"></label>
+																	</span>Hot Water
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="14">
+																		<label for="14"></label>
+																	</span>Attached garage 
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="15">
+																		<label for="15"></label>
+																	</span>Elevator
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="16">
+																		<label for="16"></label>
+																	</span>Spa/Sauna
+																</li>
+																<li>	
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="17">
+																		<label for="17"></label>
+																	</span>Indoor pool
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="18">
+																		<label for="18"></label>
+																	</span>Security cameras
+																</li>
+															</ul>	
+														</div>
+													</div>
+											 		<button type="button" awPreviousStep>Previous</button>
+												    <button type="button"  type="submit"  awNextStep>next</button>
+												 </aw-wizard-step>
+												  
+
+
+
+												  <aw-wizard-step stepTitle="Fin">
 												    <div class="row">
 
 												    	<div class="col-md-12 text-center" *ngIf="this._uw.errorFormAddtixs">
