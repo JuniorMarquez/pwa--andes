@@ -26,6 +26,8 @@ isLogged:boolean=false;
 	card:any={};
 	loaded:boolean=false;
 	tixs:any[]=[];
+	queue:any[]=[];
+	file:any[]=[];
   constructor() { }
 }
 

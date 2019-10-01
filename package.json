@@ -28,12 +28,14 @@
     "@wkoza/ngx-upload": "^8.0.4",
     "angular-archwizard": "^5.0.0",
     "jquery": "^3.4.1",
+    "ngx-awesome-uploader": "^8.0.3",
     "ngx-image-uploader": "^6.0.0-beta.1",
     "ngx-owl-carousel-o": "^2.0.1",
     "ngx-slick-carousel": "^0.4.6",
     "rxjs": "~6.4.0",
     "slick-carousel": "^1.8.1",
     "tslib": "^1.10.0",
+    "xunk-calendar": "^3.0.2",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

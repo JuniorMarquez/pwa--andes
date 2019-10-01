@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
-//import { NgModule } from '@angular/core';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-//import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ArchwizardModule } from 'angular-archwizard';
-
+import { HttpClientModule } from '@angular/common/http';
+import { Component, Inject} from '@angular/core';
+import { XunkCalendarModule } from '../xunk-calendar/xunk-calendar.module';
 
 //RUTAS
 import { app_routing } from "./app.routes";       
@@ -17,17 +17,39 @@ import { environment } from '../environments/environment';
 
 //DIRECTIVAS
 import { ConfirmEqualValidatorDirective } from './confirm-equal-validator.directive';
-
+import { FilePickerModule } from  '../assets/file-picker/src/public_api';
 
 //COMPONENTS
 
 import { CatalogComponent,DialogOverviewExampleDialog } from './components/catalog/catalog.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TopTixsComponent } from './components/top-tixs/top-tixs.component';
+import { SliderHomeComponent } from './components/slider-home/slider-home.component';
+import { PreFooterComponent } from './components/pre-footer/pre-footer.component';
+import { MyTixsComponent } from './components/my-tixs/my-tixs.component';
+import { LoginComponent } from './components/login/login.component';
+import { PartnersComponent } from './components/partners/partners.component';
+import { SideleftComponent } from './components/sideleft/sideleft.component';
+import { AffiliatesComponent } from './components/affiliates/affiliates.component';
+import { PartnerDetailComponent } from './components/partner-detail/partner-detail.component';
+import { AffiliateDetailComponent } from './components/affiliate-detail/affiliate-detail.component';
+import { TixDetailComponent } from './components/tix-detail/tix-detail.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { AlltixsComponent } from './components/alltixs/alltixs.component';
+import { NewMemberComponent } from './components/new-member/new-member.component';
+import { ComingComponent } from './components/coming/coming.component';
+import { AffiliateComponent } from './components/new-member/affiliate/affiliate.component';
+import { PartnerComponent } from './components/new-member/partner/partner.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AddtixsComponent } from './components/addtixs/addtixs.component';
+import { BookingComponent } from './components/booking/booking.component';
+import { AlltixslistComponent } from './components/alltixslist/alltixslist.component';
+import { AlltixsleftComponent } from './components/alltixsleft/alltixsleft.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 //SERVICES
-//import {InformacionService} from './services/informacion.service';
 import {TixsService} from './services/tixs.service';
 import {ProductInfoService} from './services/product-info.service';
 import {CarService} from './services/car.service';
@@ -54,32 +76,9 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatTableModule} from '@angular/material/table';
 
 
-import { HttpClientModule } from '@angular/common/http';
-//import { LightboxModule } from 'ngx-lightbox';
-import { Component, Inject} from '@angular/core';
-import { TopTixsComponent } from './components/top-tixs/top-tixs.component';
-import { SliderHomeComponent } from './components/slider-home/slider-home.component';
-import { PreFooterComponent } from './components/pre-footer/pre-footer.component';
-import { MyTixsComponent } from './components/my-tixs/my-tixs.component';
-import { LoginComponent } from './components/login/login.component';
-import { PartnersComponent } from './components/partners/partners.component';
-import { SideleftComponent } from './components/sideleft/sideleft.component';
-import { AffiliatesComponent } from './components/affiliates/affiliates.component';
-import { PartnerDetailComponent } from './components/partner-detail/partner-detail.component';
-import { AffiliateDetailComponent } from './components/affiliate-detail/affiliate-detail.component';
-import { TixDetailComponent } from './components/tix-detail/tix-detail.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { AlltixsComponent } from './components/alltixs/alltixs.component';
-import { NewMemberComponent } from './components/new-member/new-member.component';
-import { ComingComponent } from './components/coming/coming.component';
-import { AffiliateComponent } from './components/new-member/affiliate/affiliate.component';
-import { PartnerComponent } from './components/new-member/partner/partner.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { AddtixsComponent } from './components/addtixs/addtixs.component';
-import { BookingComponent } from './components/booking/booking.component';
-import { AlltixslistComponent } from './components/alltixslist/alltixslist.component';
-import { AlltixsleftComponent } from './components/alltixsleft/alltixsleft.component';
-import { AboutComponent } from './components/about/about.component';
+// import { HttpClientModule } from '@angular/common/http';
+// import { Component, Inject} from '@angular/core';
+
 
 
 
@@ -131,7 +130,9 @@ import { AboutComponent } from './components/about/about.component';
     MatBadgeModule,
     MatTableModule,
     ArchwizardModule,
-    CarouselModule
+    CarouselModule,
+    XunkCalendarModule,
+    FilePickerModule
   ],
   exports: [
     MatButtonModule, MatCheckboxModule, MatTabsModule,MatDialogModule,MatIconModule,MatInputModule,
