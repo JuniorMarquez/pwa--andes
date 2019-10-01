@@ -7079,7 +7079,7 @@ ul.add-amenities {
 ul.add-amenities li {
     margin-bottom: 5px;
     list-style: none;
-    width: 50%;
+    width: 100%;
     display: inline-block
 }
 
