@@ -68,6 +68,7 @@ public tix : TixInterface ={
       userd:"",
       productName:"",
       description:"",
+      desLg:"",
       notes:"",
       category:"",
       status:"",
@@ -84,6 +85,7 @@ public tix : TixInterface ={
   	 this.ngFormAddtixs = this.formBuilder.group({
       productName: ['', [Validators.required]],
       description: ['', [Validators.required]],
+       desLg: ['', [Validators.required]],
       notes: ['', [Validators.required]],
       category: ['', [Validators.required]]
       });

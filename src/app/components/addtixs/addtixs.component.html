@@ -12,7 +12,7 @@
 									<h3 class="dashboard-title">
 										 
 										
-										Add Tix 
+										+ Tour 
 									<!-- 	<div *ngFor="let item of this._uw.file">
 											 {{item.name}}
 										</div> -->
@@ -22,7 +22,9 @@
 								<div class="row tr-single-body"  >
 
 									<div class="col-md-4 " style="
-									padding: 15px 15px 30px 15px; background:#fafbfd!important; border-radius: 10px;">
+									padding: 15px 15px 30px 15px; background:#fafbfd!important; border-radius: 10px;
+									margin-left: 30px;
+									">
 									
 
 										<ngx-file-picker
@@ -53,34 +55,49 @@
 												<form  class="form"[formGroup]="ngFormAddtixs" (ngSubmit) ="sendTix()" >
 											
 											<aw-wizard>
-												<aw-wizard-step stepTitle="Tix">
+												<aw-wizard-step stepTitle="Tour">
 													<div class="row" > 
 												
-														<div class="col-md-4 col-xs-12">
+														<div class="col-md-8 col-xs-12">
 															
 																<div class="form-group">
-																	<label for="productName">Tix Name</label>
-																	<input type="text" class="form-control" id="productName" formControlName="productName" placeholder="Tix name" [(ngModel)]="tix.productName"
+																	<label for="productName">Tour</label>
+																	<input type="text" class="form-control" id="productName" formControlName="productName" placeholder="Nombre del tour" [(ngModel)]="tix.productName"
 																	[ngClass]="{ 'is-invalid': submitted && fval.productName.errors }"
 																	required>
 																	<div *ngIf="submitted && fval.productName.errors" class="invalid-feedback">
 																		<div *ngIf="fval.productName.errors.required" class="errorLabel">
-																		* The Tix name is required and must be a valid name
+																		* El nombre del tour es requerido
 																		</div>
 
 																	</div>
 																</div>
 														</div>
 
-														<div class="col-md-12 col-xs-12">
+														<div class="col-md-8 col-xs-12">
 															<div class="form-group">
-																<label for="description">Description</label>
-																<textarea class="form-control height-80" id="description" formControlName="description" placeholder="Description" [(ngModel)]="tix.description"
+																<label for="description">Descripcion corta</label>
+																<textarea class="form-control height-60" id="description" formControlName="description" placeholder="Descripcion corta" [(ngModel)]="tix.description"
 																[ngClass]="{ 'is-invalid': submitted && fval.description.errors }"
 																required></textarea>
 																<div *ngIf="submitted && fval.description.errors" class="invalid-feedback">
 																	<div *ngIf="fval.description.errors.required" class="errorLabel">
-																	* The Description is required 
+																	* Esta descripcion es requerida 
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+															<div class="col-md-4 col-xs-12">
+															<div class="form-group">
+																<label for="category">Category </label>
+																<input type="text" class="form-control" id="category" formControlName="category" placeholder="Category" [(ngModel)]="tix.category"
+																[ngClass]="{ 'is-invalid': submitted && fval.category.errors }"
+																required>
+																<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
+																	<div *ngIf="fval.category.errors.required" class="errorLabel">
+																	* The category is required
 																	</div>
 
 																</div>
@@ -110,20 +127,21 @@
 
 												  <aw-wizard-step stepTitle="more" awOptionalStep>
 												      <div class="row" > 
-												      	<div class="col-md-4 col-xs-12">
+												      	<div class="col-md-12 col-xs-12">
 															<div class="form-group">
-																<label for="category">Category </label>
-																<input type="text" class="form-control" id="category" formControlName="category" placeholder="Category" [(ngModel)]="tix.category"
-																[ngClass]="{ 'is-invalid': submitted && fval.category.errors }"
-																required>
-																<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
-																	<div *ngIf="fval.category.errors.required" class="errorLabel">
-																	* The category is required
+																<label for="desLg">Descripcion larga</label>
+																<textarea class="form-control height-280" id="desLg" formControlName="desLg" placeholder="Descripcion larga" [(ngModel)]="tix.desLg"
+																[ngClass]="{ 'is-invalid': submitted && fval.desLg.errors }"
+																required></textarea>
+																<div *ngIf="submitted && fval.desLg.errors" class="invalid-feedback">
+																	<div *ngIf="fval.desLg.errors.required" class="errorLabel">
+																	* Cuentanos con mayor detalle 
 																	</div>
 
 																</div>
 															</div>
 														</div>
+												      
 
 														
 															
