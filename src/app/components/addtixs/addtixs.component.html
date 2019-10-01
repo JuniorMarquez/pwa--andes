@@ -1,22 +1,26 @@
 
 
 
-<section class="dashboard gray-bg padd-0 mrg-top-50 " style="min-height: 600px;">
+<section class="dashboard white-bg padd-0 mrg-top-50 " style="min-height: 600px;">
 			<div class="container-fluid" >
-				<div class="row">
-					<!-- <div class=""> -->
-						<div class="row mrg-0 mrg-top-20">
-							<div class="tr-single-box ">
-								<div class="tr-single-header">
+				<div class="">
+					<div class="">
+						<div class=" mrg-0 mrg-top-20">
+							<div class="">
+								<div class="tr-single-header" style="border: 0px;">
+									
 									<h3 class="dashboard-title">
-										+ Tour 										
+										 
+										
+										+ Tour 
+																			
 									</h3>
 								</div>
-								<div class=" tr-single-body"  >
-									<div class="col-md-4 " style="
-									padding: 15px 15px 15px 15px; background:#fafbfd!important; border-radius: 10px;
-									/*margin-left: 30px;*/
-									">
+								<div class=" "  >
+									<div class="col-md-4 col-xs-12" style="
+										padding: 15px 15px 15px 15px; background:#fafbfd!important; border-radius: 10px;
+										/*margin-left: 30px;*/
+										">
 										<ngx-file-picker
 										    [uploadType]="'multi'"
 										    (validationError)= "onValidationError($event)"
@@ -31,7 +35,7 @@
 										    (fileAdded)="onFileAdded($event)">
 										</ngx-file-picker>									
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-8 col-xs-12">
 										<form  class="form"[formGroup]="ngFormAddtixs" (ngSubmit) ="sendTix()" >
 											
 											<aw-wizard>
@@ -135,11 +139,11 @@
 														
 													</div>								
 													<button type="button" awNextStep>next</button>
-												  </aw-wizard-step>
+												</aw-wizard-step>
 
-												  <aw-wizard-step stepTitle="2" awOptionalStep>
-												    <div class="row" > 
-												      	<div class="col-md-12 col-xs-12">
+												<aw-wizard-step stepTitle="2" awOptionalStep>
+												    <div class="row  "> 
+												      	<div class="col-md-12">
 															<div class="form-group">
 																<label for="desLg">Descripcion larga</label>
 																<textarea class="form-control height-280" id="desLg" formControlName="desLg" placeholder="Descripcion larga" [(ngModel)]="tix.desLg"
@@ -152,8 +156,8 @@
 
 																</div>
 															</div>
-														</div>
-														<div class="col-md-12 col-xs-12">
+														
+														
 															<div class="form-group">
 																<label for="tips">Tips o recomendaciones para el tour</label>
 																<textarea class="form-control height-100" id="tips" formControlName="tips" placeholder="Tips" [(ngModel)]="tix.tips"
@@ -170,12 +174,12 @@
 													</div>
 												    <button type="button" awPreviousStep>previous</button>
 												    <button type="button"  awNextStep>next</button>
-												  </aw-wizard-step>
+												 </aw-wizard-step>
 
 
 
 
-												 <aw-wizard-step stepTitle="3" awOptionalStep>
+												<aw-wizard-step stepTitle="3" awOptionalStep>
 												 	
 								
 													<div class="row">
@@ -265,7 +269,7 @@
 													</div>
 											 		<button type="button" awPreviousStep>Previous</button>
 												    <button type="button"  type="submit"  awNextStep>next</button>
-												 </aw-wizard-step>
+												</aw-wizard-step>
 												  
 
 
@@ -320,7 +324,7 @@
 								</div>
 							</div>
 						</div>
-					<!-- </div> -->
+					</div>
 				</div>
 			</div>
 </section>
