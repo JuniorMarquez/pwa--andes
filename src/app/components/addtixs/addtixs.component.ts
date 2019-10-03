@@ -39,8 +39,6 @@ export class AddtixsComponent implements OnInit {
 ngFormAddtixs: FormGroup;
   submitted = false;
 
-
-
   constructor(
   private  http: HttpClient,
   public _uw:UserWService, 
@@ -65,23 +63,31 @@ public user : UserInterface ={
       address:""
     };
 public tix : TixInterface ={
-      userd:"",
-      productName:"",
+      address:"",
+      altitud:"",
+      cantD:0,
+      capacidad:0,
+      category:"",
       description:"",
       desLg:"",
-      notes:"",
-      address:"",
       dificulty:"",
-      tips:"",
-      category:"",
+      disponibilidad:"",
+      distancia:"",
+      duracion:"",
+      images:[],
+      notes:"",
+      precio:0,
+      productName:"",
       status:"",
-      images:[]
+      temp:"",
+      tips:"",
+      userd:"",
     };
 
 
   public isError = false;
   public isLogged =false;
-   public urlCreated = "";
+  public urlCreated = "";
   public images:any[]=[];
 
   ngOnInit() {
@@ -101,13 +107,12 @@ public tix : TixInterface ={
   }
 
   sendTix(){
-    
       this.submitted = true;
       if (this.ngFormAddtixs.invalid) {
          this._uw.errorFormAddtixs=true;
       return;
         } 
-         this._uw.errorFormAddtixs=false;
+      this._uw.errorFormAddtixs=false;
       this.user = this.authService.getCurrentUser();
       let val=(this.user.id).toString();
       this.tix = this.ngFormAddtixs.value;
@@ -151,8 +156,9 @@ public tix : TixInterface ={
     file.fileName="http://18.191.65.29/imgApi/server/local-storage/tixsImages/"+file.fileName;
     this.myFiles.push(file);
     this.images.push(file.fileName);
-  
+
   }
+
   removeFile() {
   this.uploader.removeFileFromList(this.myFiles[0].fileName);
   }

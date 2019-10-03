@@ -1,7 +1,4 @@
-
-
-<main>
-	 <header class="header-image ken-ubrn-center light" data-parallax="true" data-natural-height="1080" data-natural-width="1920" data-bleed="0" data-image-src="media/hd-4.jpg" data-offset="0">
+<!--  <header class="header-image  light headImg" data-parallax="true" data-natural-height="1080" data-natural-width="1920" data-bleed="0" data-image-src="assets/media/hd-4.jpg" data-offset="0" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -26,30 +23,33 @@
                     </div>
                 </div>
             </div>
-    </header>
+    </header> -->
+
+<main>
+	
    
         <section class="section-base">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="title">
-                            <h2>Piedras Blancas</h2>
-                            <p>Coquimbo Region, Chile</p>
+                            <h2>{{tix.productName}}</h2>
+                            <p>{{tix.address}}</p>
                         </div>
                         <p align="justify">
-                            Travesía por Piedras de las Tacitas (sitio arqueológico) Luego seguiremos por el sendero a través del bosque con dirección Este. Descubrimos la “Piedra del Mono”. Después de ver esta piedra, seguimos por el bosque donde encontramos variadas especies de árboles nativos, avistamiento casual de zorros, pájaros carpinteros, etc. Poco a poco iremos ganando altura. Luego de haber recorrido alrededor de una hora y media se llega a una zona de descanso, un mirador natural, donde podremos contemplar el valle y una cascada un poco más arriba. Cruzaremos la zona de piedras blancas, que posee una pendiente más inclinada que en el tramo anterior.
+                            {{tix.desLg}}
                         </p>
                         <table class="table table-grid table-border align-left text-bold table-10">
                                     <tbody>
                                         <tr>
-                                            <td><strong>Disponibilidad</strong><br>Siempre</td>
-                                            <td><strong>Dificultad</strong><br> Fácil</td>
-                                            <td><strong>Duración</strong><br>FULL DAY</td>
+                                            <td><strong>Disponibilidad</strong><br>{{tix.disponibilidad}}</td>
+                                            <td><strong>Dificultad</strong><br> {{tix.dificulty}}</td>
+                                            <td><strong>Duración</strong><br>{{tix.duracion}}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Distancia</strong><br>100 mts</td>
-                                            <td><strong>Altitud</strong><br> 3000 s. n. m.</td>
-                                            <td><strong>Temperatura</strong><br>-5° a 15°C.</td>
+                                            <td><strong>Distancia</strong><br>{{tix.distancia}}</td>
+                                            <td><strong>Altitud</strong><br> {{tix.altitud}}</td>
+                                            <td><strong>Temperatura</strong><br>-{{tix.temp}}</td>
                                         </tr>
                                     </tbody>
                         </table>
@@ -58,41 +58,41 @@
                     <div class="col-lg-6">
                                 <ul class="slider light" data-options="arrows:true,nav:true">
                                     <li>
-                                        <a class="img-box lightbox" href="media/refuge-1.jpg" data-lightbox-anima="fade-in">
-                                            <img src="media/image-1.jpg" alt="">
+                                        <a class="img-box lightbox" href="assets/media/refuge-1.jpg" data-lightbox-anima="fade-in">
+                                            <img src="assets/media/image-1.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="img-box lightbox" href="media/refuge-2.jpg" data-lightbox-anima="fade-in">
-                                            <img src="media/refuge-2.jpg" alt="">
+                                        <a class="img-box lightbox" href="assets/media/refuge-2.jpg" data-lightbox-anima="fade-in">
+                                            <img src="assets/media/refuge-2.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="img-box lightbox" href="media/refuge-1.jpg" data-lightbox-anima="fade-in">
-                                            <img src="media/refuge-1.jpg" alt="">
+                                        <a class="img-box lightbox" href="assets/media/refuge-1.jpg" data-lightbox-anima="fade-in">
+                                            <img src="assets/media/refuge-1.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                                 <hr class="space-xs" />
                                 <ul class="slider light" data-options="type:carousel,arrows:true,perView:4">
                                     <li>
-                                        <a class="img-box lightbox" href="media/image-15.jpg" data-lightbox-anima="fade-in">
-                                            <img src="media/image-15.jpg" alt="">
+                                        <a class="img-box lightbox" href="assets/media/image-15.jpg" data-lightbox-anima="fade-in">
+                                            <img src="assets/media/image-15.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="img-box lightbox" href="media/image-6.jpg" data-lightbox-anima="fade-in">
-                                            <img src="media/image-6.jpg" alt="">
+                                        <a class="img-box lightbox" href="assets/media/image-6.jpg" data-lightbox-anima="fade-in">
+                                            <img src="assets/media/image-6.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="img-box lightbox" href="media/image-8.jpg" data-lightbox-anima="fade-in">
-                                            <img src="media/image-8.jpg" alt="">
+                                        <a class="img-box lightbox" href="assets/media/image-8.jpg" data-lightbox-anima="fade-in">
+                                            <img src="assets/media/image-8.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="img-box lightbox" href="media/image-3.jpg" data-lightbox-anima="fade-in">
-                                            <img src="media/image-3.jpg" alt="">
+                                        <a class="img-box lightbox" href="assets/media/image-3.jpg" data-lightbox-anima="fade-in">
+                                            <img src="assets/media/image-3.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
@@ -104,7 +104,7 @@
                                                 <i class="im-danger"></i>
                                                 <div class="caption">
                                                     <h3>Advertencia</h3>
-                                                    <p>No incluye almuerzo<br> Tour apto para mayores de 6 años</p>
+                                                    <p>{{tix.notes}}</p>
                                                 </div>
                                             </div>
                                         </div>                                        
@@ -112,7 +112,7 @@
                                     
                                 </div>
                             <hr class="space-xs" />
-                            <a href="treks-single.html#" class="btn btn-sm btn-circle btn-icon"><i class="im-right-4"></i>Reservar por CLP 25.0000</a>
+                            <a href="treks-single.html#" class="btn btn-sm btn-circle btn-icon"><i class="im-right-4"></i>Reservar por CLP {{tix.precio}}</a>
                     </div>
                 </div>
                 
@@ -132,8 +132,8 @@
 	                                <a href="#">Tips del viaje</a>
 	                                <div class="content">
 	                                    <p align="justify">
-	                                        A) Temperatura promedio: -5° a 15°C.<br> B) Recuerde que viene a la montaña, traer ropa adecuada y de recambio, parca, gorro de lana o similar, zapatos cómodos, lentes para el sol, bloqueador solar, linterna frontal u otra y muchas ganas de disfrutar.<br> C) Se recomienda llevar cámara fotográfica y no olvidar medicamentos. Importante llevar dinero en efectivo, $20.000. Es lo que recomendamos como agencia (mínimo).<br> D) Carnet de identidad vigente o pasaporte. Sin este documento no es posible viajar.
-	                                    </p>
+	                                        {{tix.tips}}
+                                            	                                    </p>
 	                                </div>
 	                            </li>
 	                            <li>

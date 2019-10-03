@@ -74,6 +74,8 @@ import {MatNativeDateModule} from '@angular/material';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatTableModule} from '@angular/material/table';
+import { TreksComponent } from './components/treks/treks.component';
+import { NavComponent } from './components/nav/nav.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -113,7 +115,9 @@ import {MatTableModule} from '@angular/material/table';
     BookingComponent,
     AlltixslistComponent,
     AlltixsleftComponent,
-    AboutComponent
+    AboutComponent,
+    TreksComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

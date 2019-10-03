@@ -28,7 +28,21 @@ public tix:TixInterface= {
 	description:'',
 	productName:'',
 	notes:'',
-	images: ['', '']
+	images: ['', ''],
+  cantD:0,
+  precio:0,
+  capacidad:0,
+  altitud:'',
+  temp:'',
+  duracion:'',
+  disponibilidad:'',
+  distancia:'',
+  dificulty:'',
+  desLg:'',
+  tips:'',
+  address:'',
+  status:'',
+  userd:''
 };
 
 

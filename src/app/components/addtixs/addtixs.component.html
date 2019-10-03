@@ -8,12 +8,8 @@
 						<div class=" mrg-0 mrg-top-20">
 							<div class="">
 								<div class="tr-single-header" style="border: 0px;">
-									
-									<h3 class="dashboard-title">
-										 
-										
-										+ Tour 
-																			
+									<h3 class="dashboard-title">									
+										+ Tour 		
 									</h3>
 								</div>
 								<div class=" "  >
@@ -37,13 +33,10 @@
 									</div>
 									<div class="col-md-8 col-xs-12">
 										<form  class="form"[formGroup]="ngFormAddtixs" (ngSubmit) ="sendTix()" >
-											
 											<aw-wizard>
 												<aw-wizard-step stepTitle="1">
 													<div class="row" > 
-												
 														<div class="col-md-8 col-xs-12">
-															
 																<div class="form-group">
 																	<label for="productName">Tour</label>
 																	<input type="text" class="form-control" id="productName" formControlName="productName" placeholder="Nombre del tour" [(ngModel)]="tix.productName"
@@ -136,9 +129,35 @@
 																
 															</div>
 														</div>
+														<div class="col-md-4 col-xs-12">
+															<div class="form-group">
+																<label for="dist">Distancia </label>
+																<input type="text" class="form-control" id="dist"  placeholder="Distancia" 
+																
+																required>
+																
+															</div>
+														</div>
+														<div class="col-md-4 col-xs-12">
+															<div class="form-group">
+																<label for="alt">Altura </label>
+																<input type="text" class="form-control" id="alt"  placeholder="Altura" 
+																
+																required>
+																
+															</div>
+														</div>
+														<div class="col-md-4 col-xs-12">
+															<div class="form-group">
+																<label for="temp">Temperatura </label>
+																<input type="text" class="form-control" id="temp"  placeholder="Temperatura" 
+																required>
+																
+															</div>
+														</div>
 														
 													</div>								
-													<button type="button" awNextStep>next</button>
+													<button type="button" awNextStep>Siguiente</button>
 												</aw-wizard-step>
 
 												<aw-wizard-step stepTitle="2" awOptionalStep>
@@ -172,16 +191,11 @@
 															</div>
 														</div>									
 													</div>
-												    <button type="button" awPreviousStep>previous</button>
-												    <button type="button"  awNextStep>next</button>
+												    <button type="button" awPreviousStep>Anterior</button>
+												    <button type="button"  awNextStep>Siguiente</button>
 												 </aw-wizard-step>
 
-
-
-
 												<aw-wizard-step stepTitle="3" awOptionalStep>
-												 	
-								
 													<div class="row">
 														<div class="col-md-6">
 															<ul class="add-amenities">
@@ -267,14 +281,129 @@
 															</ul>	
 														</div>
 													</div>
-											 		<button type="button" awPreviousStep>Previous</button>
-												    <button type="button"  type="submit"  awNextStep>next</button>
+											 		<button type="button" awPreviousStep>Anterior</button>
+												    <button type="button"  type="submit"  awNextStep>Siguiente</button>
 												</aw-wizard-step>
 												  
+												<aw-wizard-step stepTitle="4" awOptionalStep>		
+													<div class="row">
+														<div class="col-md-4 col-xs-12">
+															<div class="form-group">
+																<label for="cantD">Cantidad de dias </label>
+																<input type="text" class="form-control" id="cantD"  placeholder="Cantidad de dias" 
+																
+																required>
+																
+															</div>
+														</div>
+														<div class="col-md-4 col-xs-12">
+															<div class="form-group">
+																<label for="precio">Precio </label>
+																<input type="text" class="form-control" id="precio"  placeholder="Precio" 
+																
+																required>
+																
+															</div>
+														</div>
+														<div class="col-md-4 col-xs-12">
+															<div class="form-group">
+																<label for="capacidad">Capacidad </label>
+																<input type="text" class="form-control" id="capacidad"  placeholder="Capacidad" 
+																
+																required>
+																
+															</div>
+														</div>
 
+														<div class="col-md-6">
+															<ul class="add-amenities">
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="1">
+																		<label for="1"></label>
+																	</span>Enero
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="2">
+																		<label for="2"></label>
+																	</span>Febrero
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="3">
+																		<label for="3"></label>
+																	</span>Marzo
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="4">
+																		<label for="4"></label>
+																	</span>Abril
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="5">
+																		<label for="5"></label>
+																	</span>Mayo
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="6">
+																		<label for="6"></label>
+																	</span>Junio
+																</li>
+															
+															</ul>	
+														</div>
+														<div class="col-md-6">
+															<ul class="add-amenities">
+																
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="7">
+																		<label for="7"></label>
+																	</span>Julio
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="8">
+																		<label for="8"></label>
+																	</span> Agosto
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="9">
+																		<label for="9"></label>
+																	</span>Septiembre
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="0">
+																		<label for="0"></label>
+																	</span>Octubre
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="11">
+																		<label for="11"></label>
+																	</span>Noviembre
+																</li>
+																<li>
+																	<span class="custom-checkbox">
+																		<input type="checkbox" id="12">
+																		<label for="12"></label>
+																	</span>Diciembre
+																</li>
+																
+															</ul>	
+														</div>
+													</div>
+											 		<button type="button" awPreviousStep>Anterior</button>
+												    <button type="button"  type="submit"  awNextStep>Siguiente</button>
+												</aw-wizard-step>
 
-
-												  <aw-wizard-step stepTitle="4">
+												<aw-wizard-step stepTitle="5">
 												    <div class="row">
 
 												    	<div class="col-md-12 text-center" *ngIf="this._uw.errorFormAddtixs">
@@ -315,9 +444,9 @@
 															<p><strong></strong> The registration has been submitted successfully</p>
 														</div>
 													</div>
-												    <button type="button" awPreviousStep>Previous</button>
-												    <button type="button" (click)="finish()">Finish</button>
-												  </aw-wizard-step>
+												    <button type="button" awPreviousStep>Anterior</button>
+												    <button type="button" (click)="finish()">Finalizar</button>
+												</aw-wizard-step>
 											</aw-wizard>
 										</form>
 									</div>	

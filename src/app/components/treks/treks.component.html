@@ -1,0 +1,178 @@
+<!--  <header class="header header-image  light headImg" data-parallax="true" data-natural-height="1080" data-natural-width="1920" data-bleed="0" data-image-src="assets/media/hd-4.jpg" data-offset="0" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="counter counter-vertical counter-icon">
+                            <div>
+                                <h3>Fecha</h3>
+                                <p class="text-50 text-black no-margin">Ag. Sp. Oc. Nv. Dc.</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div>
+                            <h3>Capacidad</h3>
+                            <p class="text-50 text-black no-margin">10</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div>
+                            <h3>Duración</h3>
+                            <p class="text-50 text-black no-margin">FULL DAYS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header> -->
+
+
+
+
+<main>
+
+        <section class="section-base section-color">
+            <div class="container">
+                <div class="maso-list gap-30" data-columns="3" data-columns-lg="2" data-columns-sm="1">
+                    <div class="menu-inner">
+                        <div><i class="menu-btn"></i><span>Menu</span></div>
+                        <ul>
+                            <li class="active"><a data-filter="maso-item" href="#">Todos</a></li>
+                            <li><a data-filter="cat-1" href="#">Trekking</a></li>
+                            <li><a data-filter="cat-2" href="#">Escaladas</a></li>
+                            <li><a data-filter="cat-3" href="#">Cascadas</a></li>
+                            <li><a data-filter="cat-4" href="#">Aventura</a></li>
+                            <li><a class="maso-order" data-sort="asc"></a></li>
+                        </ul>
+                    </div>
+                    <div class="maso-box">
+                    	
+                    	 <div class="maso-item cat-1" *ngFor="let tix of tixs" >
+                            <div class="cnt-box cnt-box-info boxed" >
+                                <div class="extra-field">CLP ${{tix.precio}}</div>
+                                <a routerLink="/tix-detail/{{tix.id}}" class="img-box"><img src="assets/media/image-5.jpg" alt="" /></a>
+                                <div class="caption">
+                                    <h2>{{tix.productName}}</h2>
+                                    <div class="cnt-info">
+                                        <div><span>Dias</span><span>{{tix.cantD}}</span></div>
+                                        <div><span>Capacidad</span><span>{{tix.capacidad}}</span></div>
+                                        <div><span>Dificultad</span><span>{{tix.dificulty}}</span></div>
+                                    </div>
+                                    <p>
+                                       {{tix.description}}
+                                    </p>
+                                    <div class="bottom-info">
+                                        {{tix.address}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                       <!--  <div class="maso-item cat-1">
+                            <div class="cnt-box cnt-box-info boxed" data-href="treks-single.html">
+                                <div class="extra-field">CLP $25.000</div>
+                                <a href="treks-single.html" class="img-box"><img src="assets/media/image-5.jpg" alt="" /></a>
+                                <div class="caption">
+                                    <h2>Piedras Blancas</h2>
+                                    <div class="cnt-info">
+                                        <div><span>Dias</span><span>1</span></div>
+                                        <div><span>Capacidad</span><span>10</span></div>
+                                        <div><span>Dificultad</span><span>Medio</span></div>
+                                    </div>
+                                    <p>
+                                        Travesía por senderos que nos llevará por Piedras de las Tacitas, Piedra del Mono hasta Piedras blancas.
+                                    </p>
+                                    <div class="bottom-info">
+                                        Coquimbo Region, Chile 
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                       <!--  <div class="maso-item cat-2">
+                            <div class="cnt-box cnt-box-info boxed" data-href="tour2.html">
+                                <div class="extra-field">CLP $20.000</div>
+                                <a href="tour2.html" class="img-box"><img src="assets/media/image-6.jpg" alt="" /></a>
+                                <div class="caption">
+                                    <h2>Andes Panorámico</h2>
+                                    <div class="cnt-info">
+                                        <div><span>Dias</span><span>1</span></div>
+                                        <div><span>Capacidad</span><span>8</span></div>
+                                        <div><span>Dificultad</span><span>Fácil</span></div>
+                                    </div>
+                                    <p>
+                                        Tours de aventura por maravillosos lugares desde La Laguna del Maule hasta las Termas de Medanos.
+                                    </p>
+                                    <div class="bottom-info">
+                                        San Clemente, Maule Region, Chile. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maso-item cat-1 cat-3 cat-4">
+                            <div class="cnt-box cnt-box-info boxed" data-href="tour3.html">
+                                <div class="extra-field">CLP $45.000</div>
+                                <a href="tour3.html" class="img-box"><img src="assets/media/image-7.jpg" alt="" /></a>
+                                <div class="caption">
+                                    <h2>Embalse Yeso Rafting</h2>
+                                    <div class="cnt-info">
+                                        <div><span>Dias</span><span>1</span></div>
+                                        <div><span>Capacidad</span><span>10</span></div>
+                                        <div><span>Dificultad</span><span>Medio</span></div>
+                                    </div>
+                                    <p>
+                                        Trakking por las majetuosas montañas de los Andes y Rafting de pura adrenalina y aventura.
+                                    </p>
+                                    <div class="bottom-info">
+                                        Región Metropolitana, Chile
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maso-item cat-2">
+                            <div class="cnt-box cnt-box-info boxed" data-href="tour4.html">
+                                <div class="extra-field">CLP $15.000</div>
+                                <a href="tour4.html" class="img-box"><img src="assets/media/image-14.jpg" alt="" /></a>
+                                <div class="caption">
+                                    <h2>Tour 7 Tasas</h2>
+                                    <div class="cnt-info">
+                                        <div><span>Dias</span><span>1</span></div>
+                                        <div><span>Capacidad</span><span>10</span></div>
+                                        <div><span>Dificultad</span><span>Fácil</span></div>
+                                    </div>
+                                    <p>
+                                        Caminata guiada por sitios Arqueológicos y apreciación de la naturaleza que nos ofrece el parque.
+                                    </p>
+                                    <div class="bottom-info">
+                                         Región del Maule, Chile. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                       
+                    </div>
+                </div>
+                <hr class="space" />
+            </div>
+        </section>
+        <section class="section-base section-call">
+            <div class="container">
+                <div class="cnt-box cnt-call">
+                    <i class="im-paper-plane"></i>
+                    <div class="caption">
+                        <h2>Reservas y contactos</h2>
+                        <p>
+                            Desea más información sobre otros viajes o desea reservar una excursión especial?
+                        </p>
+                        <a href="treks.html#" class="btn btn-xs">Contactanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <app-footer></app-footer>
