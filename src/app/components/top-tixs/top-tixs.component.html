@@ -6,14 +6,14 @@
           <ng-template carouselSlide *ngFor="let tix of tixs" class="glide__slide">
             <div class="glide__slide" style="padding-left: 10px;padding-right: 10px;">
                 <div class="cnt-box cnt-box-info boxed text-uppercase">
-                            <div class="extra-field">Precio: {{tix.price}}</div>
-                            <a href="treks-single.html" class="img-box"><img src="assets/media/image-5.jpg" alt="" /></a>
+                            <div class="extra-field">Precio: {{tix.precio}}</div>
+                            <a routerLink="/tix-detail/{{tix.id}}" class="img-box"><img src="{{tix.images[0]}}" alt="" /></a>
                             <div class="caption">
                                 
                                 <h2>{{tix.productName}}</h2>
                                 <div class="cnt-info">
-                                    <div><span>Dias</span><span>{{tix.days}}</span></div>
-                                    <div><span>Personas</span><span>{{tix.groupSize}}</span></div>
+                                    <div><span>Dias</span><span>{{tix.cantD}}</span></div>
+                                    <div><span>Personas</span><span>{{tix.capacidad}}</span></div>
                                     <div><span>Dificultad</span><span>{{tix.dificulty}}</span></div>
                                 </div>
                                 <p>{{tix.description}}

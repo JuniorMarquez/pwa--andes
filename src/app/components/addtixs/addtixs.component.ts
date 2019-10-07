@@ -62,6 +62,7 @@ public user : UserInterface ={
       companyName:"",
       address:""
     };
+
 public tix : TixInterface ={
       address:"",
       altitud:"",
@@ -92,15 +93,23 @@ public tix : TixInterface ={
 
   ngOnInit() {
   	 this.ngFormAddtixs = this.formBuilder.group({
-      productName: ['', [Validators.required]],
-      description: ['', [Validators.required]],
       address: ['', [Validators.required]],
+      altitud: ['', [Validators.required]],
+      cantD: ['', [Validators.required]],
+      capacidad: ['', [Validators.required]],
+      category: ['', [Validators.required]],
+      description: ['', [Validators.required]],      
+      desLg: ['', [Validators.required]],      
       dificulty: ['', [Validators.required]],
-       desLg: ['', [Validators.required]],
-       tips: ['', [Validators.required]],
-      category: ['', [Validators.required]]
+      distancia: ['', [Validators.required]],
+      duracion: ['', [Validators.required]],
+      precio:['',[Validators.required]],
+      productName: ['', [Validators.required]],
+      temp: ['', [Validators.required]],
+      tips: ['', [Validators.required]],
       });
   }
+
 
  get fval() {
   return this.ngFormAddtixs.controls;
@@ -153,7 +162,7 @@ public tix : TixInterface ={
   }
   onFileAdded(file: FilePreviewModel) {
     
-    file.fileName="http://18.191.65.29/imgApi/server/local-storage/tixsImages/"+file.fileName;
+    file.fileName="http://18.191.65.29/imgApi2/server/local-storage/tixsImages/"+file.fileName;
     this.myFiles.push(file);
     this.images.push(file.fileName);
 

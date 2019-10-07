@@ -1,459 +1,532 @@
-
-
-
 <section class="dashboard white-bg padd-0 mrg-top-50 " style="min-height: 600px;">
-			<div class="container-fluid" >
-				<div class="">
+	<div class="container-fluid" >
+		<div class="">
+			<div class="">
+				<div class=" mrg-0 mrg-top-20">
 					<div class="">
-						<div class=" mrg-0 mrg-top-20">
-							<div class="">
-								<div class="tr-single-header" style="border: 0px;">
-									<h3 class="dashboard-title">									
-										+ Tour 		
-									</h3>
-								</div>
-								<div class=" "  >
-									<div class="col-md-4 col-xs-12" style="
-										padding: 15px 15px 15px 15px; background:#fafbfd!important; border-radius: 10px;
-										/*margin-left: 30px;*/
-										">
-										<ngx-file-picker
-										    [uploadType]="'multi'"
-										    (validationError)= "onValidationError($event)"
-										    [adapter]="adapter"
-										    [fileExtensions]="['pdf', 'jpeg','jpg', 'png', 'PNG', 'mp4', 'css', 'docx', 'txt']"
-										    (uploadSuccess)="onUploadSuccess($event)"
-										    (removeSuccess)="onRemoveSuccess($event)"
-										    [showeDragDropZone]="true"
-										    [showPreviewContainer]="true"
-
-										    [accept]="'image/*'"
-										    (fileAdded)="onFileAdded($event)">
-										</ngx-file-picker>									
-									</div>
-									<div class="col-md-8 col-xs-12">
-										<form  class="form"[formGroup]="ngFormAddtixs" (ngSubmit) ="sendTix()" >
-											<aw-wizard>
-												<aw-wizard-step stepTitle="1">
-													<div class="row" > 
-														<div class="col-md-8 col-xs-12">
-																<div class="form-group">
-																	<label for="productName">Tour</label>
-																	<input type="text" class="form-control" id="productName" formControlName="productName" placeholder="Nombre del tour" [(ngModel)]="tix.productName"
-																	[ngClass]="{ 'is-invalid': submitted && fval.productName.errors }"
-																	required>
-																	<div *ngIf="submitted && fval.productName.errors" class="invalid-feedback">
-																		<div *ngIf="fval.productName.errors.required" class="errorLabel">
-																		* El nombre del tour es requerido
-																		</div>
-
-																	</div>
-																</div>
-														</div>
-														<div class="col-md-4 col-xs-12">
-															<label>Categoria</label>
-															<div class="sl-box">
-																<select class="form-control wide"   id="category" formControlName="category" placeholder="Category" [(ngModel)]="tix.category"
-																[ngClass]="{ 'is-invalid': submitted && fval.category.errors }"
-																required>
-																	<option>Caminatas</option>
-																	<option>Escaladas</option>
-																	<option>Escursiones</option>
-																	<option>montañismo </option>
-																	<option>Raffting</option>
-																</select>
-															</div>
-															<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
-																	<div *ngIf="fval.category.errors.required" class="errorLabel">
-																	* La categoria es requerida
-																	</div>
-
-																</div>
-														</div>
-														<div class="col-md-6 col-xs-12">
-															<div class="form-group">
-																<label for="description">Descripcion corta</label>
-																<textarea class="form-control height-120" id="description" formControlName="description" placeholder="Descripcion corta" [(ngModel)]="tix.description"
-																[ngClass]="{ 'is-invalid': submitted && fval.description.errors }"
-																required></textarea>
-																<div *ngIf="submitted && fval.description.errors" class="invalid-feedback">
-																	<div *ngIf="fval.description.errors.required" class="errorLabel">
-																	* Esta descripcion es requerida 
-																	</div>
-
-																</div>
-															</div>
-														</div>
-														<div class="col-md-6 col-xs-12">
-															<div class="form-group">
-																<label for="address">Direccion </label>
-																<input type="text" class="form-control" id="address" formControlName="address" placeholder="Direccion" [(ngModel)]="tix.address"
-																[ngClass]="{ 'is-invalid': submitted && fval.address.errors }"
-																required>
-																<div *ngIf="submitted && fval.address.errors" class="invalid-feedback">
-																	<div *ngIf="fval.address.errors.required" class="errorLabel">
-																	* La direccion es requerida
-																	</div>
-
-																</div>
-															</div>
-															<div class="form-group">
-																<label>Dificultad</label>
-															<div class="sl-box">
-																<select class="form-control wide"   id="dificulty" formControlName="dificulty" placeholder="dificulty" [(ngModel)]="tix.dificulty"
-																[ngClass]="{ 'is-invalid': submitted && fval.dificulty.errors }"
-																required>
-																	<option>Facil</option>
-																	<option>Media</option>
-																	<option>Dificil</option>
-																	
-																</select>
-															</div>
-															<div *ngIf="submitted && fval.dificulty.errors" class="invalid-feedback">
-																	<div *ngIf="fval.dificulty.errors.required" class="errorLabel">
-																	* La dificultad es requerida
-																	</div>
-
-																</div>
-
-
-
-															</div>
-														</div>
-														<div class="col-md-12 col-xs-12">
-															<div class="form-group">
-																<label for="notes">Notas o puntos importantes </label>
-																<input type="text" class="form-control" id="notes"  placeholder="Notas" 
-																
-																required>
-																
-															</div>
-														</div>
-														<div class="col-md-4 col-xs-12">
-															<div class="form-group">
-																<label for="dist">Distancia </label>
-																<input type="text" class="form-control" id="dist"  placeholder="Distancia" 
-																
-																required>
-																
-															</div>
-														</div>
-														<div class="col-md-4 col-xs-12">
-															<div class="form-group">
-																<label for="alt">Altura </label>
-																<input type="text" class="form-control" id="alt"  placeholder="Altura" 
-																
-																required>
-																
-															</div>
-														</div>
-														<div class="col-md-4 col-xs-12">
-															<div class="form-group">
-																<label for="temp">Temperatura </label>
-																<input type="text" class="form-control" id="temp"  placeholder="Temperatura" 
-																required>
-																
-															</div>
-														</div>
-														
-													</div>								
-													<button type="button" awNextStep>Siguiente</button>
-												</aw-wizard-step>
-
-												<aw-wizard-step stepTitle="2" awOptionalStep>
-												    <div class="row  "> 
-												      	<div class="col-md-12">
-															<div class="form-group">
-																<label for="desLg">Descripcion larga</label>
-																<textarea class="form-control height-280" id="desLg" formControlName="desLg" placeholder="Descripcion larga" [(ngModel)]="tix.desLg"
-																[ngClass]="{ 'is-invalid': submitted && fval.desLg.errors }"
-																required></textarea>
-																<div *ngIf="submitted && fval.desLg.errors" class="invalid-feedback">
-																	<div *ngIf="fval.desLg.errors.required" class="errorLabel">
-																	* Cuentanos con mayor detalle 
-																	</div>
-
-																</div>
-															</div>
-														
-														
-															<div class="form-group">
-																<label for="tips">Tips o recomendaciones para el tour</label>
-																<textarea class="form-control height-100" id="tips" formControlName="tips" placeholder="Tips" [(ngModel)]="tix.tips"
-																[ngClass]="{ 'is-invalid': submitted && fval.tips.errors }"
-																required></textarea>
-																<div *ngIf="submitted && fval.tips.errors" class="invalid-feedback">
-																	<div *ngIf="fval.tips.errors.required" class="errorLabel">
-																	* Comenta las recomendaciones que AndesProAdventures da a los clientes para este tour en particular
-																	</div>
-
-																</div>
-															</div>
-														</div>									
-													</div>
-												    <button type="button" awPreviousStep>Anterior</button>
-												    <button type="button"  awNextStep>Siguiente</button>
-												 </aw-wizard-step>
-
-												<aw-wizard-step stepTitle="3" awOptionalStep>
-													<div class="row">
-														<div class="col-md-6">
-															<ul class="add-amenities">
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="1">
-																		<label for="1"></label>
-																	</span>Traslado ida y vuelta
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="2">
-																		<label for="2"></label>
-																	</span>Snack durante el traslado
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="3">
-																		<label for="3"></label>
-																	</span>Café, té o chocolate caliente
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="4">
-																		<label for="4"></label>
-																	</span>Fotos durante el viaje
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="5">
-																		<label for="5"></label>
-																	</span>Guia de AndesProAdventures
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="6">
-																		<label for="6"></label>
-																	</span>Seguro de pasajeros
-																</li>
-															
-															</ul>	
-														</div>
-														<div class="col-md-6">
-															<ul class="add-amenities">
-																
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="7">
-																		<label for="7"></label>
-																	</span>Botiquín de primeros auxilios
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="8">
-																		<label for="8"></label>
-																	</span> Todo el equipamiento de Rafting
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="9">
-																		<label for="9"></label>
-																	</span>kayakistas de seguridad
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="0">
-																		<label for="0"></label>
-																	</span>Charla de seguridad y de remado
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="11">
-																		<label for="11"></label>
-																	</span>Lockers para guardar tus pertenencias
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="12">
-																		<label for="12"></label>
-																	</span>Duchas al aire libre y camerinos
-																</li>
-																
-															</ul>	
-														</div>
-													</div>
-											 		<button type="button" awPreviousStep>Anterior</button>
-												    <button type="button"  type="submit"  awNextStep>Siguiente</button>
-												</aw-wizard-step>
-												  
-												<aw-wizard-step stepTitle="4" awOptionalStep>		
-													<div class="row">
-														<div class="col-md-4 col-xs-12">
-															<div class="form-group">
-																<label for="cantD">Cantidad de dias </label>
-																<input type="text" class="form-control" id="cantD"  placeholder="Cantidad de dias" 
-																
-																required>
-																
-															</div>
-														</div>
-														<div class="col-md-4 col-xs-12">
-															<div class="form-group">
-																<label for="precio">Precio </label>
-																<input type="text" class="form-control" id="precio"  placeholder="Precio" 
-																
-																required>
-																
-															</div>
-														</div>
-														<div class="col-md-4 col-xs-12">
-															<div class="form-group">
-																<label for="capacidad">Capacidad </label>
-																<input type="text" class="form-control" id="capacidad"  placeholder="Capacidad" 
-																
-																required>
-																
-															</div>
-														</div>
-
-														<div class="col-md-6">
-															<ul class="add-amenities">
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="1">
-																		<label for="1"></label>
-																	</span>Enero
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="2">
-																		<label for="2"></label>
-																	</span>Febrero
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="3">
-																		<label for="3"></label>
-																	</span>Marzo
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="4">
-																		<label for="4"></label>
-																	</span>Abril
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="5">
-																		<label for="5"></label>
-																	</span>Mayo
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="6">
-																		<label for="6"></label>
-																	</span>Junio
-																</li>
-															
-															</ul>	
-														</div>
-														<div class="col-md-6">
-															<ul class="add-amenities">
-																
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="7">
-																		<label for="7"></label>
-																	</span>Julio
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="8">
-																		<label for="8"></label>
-																	</span> Agosto
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="9">
-																		<label for="9"></label>
-																	</span>Septiembre
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="0">
-																		<label for="0"></label>
-																	</span>Octubre
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="11">
-																		<label for="11"></label>
-																	</span>Noviembre
-																</li>
-																<li>
-																	<span class="custom-checkbox">
-																		<input type="checkbox" id="12">
-																		<label for="12"></label>
-																	</span>Diciembre
-																</li>
-																
-															</ul>	
-														</div>
-													</div>
-											 		<button type="button" awPreviousStep>Anterior</button>
-												    <button type="button"  type="submit"  awNextStep>Siguiente</button>
-												</aw-wizard-step>
-
-												<aw-wizard-step stepTitle="5">
-												    <div class="row">
-
-												    	<div class="col-md-12 text-center" *ngIf="this._uw.errorFormAddtixs">
-															<i class="ti-thumb-down cl-danger font-50"></i>
-															<h3 class="cl-danger">Error!</h3>
-															
-
-																<div *ngIf="submitted && fval.productName.errors" class="invalid-feedback">
-																		<div *ngIf="fval.productName.errors.required" class="errorLabel">
-																		* The Tix name is required and must be a valid name
-																		</div>
-
-																</div>
-
-																<div *ngIf="submitted && fval.description.errors" class="invalid-feedback">
-																	<div *ngIf="fval.description.errors.required" class="errorLabel">
-																	* The Description is required 
-																	</div>
-
-																</div>
-
-																
-
-
-																<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
-																	<div *ngIf="fval.category.errors.required" class="errorLabel">
-																	* The category is required
-																	</div>
-
-																</div>								
-															
-														</div>
-
-
-														<div class="col-md-12 text-center" *ngIf="!this._uw.errorFormAddtixs">
-															<i class="ti-thumb-up cl-success font-50"></i>
-															<h3 class="cl-success">Congratulations!</h3>
-															<p><strong></strong> The registration has been submitted successfully</p>
-														</div>
-													</div>
-												    <button type="button" awPreviousStep>Anterior</button>
-												    <button type="button" (click)="finish()">Finalizar</button>
-												</aw-wizard-step>
-											</aw-wizard>
-										</form>
-									</div>	
-								</div>
+						<div class="tr-single-header" style="border: 0px;">
+							<h3 class="dashboard-title">									
+								+ Tour 		
+							</h3>
+						</div>
+						<div class=" "  >
+							<div class="col-md-4 col-xs-12" style="
+								padding: 15px 15px 15px 15px; background:#fafbfd!important; border-radius: 10px;
+								/*margin-left: 30px;*/
+								">
+								<ngx-file-picker
+								    [uploadType]="'multi'"
+								    (validationError)= "onValidationError($event)"
+								    [adapter]="adapter"
+								    [fileExtensions]="['pdf', 'jpeg','jpg', 'png', 'PNG', 'mp4', 'css', 'docx', 'txt']"
+								    (uploadSuccess)="onUploadSuccess($event)"
+								    (removeSuccess)="onRemoveSuccess($event)"
+								    [showeDragDropZone]="true"
+								    [showPreviewContainer]="true"
+								    [accept]="'image/*'"
+								    (fileAdded)="onFileAdded($event)">
+								</ngx-file-picker>									
 							</div>
+							<div class="col-md-8 col-xs-12">
+								<form  class="form"[formGroup]="ngFormAddtixs" (ngSubmit) ="sendTix()" >
+									<aw-wizard>
+										<aw-wizard-step stepTitle="1">
+											<div class="row" > 
+												<div class="col-md-8 col-xs-12">
+													<div class="form-group">
+														<label for="productName">Tour</label>
+														<input type="text" class="form-control" id="productName" formControlName="productName" placeholder="Nombre del tour" [(ngModel)]="tix.productName"
+														[ngClass]="{ 'is-invalid': submitted && fval.productName.errors }"
+														required>
+														<div *ngIf="submitted && fval.productName.errors" class="invalid-feedback">
+															<div *ngIf="fval.productName.errors.required" class="errorLabel">
+															* El nombre del tour es requerido
+															</div>
+
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4 col-xs-12">
+													<label>Categoria</label>
+													<div class="sl-box">
+														<select class="form-control wide"   id="category" formControlName="category" placeholder="Category" [(ngModel)]="tix.category"
+														[ngClass]="{ 'is-invalid': submitted && fval.category.errors }"
+														required>
+															<option>Caminatas</option>
+															<option>Escaladas</option>
+															<option>Escursiones</option>
+															<option>Montañismo </option>
+															<option>Raffting</option>
+														</select>
+													</div>
+													<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
+															<div *ngIf="fval.category.errors.required" class="errorLabel">
+															* La categoria es requerida
+															</div>
+
+														</div>
+												</div>
+												<div class="col-md-6 col-xs-12">
+													<div class="form-group">
+														<label for="description">Descripcion corta</label>
+														<textarea class="form-control height-120" id="description" formControlName="description" placeholder="Descripcion corta" [(ngModel)]="tix.description"
+														[ngClass]="{ 'is-invalid': submitted && fval.description.errors }"
+														required></textarea>
+														<div *ngIf="submitted && fval.description.errors" class="invalid-feedback">
+															<div *ngIf="fval.description.errors.required" class="errorLabel">
+															* Esta descripcion es requerida 
+															</div>
+
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-xs-12">
+													<div class="form-group">
+														<label for="address">Direccion </label>
+														<input type="text" class="form-control" id="address" formControlName="address" placeholder="Direccion" [(ngModel)]="tix.address"
+														[ngClass]="{ 'is-invalid': submitted && fval.address.errors }"
+														required>
+														<div *ngIf="submitted && fval.address.errors" class="invalid-feedback">
+															<div *ngIf="fval.address.errors.required" class="errorLabel">
+															* La direccion es requerida
+															</div>
+
+														</div>
+													</div>
+													<div class="form-group">
+														<label>Dificultad</label>
+													<div class="sl-box">
+														<select class="form-control wide"   id="dificulty" formControlName="dificulty" placeholder="dificulty" [(ngModel)]="tix.dificulty"
+														[ngClass]="{ 'is-invalid': submitted && fval.dificulty.errors }"
+														required>
+															<option>Facil</option>
+															<option>Media</option>
+															<option>Dificil</option>
+															
+														</select>
+													</div>
+													<div *ngIf="submitted && fval.dificulty.errors" class="invalid-feedback">
+															<div *ngIf="fval.dificulty.errors.required" class="errorLabel">
+															* La dificultad es requerida
+															</div>
+
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12 col-xs-12">
+													<div class="form-group">
+														<label for="notes">Notas o puntos importantes </label>
+														<input type="text" class="form-control" id="notes"  placeholder="Notas" required>
+													</div>
+												</div>
+												<div class="col-md-4 col-xs-12">
+													<div class="form-group">
+														<label for="distancia">Distancia </label>
+														<input type="text" class="form-control" id="distancia"  formControlName="distancia" placeholder="Distancia" [(ngModel)]="tix.distancia"[ngClass]="{ 'is-invalid': submitted && fval.distancia.errors }" required>
+														<div *ngIf="submitted && fval.distancia.errors" class="invalid-feedback">
+															<div *ngIf="fval.distancia.errors.required" class="errorLabel">
+															* La distancia es requerida
+															</div>
+														</div>
+													</div>
+												</div>
+
+
+
+
+												<div class="col-md-4 col-xs-12">
+													<div class="form-group">
+														<label for="altitud">Altitud </label>
+														<input type="text" class="form-control" id="altitud"  formControlName="altitud" placeholder="altitud" [(ngModel)]="tix.altitud"[ngClass]="{ 'is-invalid': submitted && fval.altitud.errors }" required>
+														<div *ngIf="submitted && fval.altitud.errors" class="invalid-feedback">
+															<div *ngIf="fval.altitud.errors.required" class="errorLabel">
+															* La altitud es requerida
+															</div>
+														</div>
+													</div>
+												</div>
+
+
+
+												<div class="col-md-4 col-xs-12">
+													<div class="form-group">
+														<label for="temp">Temperatura </label>
+														<input type="text" class="form-control" id="temp"  formControlName="temp" placeholder="temp" [(ngModel)]="tix.temp"[ngClass]="{ 'is-invalid': submitted && fval.temp.errors }" required>
+														<div *ngIf="submitted && fval.temp.errors" class="invalid-feedback">
+															<div *ngIf="fval.temp.errors.required" class="errorLabel">
+															* La Temperatura es requerida
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>								
+											<button type="button" awNextStep>Siguiente</button>
+										</aw-wizard-step>
+
+										<aw-wizard-step stepTitle="2" awOptionalStep>
+										    <div class="row  "> 
+										      	<div class="col-md-12">
+													<div class="form-group">
+														<label for="desLg">Descripcion larga</label>
+														<textarea class="form-control height-280" id="desLg" formControlName="desLg" placeholder="Descripcion larga" [(ngModel)]="tix.desLg"
+														[ngClass]="{ 'is-invalid': submitted && fval.desLg.errors }"
+														required></textarea>
+														<div *ngIf="submitted && fval.desLg.errors" class="invalid-feedback">
+															<div *ngIf="fval.desLg.errors.required" class="errorLabel">
+															* Cuentanos con mayor detalle 
+															</div>
+														</div>
+													</div>
+												
+													<div class="form-group">
+														<label for="tips">Tips o recomendaciones para el tour</label>
+														<textarea class="form-control height-100" id="tips" formControlName="tips" placeholder="Tips" [(ngModel)]="tix.tips"
+														[ngClass]="{ 'is-invalid': submitted && fval.tips.errors }"
+														required></textarea>
+														<div *ngIf="submitted && fval.tips.errors" class="invalid-feedback">
+															<div *ngIf="fval.tips.errors.required" class="errorLabel">
+															* Comenta las recomendaciones que AndesProAdventures da a los clientes para este tour en particular
+															</div>
+														</div>
+													</div>
+												</div>									
+											</div>
+										    <button type="button" awPreviousStep>Anterior</button>
+										    <button type="button"  awNextStep>Siguiente</button>
+										 </aw-wizard-step>
+
+										<aw-wizard-step stepTitle="3" awOptionalStep>
+											<div class="row">
+												<div class="col-md-6">
+													<ul class="add-amenities">
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="1">
+																<label for="1"></label>
+															</span>Traslado ida y vuelta
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="2">
+																<label for="2"></label>
+															</span>Snack durante el traslado
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="3">
+																<label for="3"></label>
+															</span>Café, té o chocolate caliente
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="4">
+																<label for="4"></label>
+															</span>Fotos durante el viaje
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="5">
+																<label for="5"></label>
+															</span>Guia de AndesProAdventures
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="6">
+																<label for="6"></label>
+															</span>Seguro de pasajeros
+														</li>
+													
+													</ul>	
+												</div>
+												<div class="col-md-6">
+													<ul class="add-amenities">
+														
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="7">
+																<label for="7"></label>
+															</span>Botiquín de primeros auxilios
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="8">
+																<label for="8"></label>
+															</span> Todo el equipamiento de Rafting
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="9">
+																<label for="9"></label>
+															</span>kayakistas de seguridad
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="0">
+																<label for="0"></label>
+															</span>Charla de seguridad y de remado
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="11">
+																<label for="11"></label>
+															</span>Lockers para guardar tus pertenencias
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="12">
+																<label for="12"></label>
+															</span>Duchas al aire libre y camerinos
+														</li>
+														
+													</ul>	
+												</div>
+											</div>
+									 		<button type="button" awPreviousStep>Anterior</button>
+										    <button type="button"  type="submit"  awNextStep>Siguiente</button>
+										</aw-wizard-step>
+										  
+										<aw-wizard-step stepTitle="4" awOptionalStep>		
+											<div class="row">
+												<div class="col-md-3 col-xs-12">
+                          							<div class="form-group">
+							                            <label for="cantD">Cant. de Dias </label>
+							                            <input type="text" class="form-control" id="cantD"  formControlName="cantD" placeholder="cantD" [(ngModel)]="tix.cantD"[ngClass]="{ 'is-invalid': submitted && fval.cantD.errors }" required>
+							                            <div *ngIf="submitted && fval.cantD.errors" class="invalid-feedback">
+							                              <div *ngIf="fval.cantD.errors.required" class="errorLabel">
+							                              * La cantidad de dias es requerida
+							                              </div>
+							                            </div>
+						                         	</div>
+						                        </div>
+												<div class="col-md-3 col-xs-12">
+                          							<div class="form-group">
+							                            <label for="precio">Precio </label>
+							                            <input type="text" class="form-control" id="precio"  formControlName="precio" placeholder="precio" [(ngModel)]="tix.precio"[ngClass]="{ 'is-invalid': submitted && fval.precio.errors }" required>
+							                            <div *ngIf="submitted && fval.precio.errors" class="invalid-feedback">
+							                              <div *ngIf="fval.precio.errors.required" class="errorLabel">
+							                              * El precio es requerido
+							                              </div>
+							                            </div>
+						                         	</div>
+						                        </div>
+												<div class="col-md-3 col-xs-12">
+                          							<div class="form-group">
+							                            <label for="capacidad">Capacidad </label>
+							                            <input type="text" class="form-control" id="capacidad"  formControlName="capacidad" placeholder="cant. personas" [(ngModel)]="tix.capacidad"[ngClass]="{ 'is-invalid': submitted && fval.capacidad.errors }" required>
+							                            <div *ngIf="submitted && fval.capacidad.errors" class="invalid-feedback">
+							                              <div *ngIf="fval.capacidad.errors.required" class="errorLabel">
+							                              * La capacidad es requerida
+							                              </div>
+							                            </div>
+						                         	</div>
+						                        </div>
+						                        <div class="col-md-3 col-xs-12">
+						                        	<div class="form-group">
+														<label>Duracion</label>
+													<div class="sl-box">
+														<select class="form-control wide"   id="duracion" formControlName="duracion" placeholder="duracion" [(ngModel)]="tix.duracion"
+														[ngClass]="{ 'is-invalid': submitted && fval.duracion.errors }"
+														required>
+															<option>Dia Completo</option>
+															<option>Medio dia</option>				
+														</select>
+													</div>
+													<div *ngIf="submitted && fval.duracion.errors" class="invalid-feedback">
+															<div *ngIf="fval.duracion.errors.required" class="errorLabel">
+															* La duracion es requerida
+															</div>
+
+														</div>
+													</div>
+						                        	
+						                        </div>
+
+												<div class="col-md-6">
+													<ul class="add-amenities">
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="1">
+																<label for="1"></label>
+															</span>Enero
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="2">
+																<label for="2"></label>
+															</span>Febrero
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="3">
+																<label for="3"></label>
+															</span>Marzo
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="4">
+																<label for="4"></label>
+															</span>Abril
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="5">
+																<label for="5"></label>
+															</span>Mayo
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="6">
+																<label for="6"></label>
+															</span>Junio
+														</li>
+													
+													</ul>	
+												</div>
+												<div class="col-md-6">
+													<ul class="add-amenities">
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="7">
+																<label for="7"></label>
+															</span>Julio
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="8">
+																<label for="8"></label>
+															</span> Agosto
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="9">
+																<label for="9"></label>
+															</span>Septiembre
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="0">
+																<label for="0"></label>
+															</span>Octubre
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="11">
+																<label for="11"></label>
+															</span>Noviembre
+														</li>
+														<li>
+															<span class="custom-checkbox">
+																<input type="checkbox" id="12">
+																<label for="12"></label>
+															</span>Diciembre
+														</li>
+													</ul>	
+												</div>
+											</div>
+									 		<button type="button" awPreviousStep>Anterior</button>
+										    <button type="button"  type="submit"  awNextStep>Siguiente</button>
+										</aw-wizard-step>
+
+										<aw-wizard-step stepTitle="5">
+										    <div class="row">
+
+										    	<div class="col-md-12 text-center" *ngIf="this._uw.errorFormAddtixs">
+													<i class="ti-thumb-down cl-danger font-50"></i>
+													<h3 class="cl-danger">Error!</h3>
+														<div *ngIf="submitted && fval.altitud.errors" class="invalid-feedback">
+															<div *ngIf="fval.altitud.errors.required" class="errorLabel">
+															* La altitud es requerida
+															</div>
+														</div>
+														<div *ngIf="submitted && fval.address.errors" class="invalid-feedback">
+															<div *ngIf="fval.address.errors.required" class="errorLabel">
+															* La direccion es requerida
+															</div>
+														</div>
+														<div *ngIf="submitted && fval.cantD.errors" class="invalid-feedback">
+															<div *ngIf="fval.cantD.errors.required" class="errorLabel">
+															* La Cantidad de dias es requerida
+															</div>
+														</div>
+														<div *ngIf="submitted && fval.capacidad.errors" class="invalid-feedback">
+															<div *ngIf="fval.capacidad.errors.required" class="errorLabel">
+															* La capacidad es requerida
+															</div>
+														</div>
+
+														<div *ngIf="submitted && fval.productName.errors" class="invalid-feedback">
+																<div *ngIf="fval.productName.errors.required" class="errorLabel">
+																* El nombre del tour es requerido
+																</div>
+														</div>
+
+														<div *ngIf="submitted && fval.description.errors" class="invalid-feedback">
+															<div *ngIf="fval.description.errors.required" class="errorLabel">
+															* La descripcion corta es requerida
+															</div>
+														</div>
+
+														<div *ngIf="submitted && fval.desLg.errors" class="invalid-feedback">
+															<div *ngIf="fval.desLg.errors.required" class="errorLabel">
+															* La descripcion larga es requerida
+															</div>
+														</div>
+
+
+														<div *ngIf="submitted && fval.category.errors" class="invalid-feedback">
+															<div *ngIf="fval.category.errors.required" class="errorLabel">
+															* La categoria es requerida
+															</div>
+														</div>	
+														<div *ngIf="submitted && fval.dificulty.errors" class="invalid-feedback">
+															<div *ngIf="fval.dificulty.errors.required" class="errorLabel">
+															* La dificultad es requerida
+															</div>
+														</div>	
+
+														<div *ngIf="submitted && fval.distancia.errors" class="invalid-feedback">
+															<div *ngIf="fval.distancia.errors.required" class="errorLabel">
+															* La distancia es requerida
+															</div>
+														</div>
+														<div *ngIf="submitted && fval.duracion.errors" class="invalid-feedback">
+															<div *ngIf="fval.duracion.errors.required" class="errorLabel">
+															* La duracion es requerida
+															</div>
+
+														</div>	
+														<div *ngIf="submitted && fval.precio.errors" class="invalid-feedback">
+															<div *ngIf="fval.precio.errors.required" class="errorLabel">
+															* El precio es requerido
+															</div>
+
+														</div>	
+														<div *ngIf="submitted && fval.temp.errors" class="invalid-feedback">
+															<div *ngIf="fval.temp.errors.required" class="errorLabel">
+															* La temperatura es requerida
+															</div>
+
+														</div>							
+													
+												</div>
+
+
+												<div class="col-md-12 text-center" *ngIf="!this._uw.errorFormAddtixs">
+													<i class="ti-thumb-up cl-success font-50"></i>
+													<h3 class="cl-success">Congratulations!</h3>
+													<p><strong></strong> The registration has been submitted successfully</p>
+												</div>
+											</div>
+										    <button type="button" awPreviousStep>Anterior</button>
+										    <button type="button" (click)="finish()">Finalizar</button>
+										</aw-wizard-step>
+									</aw-wizard>
+								</form>
+							</div>	
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
 </section>

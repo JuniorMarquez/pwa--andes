@@ -49,7 +49,7 @@
                     	 <div class="maso-item cat-1" *ngFor="let tix of tixs" >
                             <div class="cnt-box cnt-box-info boxed" >
                                 <div class="extra-field">CLP ${{tix.precio}}</div>
-                                <a routerLink="/tix-detail/{{tix.id}}" class="img-box"><img src="assets/media/image-5.jpg" alt="" /></a>
+                                <a routerLink="/tix-detail/{{tix.id}}" class="img-box"><img src="{{tix.images[0]}}" alt="" /></a>
                                 <div class="caption">
                                     <h2>{{tix.productName}}</h2>
                                     <div class="cnt-info">
