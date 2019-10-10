@@ -31,7 +31,8 @@ export class DemoFilePickerAdapter extends FilePickerAdapter {
       map( (res: HttpEvent<any>) => {
           if (res.type === HttpEventType.Response) {
          this._uw.file=res.body.result.files.file;
-         // console.log("Nombre: ",this._uw.file);
+         // console.log("Nombre: ",this._uw.file[0].name);
+         this._uw.images.push('http://18.191.65.29/imgApi2/server/local-storage/tixsImages/'+this._uw.file[0].name);
           return res.body.id.toString();
        
         } else if (res.type ===  HttpEventType.UploadProgress) {

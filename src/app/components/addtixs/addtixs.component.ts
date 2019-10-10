@@ -127,7 +127,7 @@ public tix : TixInterface ={
       this.tix = this.ngFormAddtixs.value;
       this.tix.userd="a"+val;
       this.tix.status="activated";
-      this.tix.images=this.images;
+      this.tix.images=this._uw.images;
       return this.dataApiService.saveTixFree(this.tix)
         .subscribe(
          // tix => this.router.navigate(['/mytixs'])
@@ -155,7 +155,8 @@ public tix : TixInterface ={
   }
   onUploadSuccess(e: FilePreviewModel) {
    // console.log(e);
-  console.log(this.myFiles)
+  // console.log(this.myFiles);
+  this.images=this._uw.file;
   }
   onRemoveSuccess(e: FilePreviewModel) {
     console.log(e);
@@ -164,7 +165,7 @@ public tix : TixInterface ={
     
     file.fileName="http://18.191.65.29/imgApi2/server/local-storage/tixsImages/"+file.fileName;
     this.myFiles.push(file);
-    this.images.push(file.fileName);
+    // this.images.push(file.fileName);
 
   }
 

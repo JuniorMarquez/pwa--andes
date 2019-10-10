@@ -28,6 +28,7 @@ isLogged:boolean=false;
 	tixs:any[]=[];
 	queue:any[]=[];
 	file:any[]=[];
+	images:any[]=[];
   constructor() { }
 }
 
