@@ -57,6 +57,9 @@ import {DataApiService} from './services/data-api.service';
 import {ScrollTopService} from './services/scroll-top.service';
 import {UserWService} from './services/user-w.service';
 
+import {IpbucketService} from './services/ipbucket.service';
+
+
 
 
 //ANIMATIONS
@@ -76,6 +79,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatTableModule} from '@angular/material/table';
 import { TreksComponent } from './components/treks/treks.component';
 import { NavComponent } from './components/nav/nav.component';
+import { BookdetailComponent } from './components/bookdetail/bookdetail.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -117,7 +121,8 @@ import { NavComponent } from './components/nav/nav.component';
     AlltixsleftComponent,
     AboutComponent,
     TreksComponent,
-    NavComponent
+    NavComponent,
+    BookdetailComponent
   ],
   imports: [
     BrowserModule,
@@ -152,7 +157,8 @@ import { NavComponent } from './components/nav/nav.component';
     TixsService,
     DataApiService,
     ScrollTopService,
-    UserWService
+    UserWService,
+    IpbucketService
       ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

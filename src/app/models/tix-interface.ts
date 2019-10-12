@@ -19,4 +19,5 @@ export interface TixInterface{
 	temp?:string;
 	tips?:string;
 	userd?:string;
+	personas?:number;
 }

@@ -7,6 +7,9 @@ import { isError } from "util";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ConfirmEqualValidatorDirective } from '../../confirm-equal-validator.directive';
 import { UserWService } from "../../services/user-w.service";
+import { DataApiService } from "../../services/data-api.service";
+
+DataApiService
 
 declare var NgForm:any;
 //comentario
@@ -21,6 +24,7 @@ export class LoginComponent implements OnInit {
   submitted = false;
 
   constructor(
+    public dataApi:DataApiService,
     public _uw:UserWService,
     private formBuilder: FormBuilder, 
     private authService: AuthService, 
@@ -36,7 +40,7 @@ export class LoginComponent implements OnInit {
   public isLogged =false;
   
   ngOnInit() {
-    
+    // this.dataApi.setips();
     this.ngFormLogin = this.formBuilder.group({
       email: ['', [Validators.required,Validators.email]],
       password: ['', [Validators.required]]

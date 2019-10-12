@@ -18,13 +18,13 @@ export class TixsService {
  		//this.loadInfo2();  
   	}
   public loadInfo2(){
-  	this.http.get("https://www.thetixsapp.com:1350/product")
+  	this.http.get("http://192.168.43.12:1350/product")
     .subscribe(data =>{
   	  this.loadedProducts=true;
   	  this.AllLoadedProducts=data.json();
   	  this.products=this.AllLoadedProducts.results;   
       for (var i=0;i<this.products.length;i++){
-        this.products[i].image="https://www.thetixsapp.com/web/"+this.products[i].images[0];
+        this.products[i].image="http://192.168.43.12/web/"+this.products[i].images[0];
         this.products[i].imagesG=[];
         if(this.products[i].images.length<2){
           this.products[i].image="https://www.thetixs.com/assets/images/logo/logo-black-color-1.png";
@@ -32,7 +32,7 @@ export class TixsService {
         }
         else{
           for (var j=0;j<this.products[i].images.length;j++){
-            this.products[i].imagesG[j]="https://www.thetixsapp.com/web/"+this.products[i].images[j];
+            this.products[i].imagesG[j]="http://192.168.43.12/web/"+this.products[i].images[j];
           }
         }
         this.products[i].categoryAll=[];
@@ -49,7 +49,7 @@ export class TixsService {
       this.products=this.productsFil;
     })
     
-      this.http.get("https://www.thetixsapp.com:1350/category").subscribe(data =>{
+      this.http.get("http://192.168.43.12:1350/category").subscribe(data =>{
       this.loadedCategorys=true;
       this.AllLoadedCategorys=data.json();
       this.categorys=[];

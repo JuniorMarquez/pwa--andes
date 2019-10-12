@@ -24,7 +24,7 @@ export class DemoFilePickerAdapter extends FilePickerAdapter {
   public uploadFile(fileItem: FilePreviewModel) {
     const form = new FormData();
     form.append('file', fileItem.file);
-    const api = 'https://www.thetixsapp.com:3004/api/containers/tixsImages/upload';
+    const api = 'http://192.168.43.12:3004/api/containers/tixsImages/upload';
     const req = new HttpRequest('POST', api, form, {reportProgress: true});
     return this.http.request(req)
     .pipe(
@@ -44,7 +44,7 @@ export class DemoFilePickerAdapter extends FilePickerAdapter {
       );
   }
     public removeFile(fileItem): Observable<any> {
-    const removeApi = 'https://www.thetixsapp.com:3004/api/containers/tixsImages/upload';
+    const removeApi = 'http://192.168.43.12:3004/api/containers/tixsImages/upload';
     return this.http.post(removeApi, {});
     }
 }
