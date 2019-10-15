@@ -80,6 +80,7 @@ import {MatTableModule} from '@angular/material/table';
 import { TreksComponent } from './components/treks/treks.component';
 import { NavComponent } from './components/nav/nav.component';
 import { BookdetailComponent } from './components/bookdetail/bookdetail.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -122,7 +123,8 @@ import { BookdetailComponent } from './components/bookdetail/bookdetail.componen
     AboutComponent,
     TreksComponent,
     NavComponent,
-    BookdetailComponent
+    BookdetailComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

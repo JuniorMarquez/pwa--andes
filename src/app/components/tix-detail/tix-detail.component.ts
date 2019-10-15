@@ -92,11 +92,18 @@ public tix:TixInterface= {
       this.book.monto='2000';
       this.book.fecha=this.selDate.date+" /"+(this.selDate.month+1)+" /"+this.selDate.year;
       // this.tix.images=this._uw.images;
+     // this._uw.book=this.book;
       return this.dataApi.saveBook(this.book)
         .subscribe(
          // tix => this.router.navigate(['/mytixs'])
         );
  }
+ // public sendMail(){
+ //     return this.dataApi.senMail(this.book)
+ //        .subscribe(
+ //         // tix => this.router.navigate(['/mytixs'])
+ //        )
+ // }
 
    public loadScript() {
       console.log("preparing to load...");

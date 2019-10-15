@@ -30,8 +30,10 @@
                 </li> -->
 
                    <li><a routerLink="about" style="font-weight: 600;" >QUIENES SOMOS</a></li>
+                 
 
                    <li><a routerLink="treks" style="font-weight: 600;" >TOURS</a></li>
+                     <li><a routerLink="contacto" style="font-weight: 600;" >CONTACTO</a></li>
                    <li *ngIf="this._uw.isLogged && this._uw.partner || this._uw.admin"><a routerLink="mytixs" style="font-weight: 600;color: yellow !important;" >DASHBOARD</a></li>
                    
 
@@ -47,7 +49,7 @@
             <ul class="nav navbar-nav navbar-right"  *ngIf="!this._uw.isLogged" [hidden]="this._uw.isLogged">
 
           <!--   <li class="br-right"><a  routerLink="login"  style="font-family: moderna; background-color: yellow; color:black;"><i class="login-icon ti-user"></i>RESERVAR</a></li> -->
-            <li class="sign-up"><a class="btn-signup red-btn" routerLink="login" style="font-family: moderna;background-color: yellow; color: black;"  ><span class="ti-calendar"></span>RESERVAR</a></li> 
+           <!--  <li class="sign-up"><a class="btn-signup red-btn" routerLink="login" style="font-family: moderna;background-color: yellow; color: black;"  ><span class="ti-calendar"></span>RESERVAR</a></li>  -->
 
           </ul>
           

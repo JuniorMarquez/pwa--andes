@@ -29,6 +29,7 @@ isLogged:boolean=false;
 	queue:any[]=[];
 	file:any[]=[];
 	images:any[]=[];
+	// book:any[]=[];
   constructor() { }
 }
 

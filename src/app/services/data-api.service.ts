@@ -30,102 +30,108 @@ export class DataApiService {
   		});
 
   	getBookPending(){
-		const url_api='http://192.168.43.12:3003/api/book?filter[where][status]=pending';
+		const url_api='https://www.thetixsapp.com:3003/api/book?filter[where][status]=pending';
 		return (this.books = this.http.get(url_api));
 	}
 
 
 	getAllTixs(){
-		const url_api = 'http://192.168.43.12:3003/api/product?filter[where][status]=activated';
+		const url_api = 'https://www.thetixsapp.com:3003/api/product?filter[where][status]=activated';
 		return this.http.get(url_api);
 
 	}
 	getTixById(id:string){
 		//console.log(id);
 		let indice = id;
-		const url_api=`http://192.168.43.12:3003/api/product/${indice}`;
+		const url_api=`https://www.thetixsapp.com:3003/api/product/${indice}`;
 		this.tix = this.http.get(url_api);
 		return (this.tix);
 	}
 	getCardById(id:string){
 		let indice = id;
-		const url_api=`http://192.168.43.12:3003/api/card/${indice}`;
+		const url_api=`https://www.thetixsapp.com:3003/api/card/${indice}`;
 		this.card = this.http.get(url_api);
 		return (this.card);
 	}
 	getPending(){
-		const url_api='http://192.168.43.12:3003/api/product?filter[where][status]=pending';
+		const url_api='https://www.thetixsapp.com:3003/api/product?filter[where][status]=pending';
 		return (this.tixs = this.http.get(url_api));
 	}
 	getUsersPending(){
-		const url_api='http://192.168.43.12:3003/api/card?filter[where][status]=pending';
+		const url_api='https://www.thetixsapp.com:3003/api/card?filter[where][status]=pending';
 		return (this.cards = this.http.get(url_api));
 	}
 
 	getActivePartners(){
-		const url_api='http://192.168.43.12:3003/api/card?filter[where][and][0][status]=active&filter[where][and][1][type]=partnerType';
+		const url_api='https://www.thetixsapp.com:3003/api/card?filter[where][and][0][status]=active&filter[where][and][1][type]=partnerType';
 		return (this.cards = this.http.get(url_api));
 	}
 	getPendingPartners(){
-		const url_api='http://192.168.43.12:3003/api/card?filter[where][and][0][status]=pending&filter[where][and][1][type]=partnerType';
+		const url_api='https://www.thetixsapp.com:3003/api/card?filter[where][and][0][status]=pending&filter[where][and][1][type]=partnerType';
 		return (this.cards = this.http.get(url_api));
 	}
 
 	getActiveAffiliates(){
-		const url_api='http://192.168.43.12:3003/api/card?filter[where][and][0][status]=active&filter[where][and][1][type]=affiliateType';
+		const url_api='https://www.thetixsapp.com:3003/api/card?filter[where][and][0][status]=active&filter[where][and][1][type]=affiliateType';
 		return (this.cards = this.http.get(url_api));
 	}
 	getPendingAffiliates(){
-		const url_api='http://192.168.43.12:3003/api/card?filter[where][and][0][status]=pending&filter[where][and][1][type]=affiliateType';
+		const url_api='https://www.thetixsapp.com:3003/api/card?filter[where][and][0][status]=pending&filter[where][and][1][type]=affiliateType';
 		return (this.cards = this.http.get(url_api));
 	}
 
 
 	saveTix(tix :TixInterface){
 		let token = this.authService.getToken();
-		const url_api='http://192.168.43.12:3003/api/product?access_token${token}';
+		const url_api='https://www.thetixsapp.com:3003/api/product?access_token${token}';
 		return this.http
 		.post<TixInterface>(url_api, tix,{headers: this.headers})
 		.pipe(map(data => data));
 	}
 	saveTixFree(tix :TixInterface){
 	//	let token = this.authService.getToken();
-		const url_api='http://192.168.43.12:3003/api/product';
+		const url_api='https://www.thetixsapp.com:3003/api/product';
 		return this.http
 		.post<TixInterface>(url_api, tix,{headers: this.headers})
 		.pipe(map(data => data));
 	}
 	updateTix(tix: TixInterface){
 		let token = this.authService.getToken();
-		const url_api='http://192.168.43.12:3003/api/product?access_token${token}';
+		const url_api='https://www.thetixsapp.com:3003/api/product?access_token${token}';
 		return this.http
 		.put<TixInterface>(url_api, tix,{headers: this.headers})
 		.pipe(map(data => data));
 	}
 	deleteTix(id: string){
 		let token = this.authService.getToken();
-		const url_api='http://192.168.43.12:3003/api/product?access_token${token}';
+		const url_api='https://www.thetixsapp.com:3003/api/product?access_token${token}';
 		return this.http
 		.delete<TixInterface>(url_api, {headers: this.headers})
 		.pipe(map(data => data));
 	}
 	getCards(id:string){
 		let indice = id;
-		const url_api = "http://192.168.43.12:3003/api/card?filter[where][userd]=a"+indice;
+		const url_api = "https://www.thetixsapp.com:3003/api/card?filter[where][userd]=a"+indice;
 		return this.http.get(url_api);
 	}
 	saveCard(card: CardInterface){
 		//const token = this.authService.getToken();
 		//console.log(token);
-		const url_api='http://192.168.43.12:3003/api/card';
+		const url_api='https://www.thetixsapp.com:3003/api/card';
 		return this.http
 		.post<CardInterface>(url_api, card)
 		.pipe(map(data => data));
 	}
 	saveBook(book: BookInterface){
-		const url_api='http://192.168.43.12:3003/api/book';
+		const url_api='https://www.thetixsapp.com:3003/api/book';
 		return this.http
 		.post<BookInterface>(url_api, book)
+		.pipe(map(data => data));
+	}
+	senMail(book){
+		const url_api='http://localhost/formulario';
+		return this.http
+		.post(url_api, book)
 		.pipe(map(data => data));
 	}
 

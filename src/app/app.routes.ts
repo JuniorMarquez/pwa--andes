@@ -20,7 +20,8 @@ import {
 	AlltixslistComponent,
 	AlltixsleftComponent,
 	AboutComponent,
-	TreksComponent
+	TreksComponent,
+	ContactoComponent
 	}from "./components/index.paginas";
 
 	import { AuthGuard } from './guards/auth.guard';
@@ -46,7 +47,8 @@ const app_routes: Routes = [
 	{path:'alltixslist',component:AlltixslistComponent},
 	{path:'alltixsleft',component:AlltixsleftComponent},
 	{path:'about',component:AboutComponent},	
-	{path:'treks',component:TreksComponent},	
+	{path:'treks',component:TreksComponent},
+	{path:'contacto',component:ContactoComponent},	
 	{path:'**',pathMatch:'full',redirectTo:''}
 	];
 	export const app_routing = RouterModule.forRoot(app_routes);
