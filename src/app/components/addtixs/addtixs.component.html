@@ -323,24 +323,23 @@
 						                        <div class="col-md-3 col-xs-12">
 						                        	<div class="form-group">
 														<label>Duracion</label>
-													<div class="sl-box">
-														<select class="form-control wide"   id="duracion" formControlName="duracion" placeholder="duracion" [(ngModel)]="tix.duracion"
-														[ngClass]="{ 'is-invalid': submitted && fval.duracion.errors }"
-														required>
-															<option>Dia Completo</option>
-															<option>Medio dia</option>				
-														</select>
-													</div>
-													<div *ngIf="submitted && fval.duracion.errors" class="invalid-feedback">
-															<div *ngIf="fval.duracion.errors.required" class="errorLabel">
-															* La duracion es requerida
-															</div>
-
+														<div class="sl-box">
+															<select class="form-control wide"   id="duracion" formControlName="duracion" placeholder="duracion" [(ngModel)]="tix.duracion"
+															[ngClass]="{ 'is-invalid': submitted && fval.duracion.errors }"
+															required>
+																<option>Dia Completo</option>
+																<option>Medio dia</option>				
+															</select>
 														</div>
-													</div>
-						                        	
-						                        </div>
+														<div *ngIf="submitted && fval.duracion.errors" class="invalid-feedback">
+																<div *ngIf="fval.duracion.errors.required" class="errorLabel">
+																* La duracion es requerida
+																</div>
 
+															</div>
+														</div>
+						                        </div>
+<!-- 
 												<div class="col-md-6">
 													<ul class="add-amenities">
 														<li>
@@ -421,7 +420,7 @@
 															</span>Diciembre
 														</li>
 													</ul>	
-												</div>
+												</div> -->
 											</div>
 									 		<button type="button" awPreviousStep>Anterior</button>
 										    <button type="button"  type="submit"  awNextStep>Siguiente</button>

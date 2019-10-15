@@ -16,7 +16,7 @@ export class TreksComponent implements OnInit {
     private dataApi: DataApiService,
     public _uw:UserWService
     ) { }
-     private tixs:TixInterface;
+     public tixs:TixInterface;
   loadAPI = null;
   url = "assets/themekit/scripts/glide.min.js";
   url2 = "assets/themekit/scripts/parallax.min.js";

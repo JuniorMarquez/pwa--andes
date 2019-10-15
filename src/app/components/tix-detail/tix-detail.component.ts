@@ -7,8 +7,10 @@ import { TixInterface } from '../../models/tix-interface';
 import { BookInterface } from '../../models/book-interface'; 
 
 import { UserWService } from "../../services/user-w.service";
-import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
 import { ConfirmEqualValidatorDirective } from '../../confirm-equal-validator.directive';
+import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
+
+import { HttpClient } from  '@angular/common/http';
 
 import { ActivatedRoute, Params} from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
@@ -122,7 +124,6 @@ public selDate = { date:1, month:1, year:1 };
       nombre: ['', [Validators.required]],
       email: ['', [Validators.required]],
       cant: ['', [Validators.required]],
-     
       });
 
 
@@ -141,6 +142,9 @@ public selDate = { date:1, month:1, year:1 };
 //  	const tix_id: string=this.route.snapshot.paramMap.get('id');
   	this.getDetails(this.route.snapshot.paramMap.get('id'));
 
+  }
+   get fval() {
+  return this.ngFormSendBook.controls;
   }
 getDetails(id: string){
 	this.dataApi.getTixById(id).subscribe(tix => (this.tix = tix));
