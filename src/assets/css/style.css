@@ -2556,7 +2556,7 @@ nav.navbar.bootsnav ul.nav>li.active>a,nav.navbar.bootsnav ul.nav>li>a:hover {
 }
 
 nav.navbar.bootsnav li.dropdown a:focus,nav.navbar.bootsnav li.dropdown a:hover,nav.navbar.bootsnav li.dropdown ul.dropdown-menu>li a:focus,nav.navbar.bootsnav li.dropdown ul.dropdown-menu>li a:hover {
-    color: #f7ff00!important
+    color: blue!important
 }
 
 nav.navbar.bootsnav ul.nav>li>a.btn-signup.red-btn {

@@ -195,7 +195,7 @@
 										    <button type="button"  awNextStep>Siguiente</button>
 										 </aw-wizard-step>
 
-										<aw-wizard-step stepTitle="3" awOptionalStep>
+										<!-- <aw-wizard-step stepTitle="3" awOptionalStep>
 											<div class="row">
 												<div class="col-md-6">
 													<ul class="add-amenities">
@@ -283,9 +283,9 @@
 											</div>
 									 		<button type="button" awPreviousStep>Anterior</button>
 										    <button type="button"  type="submit"  awNextStep>Siguiente</button>
-										</aw-wizard-step>
+										</aw-wizard-step> -->
 										  
-										<aw-wizard-step stepTitle="4" awOptionalStep>		
+										<aw-wizard-step stepTitle="3" awOptionalStep>		
 											<div class="row">
 												<div class="col-md-3 col-xs-12">
                           							<div class="form-group">
@@ -426,12 +426,12 @@
 										    <button type="button"  type="submit"  awNextStep>Siguiente</button>
 										</aw-wizard-step>
 
-										<aw-wizard-step stepTitle="5">
+										<aw-wizard-step stepTitle="4">
 										    <div class="row">
 
 										    	<div class="col-md-12 text-center" *ngIf="this._uw.errorFormAddtixs">
 													<i class="ti-thumb-down cl-danger font-50"></i>
-													<h3 class="cl-danger">Error!</h3>
+													<h3 class="cl-danger">Se han encontrado los siguientes errores!</h3>
 														<div *ngIf="submitted && fval.altitud.errors" class="invalid-feedback">
 															<div *ngIf="fval.altitud.errors.required" class="errorLabel">
 															* La altitud es requerida
@@ -512,8 +512,8 @@
 
 												<div class="col-md-12 text-center" *ngIf="!this._uw.errorFormAddtixs">
 													<i class="ti-thumb-up cl-success font-50"></i>
-													<h3 class="cl-success">Congratulations!</h3>
-													<p><strong></strong> The registration has been submitted successfully</p>
+													<h3 class="cl-success">En hora buena!</h3>
+													<p><strong></strong>La informacion del tour se ha registrado con exito.</p>
 												</div>
 											</div>
 										    <button type="button" awPreviousStep>Anterior</button>
