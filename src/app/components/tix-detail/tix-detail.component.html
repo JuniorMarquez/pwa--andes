@@ -128,7 +128,7 @@
 	                        <div class="section-base1 section-color1">
 	                            <div class="container"> 
 	                              <div class="row1">
-	                              	<form  class="form"[formGroup]="ngFormSendBook" (ngSubmit) ="sendBook()" >
+	                              	<form  class="form"[formGroup]="ngFormSendBook"  >
 	                               <!--  <form data-anima="fade-in" data-time="1000"	 class="form-box form-ajax checkbox-bottom-right " method="post" > -->
 	                                    <div class="row success-bg">
 	                                     
@@ -168,7 +168,7 @@
 															<option>15</option>
 														</select>
 	                                        </div>
-	                                        <div *ngIf="submitted && fval.categorycant.errors" class="invalid-feedback">
+	                                        <div *ngIf="submitted && fval.cant.errors" class="invalid-feedback">
 															<div *ngIf="fval.cant.errors.required" class="errorLabel">
 															* La cantidad de personas es requerida
 															</div>

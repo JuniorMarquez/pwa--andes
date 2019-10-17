@@ -41,15 +41,15 @@
 
               <!--   <li><a routerLink="partners" *ngIf="this._uw.isLogged &&  this._uw.admin">Partners</a></li>
                 <li><a routerLink="affiliates"*ngIf="this._uw.isLogged &&  this._uw.admin">Affiliates</a></li> -->
-                <li><a routerLink="booking" *ngIf="this._uw.isLogged" style="font-weight: 600;color: yellow !important;">Booking</a></li>
+                <li><a routerLink="booking" *ngIf="this._uw.isLogged" style="font-weight: 600;color: yellow !important;">RESERVAS</a></li>
 
                 
           </ul>
          
             <ul class="nav navbar-nav navbar-right"  *ngIf="!this._uw.isLogged" [hidden]="this._uw.isLogged">
 
-          <!--   <li class="br-right"><a  routerLink="login"  style="font-family: moderna; background-color: yellow; color:black;"><i class="login-icon ti-user"></i>RESERVAR</a></li> -->
-           <!--  <li class="sign-up"><a class="btn-signup red-btn" routerLink="login" style="font-family: moderna;background-color: yellow; color: black;"  ><span class="ti-calendar"></span>RESERVAR</a></li>  -->
+            <li class="br-right"><a  routerLink="login"  style="font-family: moderna; background-color: yellow; color:black;"><i class="login-icon ti-user"></i>Login</a></li>
+            <li class="sign-up"><a class="btn-signup red-btn" routerLink="validation" style="font-family: moderna;background-color: yellow; color: black;"  ><span class="ti-calendar"></span>Validar Reserva</a></li> 
 
           </ul>
           

@@ -13,8 +13,8 @@ import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
 import { HttpClient } from  '@angular/common/http';
 
 import { ActivatedRoute, Params} from '@angular/router';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule, MatCheckboxModule,MatTabsModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule, MatCheckboxModule,MatTabsModule } from '@angular/material';
 
 import { XunkCalendarModule } from '../../../xunk-calendar/xunk-calendar.module';
 

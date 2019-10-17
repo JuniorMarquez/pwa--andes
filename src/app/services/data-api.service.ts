@@ -6,6 +6,7 @@ import { AuthService } from './auth.service';
 import { TixInterface } from '../models/tix-interface';
 import { BookInterface } from '../models/book-interface';
 import { CardInterface } from '../models/card-interface';
+import { ValidationInterface } from '../models/validation-interface';
 import { UserWService } from "./user-w.service";
 
 @Injectable({
@@ -18,6 +19,8 @@ export class DataApiService {
 	card: Observable<any>;
 	books: Observable<any>;
 	book: Observable<any>;
+	validations: Observable<any>;
+	validation: Observable<any>;
   constructor(
   	public _uw:UserWService,
   	private http: HttpClient, 
@@ -30,7 +33,7 @@ export class DataApiService {
   		});
 
   	getBookPending(){
-		const url_api='https://www.thetixsapp.com:3003/api/book?filter[where][status]=pending';
+		const url_api='https://www.thetixsapp.com:3003/api/books?filter[where][status]=pending';
 		return (this.books = this.http.get(url_api));
 	}
 
@@ -38,6 +41,11 @@ export class DataApiService {
 	getAllTixs(){
 		const url_api = 'https://www.thetixsapp.com:3003/api/product?filter[where][status]=activated';
 		return this.http.get(url_api);
+
+	}
+	getAllTixsReturn(){
+		const url_api = 'https://www.thetixsapp.com:3003/api/product?filter[where][status]=activated';
+		return (this.tixs = this.http.get(url_api));
 
 	}
 	getTixById(id:string){
@@ -123,9 +131,15 @@ export class DataApiService {
 		.pipe(map(data => data));
 	}
 	saveBook(book: BookInterface){
-		const url_api='https://www.thetixsapp.com:3003/api/book';
+		const url_api='https://www.thetixsapp.com:3003/api/books';
 		return this.http
 		.post<BookInterface>(url_api, book)
+		.pipe(map(data => data));
+	}
+	saveValidation(validation: ValidationInterface){
+		const url_api='https://www.thetixsapp.com:3003/api/validations';
+		return this.http
+		.post<ValidationInterface>(url_api, validation)
 		.pipe(map(data => data));
 	}
 	senMail(book){

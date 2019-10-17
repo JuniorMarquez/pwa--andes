@@ -81,6 +81,8 @@ import { TreksComponent } from './components/treks/treks.component';
 import { NavComponent } from './components/nav/nav.component';
 import { BookdetailComponent } from './components/bookdetail/bookdetail.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { ValidationComponent } from './components/validation/validation.component';
+import { SuccessbookComponent } from './components/successbook/successbook.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -124,7 +126,9 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     TreksComponent,
     NavComponent,
     BookdetailComponent,
-    ContactoComponent
+    ContactoComponent,
+    ValidationComponent,
+    SuccessbookComponent
   ],
   imports: [
     BrowserModule,

@@ -20,3 +20,4 @@ export { AlltixsleftComponent } from "./alltixsleft/alltixsleft.component";
 export { AboutComponent } from "./about/about.component";
 export { TreksComponent } from "./treks/treks.component";
 export { ContactoComponent } from "./contacto/contacto.component";
+export { ValidationComponent } from "./validation/validation.component";

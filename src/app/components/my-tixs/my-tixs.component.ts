@@ -8,6 +8,8 @@ import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { BookInterface } from '../../models/book-interface'; 
+import { TixInterface } from '../../models/tix-interface'; 
 
 @Component({
   selector: 'app-my-tixs',
@@ -37,7 +39,20 @@ export class MyTixsComponent implements OnInit {
 
   cardArray: any[]=[];
 
+ public tixs:TixInterface;
+
+  public books:BookInterface;
+ getBookPending(){
+        this.dataApi
+        .getBookPending()
+        .subscribe((books: BookInterface) => (this.books=books));
+    }
+
+
   ngOnInit() {
+     this.getBookPending();
+
+     this.getAllTixs();
     this._uw.usersPending=false;
 	  this.user = this.authService.getCurrentUser();
  	 	// console.log(this.user);
@@ -96,15 +111,13 @@ export class MyTixsComponent implements OnInit {
         .subscribe((cards: CardInterface) => (this.cards=cards));
     }
 
-// getUsersPending(){
-  //  this.dataApi
-    //    .getUsersPending()
-      //  .subscribe((cards CardInterface) => {this.card=card;this._uw.usersPending=true;});
-   // 
- // }
-
   getCards(card_id: string){
     this.dataApi.getCards(card_id);
+    }
+   getAllTixs(){
+        this.dataApi
+        .getAllTixsReturn()
+        .subscribe((tixs: TixInterface) => (this.tixs=tixs));
     }
 
   onCheckUser(): void {
