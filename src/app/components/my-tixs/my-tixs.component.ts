@@ -43,18 +43,32 @@ export class MyTixsComponent implements OnInit {
 
   public books:BookInterface;
  getBookPending(){
-        this.dataApi
-        .getBookPending()
-        .subscribe((books: BookInterface) => (this.books=books));
+        // this.dataApi
+        // .getBookPending()
+        // .subscribe((books: BookInterface) => (this.books=books));
+
+         this.dataApi
+         .getBookPending().subscribe((res:any) => {
+      if (res[0] === undefined){
+        
+        }else{
+          this.books=res[0];
+          let cantbooks=0;
+          this._uw.totalBooks = res.length;
+          // console.log(cantTixs);
+        // this._uw.card= (res[0]);
+        // this._uw.bandera=(res[0].bander);
+         
+        }
+      });
     }
 
 
   ngOnInit() {
      this.getBookPending();
-
      this.getAllTixs();
-     let cantBooks = this.books[0].length;
-     let cantTixs = this.tixs[0].length;
+   
+    
     this._uw.usersPending=false;
 	  this.user = this.authService.getCurrentUser();
  	 	// console.log(this.user);
@@ -117,9 +131,32 @@ export class MyTixsComponent implements OnInit {
     this.dataApi.getCards(card_id);
     }
    getAllTixs(){
+        // this.dataApi
+        // .getAllTixsReturn()
+        // .subscribe((tixs: TixInterface) => (this.tixs=tixs));
+
+
         this.dataApi
-        .getAllTixsReturn()
-        .subscribe((tixs: TixInterface) => (this.tixs=tixs));
+        .getAllTixsReturn().subscribe((res:any) => {
+      if (res[0] === undefined){
+        
+        }else{
+          this.tixs=res[0];
+          let cantTixs=0;
+          this._uw.totalTixs = res.length;
+          // console.log(cantTixs);
+        // this._uw.card= (res[0]);
+        // this._uw.bandera=(res[0].bander);
+         
+        }
+      });
+
+
+
+
+
+
+
     }
 
   onCheckUser(): void {

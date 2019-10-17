@@ -29,6 +29,8 @@ isLogged:boolean=false;
 	queue:any[]=[];
 	file:any[]=[];
 	images:any[]=[];
+	totalTixs:number;
+	totalBooks:number;
 	// book:any[]=[];
   constructor() { }
 }
