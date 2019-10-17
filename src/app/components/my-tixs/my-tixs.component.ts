@@ -53,6 +53,8 @@ export class MyTixsComponent implements OnInit {
      this.getBookPending();
 
      this.getAllTixs();
+     let cantBooks = this.books[0].length;
+     let cantTixs = this.tixs[0].length;
     this._uw.usersPending=false;
 	  this.user = this.authService.getCurrentUser();
  	 	// console.log(this.user);
