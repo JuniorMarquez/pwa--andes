@@ -45,7 +45,8 @@ export class MyTixsComponent implements OnInit {
  getBookPending(){
         this.dataApi
         .getBookPending()
-        .subscribe((books: BookInterface) => (this.books=books));
+        .subscribe((books: BookInterface) => (this.books=books);
+          let cantBooks = this.books[0].length;);
     }
 
 
@@ -54,7 +55,7 @@ export class MyTixsComponent implements OnInit {
 
      this.getAllTixs();
      let cantBooks = this.books[0].length;
-     let cantTixs = this.tixs[0].length;
+    
     this._uw.usersPending=false;
 	  this.user = this.authService.getCurrentUser();
  	 	// console.log(this.user);
@@ -119,7 +120,8 @@ export class MyTixsComponent implements OnInit {
    getAllTixs(){
         this.dataApi
         .getAllTixsReturn()
-        .subscribe((tixs: TixInterface) => (this.tixs=tixs));
+        .subscribe((tixs: TixInterface) => (this.tixs=tixs);
+           let cantTixs = this.tixs[0].length; );
     }
 
   onCheckUser(): void {
