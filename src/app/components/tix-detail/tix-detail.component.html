@@ -26,6 +26,15 @@
     </header> -->
 
 <main> 
+	<!-- <swal
+  #deleteSwal
+  title="Delete {{ file.name }}?"
+  text="This cannot be undone"
+  type="question"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+  (confirm)="deleteFile(file)">
+</swal> -->
         <section class="section-base">
             <div class="container">
                 <div class="row">
@@ -194,7 +203,7 @@
 										 <hr class="space-xs" />
 
 	                                        
-	                                         <a (click)="sendBook()"class="btn btn-sm btn-circle btn-icon"><i class="im-right-4"></i>Reservar </a>
+	                                         <a (click)="sendBook()"class="btn btn-sm btn-circle btn-icon"><i class="im-right-4"></i>Consultar disponibilidad </a>
 
 	                                   <!--  <button class="btn-text" type="submit">Chequear disponibilidad</button> -->
 	                                    

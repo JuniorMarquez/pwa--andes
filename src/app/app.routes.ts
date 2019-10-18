@@ -22,7 +22,9 @@ import {
 	AboutComponent,
 	TreksComponent,
 	ContactoComponent,
-	ValidationComponent
+	ValidationComponent,
+	CheckoutComponent,
+	SuccessbookComponent
 	}from "./components/index.paginas";
 
 	import { AuthGuard } from './guards/auth.guard';
@@ -50,7 +52,8 @@ const app_routes: Routes = [
 	{path:'about',component:AboutComponent},	
 	{path:'treks',component:TreksComponent},
 	{path:'contacto',component:ContactoComponent},
-
+	{path:'checkout',component:CheckoutComponent},
+	{path:'successbook',component:SuccessbookComponent},
 	{path:'validation',component:ValidationComponent},	
 	{path:'**',pathMatch:'full',redirectTo:''}
 	];

@@ -17,7 +17,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule, MatCheckboxModule,MatTabsModule } from '@angular/material';
 
 import { XunkCalendarModule } from '../../../xunk-calendar/xunk-calendar.module';
-
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+// import swal from'sweetalert2';
+// declare var swal: any;
 
 
 @Component({
@@ -27,10 +30,15 @@ import { XunkCalendarModule } from '../../../xunk-calendar/xunk-calendar.module'
 })
 export class TixDetailComponent implements OnInit {
 
+
+tituloAlerta:string='';
 ngFormSendBook: FormGroup;
   submitted = false;
 
-  constructor(public scrollTopService:ScrollTopService,
+  constructor(
+    private router: Router, 
+    private location: Location, 
+    public scrollTopService:ScrollTopService,
   private dataApi: DataApiService,
    private route:ActivatedRoute,
    public _uw:UserWService,
@@ -41,14 +49,14 @@ ngFormSendBook: FormGroup;
   url = "assets/themekit/scripts/glide.min.js"
 
    public book:BookInterface={
-       adelanto:'',
+       adelanto:0,
       cant:1,
       email:'',
       fecha:'',
-      monto:'',
+      monto:0,
       nombre:'',
       precioUni:1,
-      resto:'',
+      resto:0,
       status:'pending'
    };
 
@@ -75,37 +83,27 @@ public tix:TixInterface= {
   personas:1
 };
  public isError = false;
-  public isLogged =false;
+ public isLogged =false;
+  
+ public MuestraAlert(){
+  // swal("Titulo", "Prueba", "success");`
+ }
+
  public sendBook(){
    this.submitted = true;
       if (this.ngFormSendBook.invalid) {
-         // this._uw.errorFormSendTixs=true;
       return;
         } 
-      // this._uw.errorFormSendTixs=false;
-      // this.user = this.authService.getCurrentUser();
-      // let val=(this.user.id).toString();
       this.book = this.ngFormSendBook.value;
-      // this.tix.userd="a"+val;
       this.book.status="pending";
-      this.book.adelanto="30%";
-      this.book.resto="70%";
-      this.book.precioUni=9;
-      this.book.monto='2000';
+      this.book.precioUni=this.tix.precio;
+      this.book.monto=this.book.precioUni*this.ngFormSendBook.value.cant;
+      this.book.adelanto=this.book.monto*30/100;
+      this.book.resto=this.book.monto*70/100;
       this.book.fecha=this.selDate.date+" /"+(this.selDate.month+1)+" /"+this.selDate.year;
-      // this.tix.images=this._uw.images;
-     // this._uw.book=this.book;
-      return this.dataApi.saveBook(this.book)
-        .subscribe(
-         // tix => this.router.navigate(['/mytixs'])
-        );
+      this._uw.book=this.book;
+          this.router.navigate(['/checkout'])
  }
- // public sendMail(){
- //     return this.dataApi.senMail(this.book)
- //        .subscribe(
- //         // tix => this.router.navigate(['/mytixs'])
- //        )
- // }
 
    public loadScript() {
       console.log("preparing to load...");
@@ -125,9 +123,6 @@ public selDate = { date:1, month:1, year:1 };
       email: ['', [Validators.required]],
       cant: ['', [Validators.required]],
       });
-
-
-
 
       this.selDate = XunkCalendarModule.getToday();  
   if (this._uw.loaded==true){

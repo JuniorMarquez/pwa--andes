@@ -31,6 +31,7 @@ isLogged:boolean=false;
 	images:any[]=[];
 	totalTixs:number;
 	totalBooks:number;
+	book:any={};
 	// book:any[]=[];
   constructor() { }
 }

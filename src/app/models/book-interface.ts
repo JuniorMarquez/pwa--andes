@@ -1,12 +1,12 @@
 export interface BookInterface {
 	id?:string;
-	adelanto?:string;
+	adelanto?:number;
 	cant?:number;
 	email?:string;
 	fecha?:string;
-	monto?:string;
+	monto?:number;
 	nombre?:string;
 	precioUni?:number;
-	resto?:string;
+	resto?:number;
 	status?:string;
 }

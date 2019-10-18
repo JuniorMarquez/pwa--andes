@@ -7,7 +7,7 @@ import { ArchwizardModule } from 'angular-archwizard';
 import { HttpClientModule } from '@angular/common/http';
 import { Component, Inject} from '@angular/core';
 import { XunkCalendarModule } from '../xunk-calendar/xunk-calendar.module';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+// import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 //RUTAS
 import { app_routing } from "./app.routes";       
@@ -84,6 +84,7 @@ import { BookdetailComponent } from './components/bookdetail/bookdetail.componen
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ValidationComponent } from './components/validation/validation.component';
 import { SuccessbookComponent } from './components/successbook/successbook.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -130,10 +131,11 @@ import { SuccessbookComponent } from './components/successbook/successbook.compo
     ContactoComponent,
     ValidationComponent,
     SuccessbookComponent,
+    CheckoutComponent,
 
   ],
   imports: [
-    SweetAlert2Module.forRoot(),
+    // SweetAlert2Module.forRoot(),
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     HttpClientModule,
