@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { UserWService } from "../../services/user-w.service";
 import { DataApiService } from '../../services/data-api.service';
-
 
 @Component({
   selector: 'app-checkout',
@@ -11,16 +13,18 @@ import { DataApiService } from '../../services/data-api.service';
 export class CheckoutComponent implements OnInit {
 
   constructor(
-  	public _uw:UserWService,
-	private dataApi: DataApiService,
+    public router:Router, 
+    public location:Location,
+    public _uw:UserWService,
+    private dataApi:DataApiService
   	) { }
-  	public sendBook(){
-  		return this.dataApi.saveBook(this._uw.book)
-        .subscribe(
-     );     
-  	}
+  public sendBook(){
+   this.dataApi.saveBook(this._uw.book)
+        .subscribe();
+  this.router.navigate(['/successbook'])	    
+    }
   ngOnInit() {
-  	this.sendBook();
+  	
   }
 
 }

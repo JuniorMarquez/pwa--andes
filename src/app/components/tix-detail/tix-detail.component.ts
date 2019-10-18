@@ -37,7 +37,7 @@ ngFormSendBook: FormGroup;
 
   constructor(
     private router: Router, 
-    private location: Location, 
+    private location: Location,
     public scrollTopService:ScrollTopService,
   private dataApi: DataApiService,
    private route:ActivatedRoute,
@@ -98,7 +98,7 @@ public tix:TixInterface= {
       this.book.status="pending";
       this.book.precioUni=this.tix.precio;
       this.book.monto=this.book.precioUni*this.ngFormSendBook.value.cant;
-      this.book.adelanto=this.book.monto*30/100;
+      this.book.adelanto=(this.book.precioUni*this.ngFormSendBook.value.cant)*(30/100);
       this.book.resto=this.book.monto*70/100;
       this.book.fecha=this.selDate.date+" /"+(this.selDate.month+1)+" /"+this.selDate.year;
       this._uw.book=this.book;
