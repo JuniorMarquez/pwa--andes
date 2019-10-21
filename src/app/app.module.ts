@@ -86,6 +86,7 @@ import { ValidationComponent } from './components/validation/validation.componen
 import { SuccessbookComponent } from './components/successbook/successbook.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { SuccessvalidationComponent } from './components/successvalidation/successvalidation.component';
+import { ValistComponent } from './components/valist/valist.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -134,6 +135,7 @@ import { SuccessvalidationComponent } from './components/successvalidation/succe
     SuccessbookComponent,
     CheckoutComponent,
     SuccessvalidationComponent,
+    ValistComponent,
 
   ],
   imports: [

@@ -54,6 +54,7 @@ ngFormSendValidation: FormGroup;
       return;
         } 
       this.validation = this.ngFormSendValidation.value;
+      this.validation.status="pending";
       this.dataApiService.saveValidation(this.validation)
         .subscribe(
         );   

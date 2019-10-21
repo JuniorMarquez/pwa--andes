@@ -25,6 +25,7 @@ import {
 	ValidationComponent,
 	CheckoutComponent,
 	SuccessbookComponent,
+	ValistComponent,
 	SuccessvalidationComponent
 	}from "./components/index.paginas";
 
@@ -54,6 +55,7 @@ const app_routes: Routes = [
 	{path:'treks',component:TreksComponent},
 	{path:'contacto',component:ContactoComponent},
 	{path:'checkout',component:CheckoutComponent},
+	{path:'valist',component:ValistComponent},
 	{path:'successbook',component:SuccessbookComponent},
 	{path:'validation',component:ValidationComponent},
 	{path:'successvalidation',component:SuccessvalidationComponent},		

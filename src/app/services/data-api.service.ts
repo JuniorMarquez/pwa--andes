@@ -36,6 +36,10 @@ export class DataApiService {
 		const url_api='https://www.thetixsapp.com:3003/api/books?filter[where][status]=pending';
 		return (this.books = this.http.get(url_api));
 	}
+	getValidationPending(){
+		const url_api='https://www.thetixsapp.com:3003/api/validations?filter[where][status]=pending';
+		return (this.books = this.http.get(url_api));
+	}
 
 
 	getAllTixs(){
