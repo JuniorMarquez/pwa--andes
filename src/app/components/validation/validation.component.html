@@ -3,19 +3,9 @@
 			<div class="slideshow-container">
 				<!-- slideshow-item -->	
 				<div class="slideshow-item">
-					<div class="bg"  data-bg="assets/img/banner-2.jpg"></div>
-				</div>
-				<!--  slideshow-item end  -->	
-				<!-- slideshow-item -->	
-				<div class="slideshow-item">
-					<div class="bg"  data-bg="assets/img/banner-3.jpg"></div>
-				</div>
-				<!--  slideshow-item end  -->	
-				<!-- slideshow-item -->	
-				<div class="slideshow-item">
-					<div class="bg"  data-bg="assets/img/banner-4.jpg"></div>
-				</div>
-				<!--  slideshow-item end  -->	                        
+					<div class="bg"  data-bg="assets/img/banner-2.jpg" 
+					style="background-image:url(assets/img/banner-2.jpg)"></div>
+				</div>                        
 			</div>
 			<div class="overlay"></div>
 			<div class="hero-section-wrap fl-wrap">
@@ -27,59 +17,32 @@
 						</div>
 					
 						<form class="form"[formGroup]="ngFormSendValidation" (ngSubmit) ="sendValidation()" >
-							<fieldset class="home-form-1">
-							
+							<fieldset class="home-form-1">						
 								<div class="col-md-3 col-sm-3 padd-0">
-									<input type="text" class="form-control br-1" placeholder="Referencia de pago" id="referencia" formControlName="referencia" [(ngModel)]="validation.referencia" [ngClass]="{ 'is-invalid': submitted && fval.referencia.errors }"
-														required>
-
-
-									
-														<div *ngIf="submitted && fval.referencia.errors" class="invalid-feedback">
-															<div *ngIf="fval.referencia.errors.required" class="errorLabel">
-															* La referencia es requerida
-															</div>
-
-														</div>
-
-
-
+									<input type="text" class="form-control br-1" placeholder="Referencia de pago" id="referencia" formControlName="referencia" [(ngModel)]="validation.referencia" [ngClass]="{ 'is-invalid': submitted && fval.referencia.errors }" required>
+									<div *ngIf="submitted && fval.referencia.errors" class="invalid-feedback">
+										<div *ngIf="fval.referencia.errors.required" class="errorLabel">* La referencia es requerida
+										</div>
+									</div>
 								</div>
-								
+						
 								<div class="col-md-3 col-sm-3 padd-0">
-									<input type="text" class="form-control br-1" placeholder="Nro de reserva" id="nroReserva" formControlName="nroReserva" [(ngModel)]="validation.nroReserva" [ngClass]="{ 'is-invalid': submitted && fval.nroReserva.errors }"
-														required>
-
-
-									
-														<div *ngIf="submitted && fval.nroReserva.errors" class="invalid-feedback">
-															<div *ngIf="fval.nroReserva.errors.required" class="errorLabel">
-															* El numero de reserva es requerido
-															</div>
-
-														</div>
+									<input type="text" class="form-control br-1" placeholder="Nro de reserva" id="nroReserva" formControlName="nroReserva" [(ngModel)]="validation.nroReserva" [ngClass]="{ 'is-invalid': submitted && fval.nroReserva.errors }"required>
+									<div *ngIf="submitted && fval.nroReserva.errors" class="invalid-feedback">
+										<div *ngIf="fval.nroReserva.errors.required" class="errorLabel">* El numero de reserva es requerido
+										</div>
+									</div>
 								</div>
 								<div class="col-md-2 col-sm-2 padd-0">
-								<input type="text" class="form-control br-1" placeholder="Telef. de contacto" id="telefono" formControlName="telefono" [(ngModel)]="validation.telefono" [ngClass]="{ 'is-invalid': submitted && fval.telefono.errors }"
-														required>
-
-
-									
-														<div *ngIf="submitted && fval.telefono.errors" class="invalid-feedback">
-															<div *ngIf="fval.telefono.errors.required" class="errorLabel">
-															* El telefono es requerido
-															</div>
-
-														</div>
-								</div>
-									
-								
-						
-									
+								<input type="text" class="form-control br-1" placeholder="Telef. de contacto" id="telefono" formControlName="telefono" [(ngModel)]="validation.telefono" [ngClass]="{ 'is-invalid': submitted && fval.telefono.errors }"required>
+									<div *ngIf="submitted && fval.telefono.errors" class="invalid-feedback">
+										<div *ngIf="fval.telefono.errors.required" class="errorLabel">* El telefono es requerido
+										</div>
+									</div>
+								</div>									
 								<div class="col-md-2 col-sm-2 padd-0">
 									<button  class="btn theme-btn cl-white seub-btn" type="submit">Validar</button>
 								</div>
-									
 							</fieldset>
 						</form>
 					</div>
