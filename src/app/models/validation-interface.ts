@@ -3,7 +3,7 @@ export interface ValidationInterface {
 	telefono?:string;
 	referencia?:string;
 	email?:string;
-	nroReserva?:number;
+	nroReserva?:string;
 	monto?:string;
 	status?:string;
 }

@@ -85,6 +85,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { ValidationComponent } from './components/validation/validation.component';
 import { SuccessbookComponent } from './components/successbook/successbook.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { SuccessvalidationComponent } from './components/successvalidation/successvalidation.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -132,6 +133,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ValidationComponent,
     SuccessbookComponent,
     CheckoutComponent,
+    SuccessvalidationComponent,
 
   ],
   imports: [

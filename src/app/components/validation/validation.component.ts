@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Observable, of } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
-
 import { DataApiService } from '../../services/data-api.service';
 import { ValidationInterface } from '../../models/validation-interface'; 
 import { UserWService } from "../../services/user-w.service";
 import { ConfirmEqualValidatorDirective } from '../../confirm-equal-validator.directive';
 import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
-
+import { ActivatedRoute, Params} from '@angular/router';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { HttpClient } from  '@angular/common/http';
 
 @Component({
@@ -22,6 +22,8 @@ ngFormSendValidation: FormGroup;
   submitted = false;
 
   constructor(
+    private router: Router, 
+    private location: Location,
   	 private dataApiService: DataApiService, 
   	 public _uw:UserWService,
 	   private formBuilder: FormBuilder
@@ -29,7 +31,7 @@ ngFormSendValidation: FormGroup;
 
    public validation:ValidationInterface={
      referencia:'',
-      nroReserva:1,
+      nroReserva:'',
       email:'',
       telefono:'',     
       monto:'',     
@@ -52,10 +54,11 @@ ngFormSendValidation: FormGroup;
       return;
         } 
       this.validation = this.ngFormSendValidation.value;
-      return this.dataApiService.saveValidation(this.validation)
+      this.dataApiService.saveValidation(this.validation)
         .subscribe(
         );   
-    
+        console.log("se desplaza");
+            this.router.navigate(['/successvalidation'])
   }
 
 

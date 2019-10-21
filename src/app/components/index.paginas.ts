@@ -23,3 +23,5 @@ export { ContactoComponent } from "./contacto/contacto.component";
 export { ValidationComponent } from "./validation/validation.component";
 export { CheckoutComponent } from "./checkout/checkout.component";
 export { SuccessbookComponent } from "./successbook/successbook.component";
+export { SuccessvalidationComponent } from "./successvalidation/successvalidation.component";
+

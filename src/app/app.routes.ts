@@ -24,7 +24,8 @@ import {
 	ContactoComponent,
 	ValidationComponent,
 	CheckoutComponent,
-	SuccessbookComponent
+	SuccessbookComponent,
+	SuccessvalidationComponent
 	}from "./components/index.paginas";
 
 	import { AuthGuard } from './guards/auth.guard';
@@ -54,7 +55,8 @@ const app_routes: Routes = [
 	{path:'contacto',component:ContactoComponent},
 	{path:'checkout',component:CheckoutComponent},
 	{path:'successbook',component:SuccessbookComponent},
-	{path:'validation',component:ValidationComponent},	
+	{path:'validation',component:ValidationComponent},
+	{path:'successvalidation',component:SuccessvalidationComponent},		
 	{path:'**',pathMatch:'full',redirectTo:''}
 	];
 	export const app_routing = RouterModule.forRoot(app_routes);
