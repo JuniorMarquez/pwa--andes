@@ -55,6 +55,7 @@ ngFormSendBook: FormGroup;
       fecha:'',
       monto:0,
       nombre:'',
+      nroReserva:0,
       precioUni:1,
       resto:0,
       status:'pending'
@@ -88,6 +89,9 @@ public tix:TixInterface= {
  public MuestraAlert(){
   // swal("Titulo", "Prueba", "success");`
  }
+ public aleatorio(a,b) {
+         return Math.round(Math.random()*(b-a)+parseInt(a));
+ }
 
  public sendBook(){
    this.submitted = true;
@@ -96,6 +100,8 @@ public tix:TixInterface= {
         } 
       this.book = this.ngFormSendBook.value;
       this.book.status="pending";
+      this.book.nroReserva=this.aleatorio(10000,99999);
+      console.log(this.book.nroReserva);
       this.book.precioUni=this.tix.precio;
       this.book.monto=this.book.precioUni*this.ngFormSendBook.value.cant;
       this.book.adelanto=(this.book.precioUni*this.ngFormSendBook.value.cant)*(30/100);

@@ -1,4 +1,4 @@
-<section class="dashboard gray-bg padd-0 mrg-top-50">
+<section class="dashboard  padd-0 mrg-top-50">
 			<div class="container-fluid">
 				<div class="row">
 					
@@ -14,8 +14,9 @@
 									<div class="table-responsive">
 										<table class="table table-striped table-hover">
 											<thead>
-												<tr>					
+												<tr>			
 													<th>Nombre</th>
+													<th>Nro Reserva</th>		
 													<th>Email</th>
 													<th>Fecha</th>
 													<th>Estado</th>
@@ -26,12 +27,13 @@
 											<tbody>
 												<!-- tr -->
 												<tr *ngFor="let book of books">
+
 													<td>
 														<!-- <span class="custom-checkbox">
 															<input type="checkbox" id="ao" value="1">
 															<label for="ao"></label>
 														</span> -->
-														<a href="booking-2.html#">
+														<a href="#">
 															<div class="bk-thumb">
 																<img src="assets/img/user-3.jpg" class="avatar img-circle" alt="Avatar" />
 																<span class="bk-status pending"><i class="fa fa-check-circle"></i></span>
@@ -39,13 +41,14 @@
 															{{book.nombre}}<span></span>
 														</a>
 													</td>
+													<td><b>{{book.nroReserva}}</b></td>
 													<td><b>{{book.email}}</b><br>-<span class="seprate"></span>+</td>                        
 													<td><b>{{book.fecha}}</b></td>
 													<td>{{book.status}}</td>
 													
 													<td>
-														<a href="booking-2.html#" class="tbl-action settings" title="Settings" data-toggle="tooltip"><i class="ti-pencil"></i></a>
-														<a href="booking-2.html#" class="tbl-action bg-danger" title="Delete" data-toggle="tooltip"><i class="ti-trash"></i></a>
+														<a href="#" class="tbl-action settings" title="Settings" data-toggle="tooltip"><i class="ti-pencil"></i></a>
+														<a href="#" class="tbl-action bg-danger" title="Delete" data-toggle="tooltip"><i class="ti-trash"></i></a>
 													</td>
 												</tr>
 												
