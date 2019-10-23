@@ -29,10 +29,10 @@
                   </ul>
                 </li> -->
 
-                   <li><a routerLink="about" style="font-weight: 600;" >QUIENES SOMOS</a></li>
+                   <li><a routerLink="about" style="font-weight: 600;" *ngIf="!this._uw.isLogged">QUIENES SOMOS</a></li>
                  
 
-                   <li><a routerLink="treks" style="font-weight: 600;" >TOURS</a></li>
+                   <li><a routerLink="treks" style="font-weight: 600;" *ngIf="!this._uw.isLogged">TOURS</a></li>
                      <li *ngIf="!this._uw.isLogged"><a routerLink="contacto" style="font-weight: 600;" >CONTACTO</a></li>
                    <li *ngIf="this._uw.isLogged && this._uw.partner || this._uw.admin"><a routerLink="mytixs" style="font-weight: 600;color: yellow !important;" >DASHBOARD</a></li>
                    
@@ -41,6 +41,8 @@
 
               <!--   <li><a routerLink="partners" *ngIf="this._uw.isLogged &&  this._uw.admin">Partners</a></li>
                 <li><a routerLink="affiliates"*ngIf="this._uw.isLogged &&  this._uw.admin">Affiliates</a></li> -->
+
+                <li><a routerLink="treklist" *ngIf="this._uw.isLogged" style="font-weight: 600;color: yellow !important;">TOURS</a></li>
                 <li><a routerLink="booking" *ngIf="this._uw.isLogged" style="font-weight: 600;color: yellow !important;">RESERVAS</a></li>
                  <li><a routerLink="valist" *ngIf="this._uw.isLogged" style="font-weight: 600;color: yellow !important;">VALIDACIONES</a></li>
 

@@ -87,6 +87,8 @@ import { SuccessbookComponent } from './components/successbook/successbook.compo
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { SuccessvalidationComponent } from './components/successvalidation/successvalidation.component';
 import { ValistComponent } from './components/valist/valist.component';
+import { TreklistComponent } from './components/treklist/treklist.component';
+import { TrekeditComponent } from './components/trekedit/trekedit.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -136,6 +138,8 @@ import { ValistComponent } from './components/valist/valist.component';
     CheckoutComponent,
     SuccessvalidationComponent,
     ValistComponent,
+    TreklistComponent,
+    TrekeditComponent,
 
   ],
   imports: [
