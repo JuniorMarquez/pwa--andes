@@ -55,6 +55,7 @@ ngFormSendBook: FormGroup;
       monto:0,
       nombre:'',
       nroReserva:0,
+      personas:1,
       precioUni:1,
       resto:0,
       status:'pending'
@@ -68,7 +69,7 @@ public tix:TixInterface= {
 	images: ['', ''],
   cantD:0,
   precio:0,
-  capacidad:0,
+  capacidad:1,
   altitud:'',
   temp:'',
   duracion:'',
@@ -80,7 +81,6 @@ public tix:TixInterface= {
   address:'',
   status:'',
   userd:'',
-  personas:1
 };
  public isError = false;
  public isLogged =false;

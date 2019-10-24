@@ -6,6 +6,7 @@ export interface BookInterface {
 	fecha?:string;
 	monto?:number;
 	nombre?:string;
+	personas?:number;
 	precioUni?:number;
 	productName?:string;
 	resto?:number;
