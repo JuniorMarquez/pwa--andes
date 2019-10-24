@@ -134,12 +134,12 @@ export class CatalogComponent {
       }
 	}
    	ngOnInit(): void {
-        this.getAllTixs();
-   		//this.filter();
-  		//$.getScript('assets/js/collage.js');
- 		//$.getScript('assets/js/custom.js');
-		this._ps.imagesG=[];
-		this.product=[]	;	
+  //       this.getAllTixs();
+  //  		//this.filter();
+  // 		//$.getScript('assets/js/collage.js');
+ 	// 	//$.getScript('assets/js/custom.js');
+		// this._ps.imagesG=[];
+		// this.product=[]	;	
   	}
 }	
  
