@@ -7,7 +7,9 @@ export interface BookInterface {
 	monto?:number;
 	nombre?:string;
 	precioUni?:number;
+	productName?:string;
 	resto?:number;
-	status?:string
+	status?:string;
 	nroReserva?:number;
+	asunto?:string;
 }

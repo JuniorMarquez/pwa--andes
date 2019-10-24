@@ -19,8 +19,6 @@ import { MatButtonModule, MatCheckboxModule,MatTabsModule } from '@angular/mater
 import { XunkCalendarModule } from '../../../xunk-calendar/xunk-calendar.module';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-// import swal from'sweetalert2';
-// declare var swal: any;
 
 
 @Component({
@@ -50,6 +48,7 @@ ngFormSendBook: FormGroup;
 
    public book:BookInterface={
        adelanto:0,
+       asunto:'',
       cant:1,
       email:'',
       fecha:'',
@@ -106,6 +105,8 @@ public tix:TixInterface= {
       this.book.monto=this.book.precioUni*this.ngFormSendBook.value.cant;
       this.book.adelanto=(this.book.precioUni*this.ngFormSendBook.value.cant)*(30/100);
       this.book.resto=this.book.monto*70/100;
+      this.book.asunto="Nueva reserva";
+      this.book.productName=this.tix.productName;
       this.book.fecha=this.selDate.date+" /"+(this.selDate.month+1)+" /"+this.selDate.year;
       this._uw.book=this.book;
           this.router.navigate(['/checkout'])

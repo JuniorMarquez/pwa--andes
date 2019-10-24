@@ -147,7 +147,7 @@ export class DataApiService {
 		.pipe(map(data => data));
 	}
 	senMail(book){
-		const url_api='http://localhost/formulario';
+		const url_api='http://192.168.0.107:3000/formulario';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
