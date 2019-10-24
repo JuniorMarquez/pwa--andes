@@ -43,22 +43,14 @@ export class MyTixsComponent implements OnInit {
 
   public books:BookInterface;
  getBookPending(){
-        // this.dataApi
-        // .getBookPending()
-        // .subscribe((books: BookInterface) => (this.books=books));
-
          this.dataApi
          .getBookPending().subscribe((res:any) => {
       if (res[0] === undefined){
-        
+        return
         }else{
           this.books=res[0];
           let cantbooks=0;
           this._uw.totalBooks = res.length;
-          // console.log(cantTixs);
-        // this._uw.card= (res[0]);
-        // this._uw.bandera=(res[0].bander);
-         
         }
       });
     }
@@ -150,13 +142,6 @@ export class MyTixsComponent implements OnInit {
          
         }
       });
-
-
-
-
-
-
-
     }
 
   onCheckUser(): void {

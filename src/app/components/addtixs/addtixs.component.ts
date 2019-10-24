@@ -142,7 +142,7 @@ public tix : TixInterface ={
     }, 4000);
   }
  finish(){
-    if (this._uw.errorFormPartner){
+    if (this._uw.errorFormAddtixs){
       this.sendTix();
     }
     this.router.navigate(['/mytixs'])
