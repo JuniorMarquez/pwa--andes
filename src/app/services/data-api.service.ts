@@ -91,8 +91,6 @@ export class DataApiService {
 		const url_api='https://www.thetixsapp.com:3003/api/card?filter[where][and][0][status]=pending&filter[where][and][1][type]=affiliateType';
 		return (this.cards = this.http.get(url_api));
 	}
-
-
 	saveTix(tix :TixInterface){
 		let token = this.authService.getToken();
 		const url_api='https://www.thetixsapp.com:3003/api/product?access_token${token}';

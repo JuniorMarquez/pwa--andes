@@ -130,6 +130,7 @@ public tix : TixInterface ={
       this.tix.images=this._uw.images;
       return this.dataApiService.saveTixFree(this.tix)
         .subscribe(
+          
          // tix => this.router.navigate(['/mytixs'])
         );
   }    
