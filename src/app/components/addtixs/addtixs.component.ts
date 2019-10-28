@@ -123,10 +123,10 @@ public tix : TixInterface ={
       return;
         } 
       this._uw.errorFormAddtixs=false;
-      this.user = this.authService.getCurrentUser();
-      let val=(this.user.id).toString();
+      // this.user = this.authService.getCurrentUser();
+      // let val=(this.user.id).toString();
       this.tix = this.ngFormAddtixs.value;
-      this.tix.userd="a"+val;
+      // this.tix.userd="a"+val;
       this.tix.status="activated";
       this.tix.images=this._uw.images;
       return this.dataApiService.saveTixFree(this.tix)
