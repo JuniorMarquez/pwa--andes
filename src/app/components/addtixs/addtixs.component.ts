@@ -92,6 +92,7 @@ public tix : TixInterface ={
   public images:any[]=[];
 
   ngOnInit() {
+    this._uw.errorFormAddtixs=false;
   	 this.ngFormAddtixs = this.formBuilder.group({
       address: ['', [Validators.required]],
       altitud: ['', [Validators.required]],
