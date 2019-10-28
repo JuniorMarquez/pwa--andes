@@ -50,7 +50,7 @@ export class MyTixsComponent implements OnInit {
         }else{
           this.books=res[0];
           let cantbooks=0;
-          this._uw.totalBooks = res.length;
+//          this._uw.totalBooks = res.length;
         }
       });
     }
@@ -135,7 +135,7 @@ export class MyTixsComponent implements OnInit {
         }else{
           this.tixs=res[0];
           let cantTixs=0;
-          this._uw.totalTixs = res.length;
+          // this._uw.totalTixs = res.length;
           // console.log(cantTixs);
         // this._uw.card= (res[0]);
         // this._uw.bandera=(res[0].bander);

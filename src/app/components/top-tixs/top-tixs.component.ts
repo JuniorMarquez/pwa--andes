@@ -39,9 +39,13 @@ export class TopTixsComponent implements OnInit {
     nav: true
   };
 
-  constructor(private dataApi: DataApiService) { }
+  constructor(
+ private dataApi: DataApiService
+) { }
  public tixs:TixInterface;
- getAllTixs(){
+
+ 
+ getTixsPending(){
 //      this.dataApi.getAllTixs().subscribe(tixs => console.log(tixs));
         this.dataApi
         .getAllTixs()
@@ -50,7 +54,7 @@ export class TopTixsComponent implements OnInit {
 
 
   ngOnInit(): void {
-     this.getAllTixs();
+     this.getTixsPending();
       //this.filter();
       //$.getScript('assets/js/collage.js');
     //$.getScript('assets/js/custom.js');
