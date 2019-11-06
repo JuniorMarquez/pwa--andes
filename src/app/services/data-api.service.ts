@@ -6,6 +6,7 @@ import { AuthService } from './auth.service';
 import { TixInterface } from '../models/tix-interface';
 import { BookInterface } from '../models/book-interface';
 import { CardInterface } from '../models/card-interface';
+import { InfoInterface } from '../models/info-interface';
 import { ValidationInterface } from '../models/validation-interface';
 import { UserWService } from "./user-w.service";
 
