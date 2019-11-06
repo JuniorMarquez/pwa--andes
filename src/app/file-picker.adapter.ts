@@ -24,7 +24,7 @@ export class DemoFilePickerAdapter extends FilePickerAdapter {
   public uploadFile(fileItem: FilePreviewModel) {
     const form = new FormData();
     form.append('file', fileItem.file);
-    const api = 'https://db.andesproadventures.com/api/containers/tixsImages/upload';
+    const api = 'https://db.andesproadventures.com:3004/api/containers/tixsImages/upload';
     const req = new HttpRequest('POST', api, form, {reportProgress: true});
     return this.http.request(req)
     .pipe(
