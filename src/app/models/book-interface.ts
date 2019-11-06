@@ -13,4 +13,5 @@ export interface BookInterface {
 	status?:string;
 	nroReserva?:number;
 	asunto?:string;
+	adminName?:string;
 }

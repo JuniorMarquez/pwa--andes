@@ -48,6 +48,7 @@ ngFormSendBook: FormGroup;
 
    public book:BookInterface={
        adelanto:0,
+       adminName:'',
        asunto:'',
       cant:1,
       email:'',
@@ -106,6 +107,7 @@ public tix:TixInterface= {
       this.book.adelanto=(this.book.precioUni*this.ngFormSendBook.value.cant)*(30/100);
       this.book.resto=this.book.monto*70/100;
       this.book.asunto="Nueva reserva";
+      this.book.adminName=this._uw.adminName;
       this.book.productName=this.tix.productName;
       this.book.fecha=this.selDate.date+" /"+(this.selDate.month+1)+" /"+this.selDate.year;
       this._uw.book=this.book;

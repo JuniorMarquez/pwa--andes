@@ -19,9 +19,11 @@ export class CheckoutComponent implements OnInit {
     private dataApi:DataApiService
   	) { }
   public sendBook(){
-   this.dataApi.saveBook(this._uw.book)
-        .subscribe();
+   // this.dataApi.saveBook(this._uw.book)
+   //      .subscribe();
    this.dataApi.senMail(this._uw.book).subscribe();
+   
+   this.dataApi.senMail06(this._uw.book).subscribe();
   this.router.navigate(['/successbook'])	    
     }
   ngOnInit() {

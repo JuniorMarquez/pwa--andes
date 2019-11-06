@@ -165,7 +165,7 @@ public tix : TixInterface ={
   }
   onFileAdded(file: FilePreviewModel) {
     
-    file.fileName="http://18.191.65.29/imgApi2/server/local-storage/tixsImages/"+file.fileName;
+    file.fileName="https://db.andesproadventures.com/imgApi/server/local-storage/tixsImages/"+file.fileName;
     this.myFiles.push(file);
     // this.images.push(file.fileName);
 

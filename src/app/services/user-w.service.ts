@@ -7,6 +7,7 @@ export class UserWService {
 info:any={};
 isLogged:boolean=false;
 	userW:any[]=[];
+	adminName:string;
 	user:any={};
 	name:string;
 	idCard:string;
