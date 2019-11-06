@@ -18,6 +18,7 @@ export class DataApiService {
 	tix: Observable<any>;
 	cards: Observable<any>;
 	card: Observable<any>;
+	info: Observable<any>;
 	books: Observable<any>;
 	book: Observable<any>;
 	validations: Observable<any>;
@@ -32,7 +33,7 @@ export class DataApiService {
   		"Content-Type":"application/json",
   		Authorization: this.authService.getToken()
   		});
-
+  	// 
   	getBookPending(){
 		const url_api='https://db.andesproadventures.com:3003/api/books?filter[where][status]=pending';
 		return (this.books = this.http.get(url_api));
@@ -67,7 +68,7 @@ export class DataApiService {
 		return (this.card);
 	}
 	getInfo(){
-		let indice = id;
+		// let indice = id;
 		const url_api=`https://db.andesproadventures.com:3003/api/info/`;
 		this.info = this.http.get(url_api);
 		return (this.info);
