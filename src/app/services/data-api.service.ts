@@ -153,37 +153,37 @@ export class DataApiService {
 		.pipe(map(data => data));
 	}
 	senMail(book){
-		const url_api='http://192.168.0.107:3000/formulario';
+		const url_api='https://db.andesproadventures.com:3005/newBookAppToUser';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
 	senMail06(book){
-		const url_api='http://192.168.0.107:3006/formulario';
+		const url_api='https://db.andesproadventures.com:3005/newBookAppToAdmin';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
 	senMail07(book){
-		const url_api='http://192.168.0.107:3007/formulario';
+		const url_api='https://db.andesproadventures.com:3005/newValidationAppToUser';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
 	senMail08(book){
-		const url_api='http://192.168.0.107:3008/formulario';
+		const url_api='https://db.andesproadventures.com:3005/newValidationAppToAdmin';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
 	senMail09(book){
-		const url_api='http://192.168.0.107:3009/formulario';
+		const url_api='https://db.andesproadventures.com:3005/succesValidation';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
 	senMail10(book){
-		const url_api='http://192.168.0.107:3010/formulario';
+		const url_api='https://db.andesproadventures.com:3005/newContactAppToAdmin';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
