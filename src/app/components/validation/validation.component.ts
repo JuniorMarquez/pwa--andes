@@ -41,8 +41,8 @@ ngFormSendValidation: FormGroup;
      public sendMailValidation(){
    // this.dataApi.saveBook(this._uw.book)
    //      .subscribe();  
-   this.dataApi.senMail07(this._uw.validation).subscribe();
-   this.dataApi.senMail08(this._uw.validation).subscribe();   
+   this.dataApiService.senMail07(this._uw.validation).subscribe();
+   this.dataApiService.senMail08(this._uw.validation).subscribe();   
     }
 
 

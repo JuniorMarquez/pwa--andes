@@ -18,16 +18,14 @@ export class CheckoutComponent implements OnInit {
     public _uw:UserWService,
     private dataApi:DataApiService
   	) { }
+  
   public sendBook(){
-   // this.dataApi.saveBook(this._uw.book)
-   //      .subscribe();
-   this.dataApi.senMail(this._uw.book).subscribe();
-   
-   this.dataApi.senMail06(this._uw.book).subscribe();
-  this.router.navigate(['/successbook'])	    
+    this.dataApi.senMail(this._uw.book).subscribe(); 
+    this.dataApi.senMail06(this._uw.book).subscribe();
+    this.router.navigate(['/successbook'])	    
     }
-  ngOnInit() {
-  	
+  
+  ngOnInit() {	
   }
-
+  
 }
