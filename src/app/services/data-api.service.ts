@@ -164,16 +164,16 @@ export class DataApiService {
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
-	senMail07(book){
+	senMail07(validation){
 		const url_api='https://db.andesproadventures.com:3005/newValidationAppToUser';
 		return this.http
-		.post(url_api, book)
+		.post(url_api, validation)
 		.pipe(map(data => data));
 	}
-	senMail08(book){
+	senMail08(validation){
 		const url_api='https://db.andesproadventures.com:3005/newValidationAppToAdmin';
 		return this.http
-		.post(url_api, book)
+		.post(url_api, validation)
 		.pipe(map(data => data));
 	}
 	senMail09(book){

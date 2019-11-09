@@ -38,6 +38,13 @@ ngFormSendValidation: FormGroup;
       status:'pending'
    };
 
+     public sendMailValidation(){
+   // this.dataApi.saveBook(this._uw.book)
+   //      .subscribe();  
+   this.dataApi.senMail07(this._uw.validation).subscribe();
+   this.dataApi.senMail08(this._uw.validation).subscribe();   
+    }
+
 
   ngOnInit() {
   	this.ngFormSendValidation = this.formBuilder.group({
@@ -55,6 +62,8 @@ ngFormSendValidation: FormGroup;
         } 
       this.validation = this.ngFormSendValidation.value;
       this.validation.status="pending";
+      this._uw.validation=this.validation;
+      this.sendMailValidation();
       this.dataApiService.saveValidation(this.validation)
         .subscribe(
         );   
