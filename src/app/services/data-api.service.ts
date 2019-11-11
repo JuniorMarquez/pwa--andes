@@ -69,7 +69,7 @@ export class DataApiService {
 	}
 	getInfo(){
 		// let indice = id;
-		const url_api=`https://db.andesproadventures.com:3003/api/info/`;
+		const url_api=`https://db.andesproadventures.com:3003/api/infos/`;
 		this.info = this.http.get(url_api);
 		return (this.info);
 	}

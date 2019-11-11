@@ -4,10 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserWService {
-info:any={};
-isLogged:boolean=false;
-	adminName:string;
 	admin:boolean;
+	adminName:string;
 	affiliate:boolean;
 	bandera:string;
 	book:any={};
@@ -19,6 +17,8 @@ isLogged:boolean=false;
 	file:any[]=[];
 	idCard:string;
 	images:any[]=[];
+	info:any={};
+	isLogged:boolean=false;
 	loaded:boolean=false;
 	name:string;
 	partner:boolean;
