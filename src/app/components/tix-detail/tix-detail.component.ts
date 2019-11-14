@@ -97,10 +97,10 @@ export class TixDetailComponent implements OnInit {
     this.book = this.ngFormSendBook.value;
     this.book.status="pending";
     this.book.nroReserva=this.aleatorio(10000,99999);
-    console.log(this.book.nroReserva);
+    // console.log(this.book.nroReserva);
     this.book.precioUni=this.tix.precio;
-    this.book.monto=this.book.precioUni*this.ngFormSendBook.value.cant;
-    this.book.adelanto=(this.book.precioUni*this.ngFormSendBook.value.cant)*(30/100);
+    this.book.monto=this.tix.precio*this.ngFormSendBook.value.cant;
+    this.book.adelanto=(this.tix.precio*this.ngFormSendBook.value.cant)*(30/100);
     this.book.resto=this.book.monto*70/100;
     this.book.asunto="Nueva reserva";
  
@@ -115,6 +115,7 @@ export class TixDetailComponent implements OnInit {
     this._uw.book.titular=this._uw.info.titular;
     this._uw.book.emailContacto=this._uw.info.emailContacto;
     this._uw.book.telefonoContacto=this._uw.info.telefonoContacto;
+    // this.dataApi.saveBook(this.book);
     this.router.navigate(['/checkout'])
   }
 

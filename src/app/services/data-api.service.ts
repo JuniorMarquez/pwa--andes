@@ -48,7 +48,7 @@ export class DataApiService {
 
 
   	getBookPending(){	
-		const url_api='https://db.andesproadventures.com:3003/api/books?filter[where][status]=pending';
+		const url_api='https://db.andesproadventures.com:3003/api/book?filter[where][status]=pending';
 		return (this.books = this.http.get(url_api));
 	}
 	getValidationPending(){
@@ -155,7 +155,7 @@ export class DataApiService {
 		.pipe(map(data => data));
 	}
 	saveBook(book: BookInterface){
-		const url_api='https://db.andesproadventures.com:3003/api/books';
+		const url_api='https://db.andesproadventures.com:3003/api/book';
 		return this.http
 		.post<BookInterface>(url_api, book)
 		.pipe(map(data => data));

@@ -671,7 +671,7 @@
 	                        <div class="section-base1 section-color1">
 	                            <div class="container"> 
 	                              <div class="row1">
-	                              	<form  class="form"[formGroup]="ngFormSendBook"  *ngIf="!this._uw.editingTrek && !this._uw.isLogged">
+	                              	<form  class="form"[formGroup]="ngFormSendBook"  *ngIf="!this._uw.isLogged" [hidden]="this._uw.editingTrek" (ngSubmit) ="sendBook()">
 	                               <!--  <form data-anima="fade-in" data-time="1000"	 class="form-box form-ajax checkbox-bottom-right " method="post" > -->
 	                                    <div class="row success-bg">
 	                                     

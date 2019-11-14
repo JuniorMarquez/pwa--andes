@@ -79,9 +79,9 @@ ngFormSendValidation: FormGroup;
       this._uw.validation.adminEmail=this._uw.info.adminEmail;
       this._uw.validation.adminName=this._uw.info.adminName;
       this.sendMailValidation();
-      // this.dataApiService.saveValidation(this.validation)
-      //   .subscribe(
-      //   );   
+      this.dataApiService.saveValidation(this.validation)
+        .subscribe(
+        );   
         console.log("se desplaza");
             this.router.navigate(['/successvalidation'])
   }
