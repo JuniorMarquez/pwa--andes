@@ -93,7 +93,7 @@ export class TixDetailComponent implements OnInit {
 
   editTrek(){
     this._uw.editingTrek = true;
-    this._uw.images=this.tix.images;
+    
 
   }
 
@@ -101,7 +101,7 @@ export class TixDetailComponent implements OnInit {
        this.dataApi
         .getInfo().subscribe((res:any) => {
         this._uw.info=res[0];
-        console.log(this._uw.info.titular);
+        // console.log(this._uw.info.titular);
       });
     }
 
@@ -225,6 +225,7 @@ export class TixDetailComponent implements OnInit {
       this._uw.loaded=true;
       this.scrollTopService.setScrollTop();
       this.getDetails(this.route.snapshot.paramMap.get('id'));
+
     }
   
   get fval2() {
@@ -235,6 +236,8 @@ export class TixDetailComponent implements OnInit {
   return this.ngFormAddtixs.controls;
   }
   getDetails(id: string){
-  	this.dataApi.getTixById(id).subscribe(tix => (this.tix = tix));
+  	this.dataApi.getTixById(id).subscribe(tix => (this.tix = tix;
+      
+        this._uw.images=this.tix.images;));
   }
 }
