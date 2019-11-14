@@ -28,7 +28,7 @@ export class DataApiService {
   	private http: HttpClient, 
   	private authService:AuthService
   	) {}
-   public tixs:TixInterface;
+   public selectedTix:TixInterface;
 
 
   	headers : HttpHeaders = new HttpHeaders({

@@ -30,6 +30,7 @@ import { Location } from '@angular/common';
 export class TixDetailComponent implements OnInit {
 
   tituloAlerta:string='';
+  ngFormAddtixs: FormGroup;
   ngFormSendBook: FormGroup;
   submitted = false;
 
@@ -87,6 +88,12 @@ export class TixDetailComponent implements OnInit {
 
   public isError = false;
   public isLogged =false;
+
+
+
+  editTrek(){
+    this._uw.editingTrek = true;
+  }
 
   getInfo(){
        this.dataApi
@@ -148,6 +155,23 @@ export class TixDetailComponent implements OnInit {
         email: ['', [Validators.required]],
         cant: ['', [Validators.required]],
         });
+     this._uw.errorFormAddtixs=false;
+     this.ngFormAddtixs = this.formBuilder.group({
+      address: ['', [Validators.required]],
+      altitud: ['', [Validators.required]],
+      cantD: ['', [Validators.required]],
+      capacidad: ['', [Validators.required]],
+      category: ['', [Validators.required]],
+      description: ['', [Validators.required]],      
+      desLg: ['', [Validators.required]],      
+      dificulty: ['', [Validators.required]],
+      distancia: ['', [Validators.required]],
+      duracion: ['', [Validators.required]],
+      precio:['',[Validators.required]],
+      productName: ['', [Validators.required]],
+      temp: ['', [Validators.required]],
+      tips: ['', [Validators.required]],
+      });
 
         this.selDate = XunkCalendarModule.getToday();  
     if (this._uw.loaded==true){
@@ -161,8 +185,12 @@ export class TixDetailComponent implements OnInit {
       this.getDetails(this.route.snapshot.paramMap.get('id'));
     }
   
-  get fval() {
+  get fval2() {
     return this.ngFormSendBook.controls;
+  }
+
+ get fval() {
+  return this.ngFormAddtixs.controls;
   }
   getDetails(id: string){
   	this.dataApi.getTixById(id).subscribe(tix => (this.tix = tix));
