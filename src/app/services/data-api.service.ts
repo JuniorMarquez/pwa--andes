@@ -126,7 +126,7 @@ export class DataApiService {
 		.post<TixInterface>(url_api, tix,{headers: this.headers})
 		.pipe(map(data => data));
 	}
-	updateTix(tix :TixInterface,id){
+	updateTix(tix :TixInterface, id: string){
 		let token = this.authService.getToken();
 		const url_api=`https://db.andesproadventures.com:3003/api/product/${id}/?access_token=${token}`;
 		return this.http
