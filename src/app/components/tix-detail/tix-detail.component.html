@@ -29,7 +29,32 @@
         <section class="section-base">
             <div class="container">
                 <div class="row" >
-                    <div class="col-lg-6" *ngIf="!this._uw.editingTrek">
+                    <div class="col-lg-6" *ngIf="tix !== undefined "[hidden]="this._uw.editingTrek">
+                                
+                                <hr class="space-xs" />
+
+
+                                                    <div class="list-thumb-box" *ngFor="let item of tix.images; let i=index;" >
+                                                        <img 
+                                                        src="{{item}}"  *ngIf="i === 0"class="img-responsive" alt="" />
+                                                        
+                                                    </div>
+                                                    <ul class="gallery-list" >
+                                                <li *ngFor="let image of tix.images" >
+                                                    <a data-fancybox="gallery" href="{{image}}">
+                                                        <img src="{{image}}" class="img-responsive" alt="">
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                                
+                         
+
+                                
+                            <hr class="space-xs" />
+                           
+                    </div>
+                    <div class="col-lg-4" *ngIf="tix !== undefined" [hidden]="!this._uw.editingTrek">
                                 
                                 <hr class="space-xs" />
 
@@ -54,32 +79,7 @@
                             <hr class="space-xs" />
                            
                     </div>
-                    <div class="col-lg-4" [hidden]="!this._uw.editingTrek">
-                                
-                                <hr class="space-xs" />
-
-
-                                                    <div class="list-thumb-box" *ngFor="let item of tix.images; let i=index;" >
-                                                        <img 
-                                                        src="{{item}}"  *ngIf="i === 0"class="img-responsive" alt="" />
-                                                        
-                                                    </div>
-                                                    <ul class="gallery-list">
-                                                <li *ngFor="let image of tix.images">
-                                                    <a data-fancybox="gallery" href="{{image}}">
-                                                        <img src="{{image}}" class="img-responsive" alt="">
-                                                    </a>
-                                                </li>
-                                            </ul>
-
-                                                
-                         
-
-                                
-                            <hr class="space-xs" />
-                           
-                    </div>
-                    <div class="col-lg-6" [hidden]="this._uw.editingTrek">
+                    <div class="col-lg-6" *ngIf="tix !== undefined " [hidden]="this._uw.editingTrek">
                     	<a class="btn btn-sm btn-circle btn-icon" (click)="editTrek()" *ngIf="this._uw.isLogged">
                         		<i class="fa fa-pencil"></i>Editar 
                         	</a>
@@ -130,7 +130,7 @@
 
 
 
- <div class="col-md-8 col-xs-12" [hidden]="!this._uw.editingTrek">
+ <div class="col-md-8 col-xs-12" *ngIf="tix !== undefined " [hidden]="!this._uw.editingTrek">
 								<form  class="form"[formGroup]="ngFormAddtixs" (ngSubmit) ="sendTix(tix.id)" >
 									<aw-wizard>
 										<aw-wizard-step stepTitle="1">
@@ -638,7 +638,7 @@
                 
 	            <div class="row">
 	                
-	                    <div class="col-lg-6"  [hidden]="this._uw.editingTrek">
+	                    <div class="col-lg-6" *ngIf="tix !== undefined " [hidden]="this._uw.editingTrek">
 	                       	<ul class="accordion-list" data-open="1">
 						                            <li>
 						                                <a href="#">Que Incluye el Tours</a>
@@ -671,7 +671,7 @@
 	                        <div class="section-base1 section-color1">
 	                            <div class="container"> 
 	                              <div class="row1">
-	                              	<form  class="form"[formGroup]="ngFormSendBook"  *ngIf="!this._uw.isLogged">
+	                              	<form  class="form"[formGroup]="ngFormSendBook"  *ngIf="!this._uw.editingTrek && !this._uw.isLogged">
 	                               <!--  <form data-anima="fade-in" data-time="1000"	 class="form-box form-ajax checkbox-bottom-right " method="post" > -->
 	                                    <div class="row success-bg">
 	                                     

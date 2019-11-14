@@ -109,7 +109,7 @@ export class TixDetailComponent implements OnInit {
     this._uw.book=this.book;
     this._uw.book.adminName=this._uw.info.adminName;
     this._uw.book.adminEmail=this._uw.info.adminEmail;
-    this._uw.book.men1=this._uw.info.
+    this._uw.book.men1=this._uw.info.men1;
     this._uw.book.numeroCuenta=this._uw.info.numeroCuenta;
     this._uw.book.rut=this._uw.info.rut;
     this._uw.book.titular=this._uw.info.titular;
