@@ -64,8 +64,7 @@ export class TixDetailComponent implements OnInit {
     status:'pending'
   };
 
-  public tix:TixInterface= {
-  };
+  public tix:TixInterface;
 
   public isError = false;
   public isLogged =false;
@@ -74,7 +73,7 @@ export class TixDetailComponent implements OnInit {
 
   editTrek(){
     this._uw.editingTrek = true;
-    
+    this._uw.images=this.tix.images;
 
   }
 
@@ -146,7 +145,8 @@ export class TixDetailComponent implements OnInit {
       this.tix = this.ngFormAddtixs.value;
       // this.tix.userd="a"+val;
       this.tix.status="activated";
-      // this.tix.images=this._uw.images;
+      this.tix.images=this._uw.images;
+      
 
       return this.dataApi.updateTix(this.tix, id)
         .subscribe(
@@ -218,6 +218,6 @@ export class TixDetailComponent implements OnInit {
   }
   getDetails(id: string){
   	this.dataApi.getTixById(id).subscribe(tix => (this.tix = tix));
-    this._uw.images=this.tix.images;
+    
   }
 }

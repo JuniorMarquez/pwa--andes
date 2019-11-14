@@ -29,7 +29,7 @@
         <section class="section-base">
             <div class="container">
                 <div class="row" >
-                    <div class="col-lg-6" [hidden]="this._uw.editingTrek">
+                    <div class="col-lg-6" *ngIf="!this._uw.editingTrek">
                                 
                                 <hr class="space-xs" />
 

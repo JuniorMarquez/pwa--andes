@@ -72,6 +72,7 @@ export class DataApiService {
 		let indice = id;
 		const url_api=`https://db.andesproadventures.com:3003/api/product/${indice}`;
 		this.tix = this.http.get(url_api);
+		
 		return (this.tix);
 	}
 	getCardById(id:string){

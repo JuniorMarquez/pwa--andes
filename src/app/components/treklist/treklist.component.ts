@@ -61,6 +61,7 @@ getTixsPending(){
   }
   editTrek(tix: TixInterface){
     this._uw.editingTrek=true;
+    this._uw.images=this.tix.images;
     this.router.navigate(['/tix-detail/',tix.id]);
 
   }
