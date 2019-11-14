@@ -237,6 +237,6 @@ export class TixDetailComponent implements OnInit {
   }
   getDetails(id: string){
   	this.dataApi.getTixById(id).subscribe(tix => (this.tix = tix);
-        this._uw.images=this.tix.images);
+        this._uw.images=this.tix.images;);
   }
 }
