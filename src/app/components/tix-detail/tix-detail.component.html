@@ -26,15 +26,6 @@
     </header> -->
 
 <main> 
-	<!-- <swal
-  #deleteSwal
-  title="Delete {{ file.name }}?"
-  text="This cannot be undone"
-  type="question"
-  [showCancelButton]="true"
-  [focusCancel]="true"
-  (confirm)="deleteFile(file)">
-</swal> -->
         <section class="section-base">
             <div class="container">
                 <div class="row" >
@@ -89,10 +80,11 @@
                            
                     </div>
                     <div class="col-lg-6" [hidden]="this._uw.editingTrek">
-                        <div class="col-lg-12" *ngIf="this._uw.isLogged" [hidden]="this._uw.editingTrek" >
-                        	<a class="btn btn-sm btn-circle btn-icon" (click)="editTrek()">
+                    	<a class="btn btn-sm btn-circle btn-icon" (click)="editTrek()" *ngIf="this._uw.isLogged">
                         		<i class="fa fa-pencil"></i>Editar 
                         	</a>
+                        <div class="col-lg-12" *ngIf="this._uw.isLogged" [hidden]="this._uw.editingTrek" >
+                        	
     		            </div>
                         <div class="title">
                             <h2>{{tix.productName}}</h2>
@@ -128,129 +120,17 @@
                                         
                         
                     </div>
-                   
 
 
 
-                </div>
-                
-	            <div class="row" [hidden]="this._uw.editingTrek">
-	                
-	                    <div class="col-lg-6 ">
-	                       	<ul class="accordion-list" data-open="1">
-						                            <li>
-						                                <a href="#">Que Incluye el Tours</a>
-						                                <div class="content">
-						                                    <p>
-						                                        1). Traslado ida y vuelta.<br> 2). Snack durante el traslado.<br> 3). Fotos durante el viaje. <br>4). Guía Y coordinador de ANDES PROADVENTURES.<br> 5). Seguro de pasajeros.<br> 6). Botiquín de primeros auxilios.
-						                                    </p>
-						                                </div>
-						                            </li>
-						                            <li>
-						                                <a href="#">Tips del viaje</a>
-						                                <div class="content">
-						                                    <p align="justify">
-						                                        {{tix.tips}}
-					                                            	                                    </p>
-						                                </div>
-						                            </li>
-						                            <li>
-						                                <a href="#">Información para la Reserva</a>
-						                                <div class="content">
-						                                    <p align="justify">
-						                                        1)Para asegurar tus cupos, reserva directamente a nuestra cuenta Rut.<br> 2) Deposito o Transferencia a cuenta RUT en Banco Estado: Número de cuenta: 26212340 RUT Número: 26212340-5 A nombre de: Jhon Hernández Correo: jhonha.18@gmail.com Número de Teléfono: +56958249250 Para aclarar dudas. También puede comunicarse con nosotros a cualquiera de los siguientes números. +569 98185667
-						                                    </p>
-						                                </div>
-						                            </li>
-						                        </ul>
-	                    </div>
 
-	                    <div class="col-lg-6">
-	                        <div class="section-base1 section-color1">
-	                            <div class="container"> 
-	                              <div class="row1">
-	                              	<form  class="form"[formGroup]="ngFormSendBook"  *ngIf="!this._uw.isLogged">
-	                               <!--  <form data-anima="fade-in" data-time="1000"	 class="form-box form-ajax checkbox-bottom-right " method="post" > -->
-	                                    <div class="row success-bg">
-	                                     
-	                                      <hr class="space-lg" />
-	                                        <div class="col-lg-6">
-	                                            <p>Nombre</p>
-	                                            <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Nombre" [(ngModel)]="book.nombre"
-														[ngClass]="{ 'is-invalid': submitted && fval2.nombre.errors }"
-														required>
-														<div *ngIf="submitted && fval2.nombre.errors" class="invalid-feedback">
-															<div *ngIf="fval2.nombre.errors.required" class="errorLabel">
-															* El nombre es requerido
-															</div>
 
-														</div>
-	                                        </div>
-	                                       <div class="col-lg-6">
-	                                            <p>Email</p>
-	                                            <input type="text" class="form-control" id="email" formControlName="email" placeholder="email" [(ngModel)]="book.email"
-														[ngClass]="{ 'is-invalid': submitted && fval2.email.errors }"
-														required>
-														<div *ngIf="submitted && fval2.email.errors" class="invalid-feedback">
-															<div *ngIf="fval2.email.errors.required" class="errorLabel">
-															* El email es requerido
-															</div>
-														</div>
-	                                        </div>
-	                                        <div class="col-lg-6">
-	                                            <p>Personas</p>
-	                                           <select class="form-control wide"   id="cant" formControlName="cant" placeholder="cant" [(ngModel)]="book.cant"
-														[ngClass]="{ 'is-invalid': submitted && fval2.cant.errors }"
-														required>
-															<option>1</option>
-															<option>2</option>
-															<option>5</option>
-															<option>10 </option>
-															<option>15</option>
-														</select>
-	                                        </div>
-	                                        <div *ngIf="submitted && fval2.cant.errors" class="invalid-feedback">
-															<div *ngIf="fval2.cant.errors.required" class="errorLabel">
-															* La cantidad de personas es requerida
-															</div>
+                    <!-- ------ formulario edicion ini------------ -->
 
-														</div>
-	                                        <div class="col-lg-6">
-	                                            <p><strong>Fecha:</strong> {{ selDate.year }}-{{ selDate.month + 1}}-{{ selDate.date }}</p>
-	                                            
-	                                        </div>
-	                                      
-	                                    </div>
-	                                      <div >
-	                                        	 <xunk-calendar [selectedDate]="selDate"></xunk-calendar>
-	                                        	 <div class="form-checkbox">
-	                                        <input type="checkbox" id="check" name="check" value="check" required>
-	                                        <label for="check">Aceptar teminos y condiciones.</label>
-	                                    </div>
-	                                        	
-	                                        </div>
 
-										 <hr class="space-xs" />
 
-	                                        <div class="col-lg-12 align-right">
-	                                         <a (click)="sendBook()"class="btn btn-sm btn-circle btn-icon"><i class="fa fa-search"></i>Consultar disponibilidad </a>
-	                                     </div>
 
-	                                   <!--  <button class="btn-text" type="submit">Chequear disponibilidad</button> -->
-	                                    
-	                                 
-	                                    
-	                                   
-	                                </form>
-	                                
-	                              </div>
-	                             
-	                            </div>
-	                        </div>
-	                    </div>
-	            </div>
-            </div>
-            <div class="col-md-8 col-xs-12" [hidden]="!this._uw.editingTrek">
+ <div class="col-md-8 col-xs-12" [hidden]="!this._uw.editingTrek">
 								<form  class="form"[formGroup]="ngFormAddtixs" (ngSubmit) ="sendTix()" >
 									<aw-wizard>
 										<aw-wizard-step stepTitle="1">
@@ -746,7 +626,133 @@
 								</form>
 							</div>
 
-    
+
+
+
+                    <!-- ---------formulario edicion fin------------------ -->
+                   
+
+
+
+                </div>
+                
+	            <div class="row">
+	                
+	                    <div class="col-lg-6"  [hidden]="this._uw.editingTrek">
+	                       	<ul class="accordion-list" data-open="1">
+						                            <li>
+						                                <a href="#">Que Incluye el Tours</a>
+						                                <div class="content">
+						                                    <p>
+						                                        1). Traslado ida y vuelta.<br> 2). Snack durante el traslado.<br> 3). Fotos durante el viaje. <br>4). Guía Y coordinador de ANDES PROADVENTURES.<br> 5). Seguro de pasajeros.<br> 6). Botiquín de primeros auxilios.
+						                                    </p>
+						                                </div>
+						                            </li>
+						                            <li>
+						                                <a href="#">Tips del viaje</a>
+						                                <div class="content">
+						                                    <p align="justify">
+						                                        {{tix.tips}}
+					                                            	                                    </p>
+						                                </div>
+						                            </li>
+						                            <li>
+						                                <a href="#">Información para la Reserva</a>
+						                                <div class="content">
+						                                    <p align="justify">
+						                                        1)Para asegurar tus cupos, reserva directamente a nuestra cuenta Rut.<br> 2) Deposito o Transferencia a cuenta RUT en Banco Estado: Número de cuenta: 26212340 RUT Número: 26212340-5 A nombre de: Jhon Hernández Correo: jhonha.18@gmail.com Número de Teléfono: +56958249250 Para aclarar dudas. También puede comunicarse con nosotros a cualquiera de los siguientes números. +569 98185667
+						                                    </p>
+						                                </div>
+						                            </li>
+						                        </ul>
+	                    </div>
+
+	                    <div class="col-lg-6">
+	                        <div class="section-base1 section-color1">
+	                            <div class="container"> 
+	                              <div class="row1">
+	                              	<form  class="form"[formGroup]="ngFormSendBook"  *ngIf="!this._uw.isLogged">
+	                               <!--  <form data-anima="fade-in" data-time="1000"	 class="form-box form-ajax checkbox-bottom-right " method="post" > -->
+	                                    <div class="row success-bg">
+	                                     
+	                                      <hr class="space-lg" />
+	                                        <div class="col-lg-6">
+	                                            <p>Nombre</p>
+	                                            <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Nombre" [(ngModel)]="book.nombre"
+														[ngClass]="{ 'is-invalid': submitted && fval2.nombre.errors }"
+														required>
+														<div *ngIf="submitted && fval2.nombre.errors" class="invalid-feedback">
+															<div *ngIf="fval2.nombre.errors.required" class="errorLabel">
+															* El nombre es requerido
+															</div>
+
+														</div>
+	                                        </div>
+	                                       <div class="col-lg-6">
+	                                            <p>Email</p>
+	                                            <input type="text" class="form-control" id="email" formControlName="email" placeholder="email" [(ngModel)]="book.email"
+														[ngClass]="{ 'is-invalid': submitted && fval2.email.errors }"
+														required>
+														<div *ngIf="submitted && fval2.email.errors" class="invalid-feedback">
+															<div *ngIf="fval2.email.errors.required" class="errorLabel">
+															* El email es requerido
+															</div>
+														</div>
+	                                        </div>
+	                                        <div class="col-lg-6">
+	                                            <p>Personas</p>
+	                                           <select class="form-control wide"   id="cant" formControlName="cant" placeholder="cant" [(ngModel)]="book.cant"
+														[ngClass]="{ 'is-invalid': submitted && fval2.cant.errors }"
+														required>
+															<option>1</option>
+															<option>2</option>
+															<option>5</option>
+															<option>10 </option>
+															<option>15</option>
+														</select>
+	                                        </div>
+	                                        <div *ngIf="submitted && fval2.cant.errors" class="invalid-feedback">
+															<div *ngIf="fval2.cant.errors.required" class="errorLabel">
+															* La cantidad de personas es requerida
+															</div>
+
+														</div>
+	                                        <div class="col-lg-6">
+	                                            <p><strong>Fecha:</strong> {{ selDate.year }}-{{ selDate.month + 1}}-{{ selDate.date }}</p>
+	                                            
+	                                        </div>
+	                                      
+	                                    </div>
+	                                      <div >
+	                                        	 <xunk-calendar [selectedDate]="selDate"></xunk-calendar>
+	                                        	 <div class="form-checkbox">
+	                                        <input type="checkbox" id="check" name="check" value="check" required>
+	                                        <label for="check">Aceptar teminos y condiciones.</label>
+	                                    </div>
+	                                        	
+	                                        </div>
+
+										 <hr class="space-xs" />
+
+	                                        <div class="col-lg-12 align-right">
+	                                         <a (click)="sendBook()"class="btn btn-sm btn-circle btn-icon"><i class="fa fa-search"></i>Consultar disponibilidad </a>
+	                                     </div>
+
+	                                   <!--  <button class="btn-text" type="submit">Chequear disponibilidad</button> -->
+	                                    
+	                                 
+	                                    
+	                                   
+	                                </form>
+	                                
+	                              </div>
+	                             
+	                            </div>
+	                        </div>
+	                    </div>
+	            </div>
+            </div>
+         
          
                 
         </section>
