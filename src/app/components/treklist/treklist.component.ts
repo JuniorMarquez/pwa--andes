@@ -23,5 +23,8 @@ getTixsPending(){
   ngOnInit() {
   	this.getTixsPending();
   }
+  onPreUpdatetrek(tix: TixInterface):void{
+    this.dataApi.selectedTix=Object.assign({},tix);
+  } 
 
 }

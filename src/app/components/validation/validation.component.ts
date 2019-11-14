@@ -41,12 +41,22 @@ ngFormSendValidation: FormGroup;
      public sendMailValidation(){
    // this.dataApi.saveBook(this._uw.book)
    //      .subscribe();  
-   this.dataApiService.senMail07(this._uw.validation).subscribe();
-   this.dataApiService.senMail08(this._uw.validation).subscribe();   
+   // this.dataApiService.senMailNewValidationAppToUser(this._uw.validation).subscribe();
+   this.dataApiService.senMailNewValidationAppToAdmin(this._uw.validation).subscribe(); 
+
+    }
+
+    getInfo(){
+       this.dataApiService
+        .getInfo().subscribe((res:any) => {
+        this._uw.info=res[0];
+        console.log(this._uw.info.titular);
+      });
     }
 
 
   ngOnInit() {
+     this.getInfo();
   	this.ngFormSendValidation = this.formBuilder.group({
       referencia: ['', [Validators.required]],
       telefono: ['', [Validators.required]],
@@ -62,11 +72,16 @@ ngFormSendValidation: FormGroup;
         } 
       this.validation = this.ngFormSendValidation.value;
       this.validation.status="pending";
+      this._uw.validation.asunto="Confirmacion de reserva";
+      // this.validation.adminEmail=this._uw.info.adminEmail;
+      // this.validation.adminName=this._uw.info.adminName;
       this._uw.validation=this.validation;
+      this._uw.validation.adminEmail=this._uw.info.adminEmail;
+      this._uw.validation.adminName=this._uw.info.adminName;
       this.sendMailValidation();
-      this.dataApiService.saveValidation(this.validation)
-        .subscribe(
-        );   
+      // this.dataApiService.saveValidation(this.validation)
+      //   .subscribe(
+      //   );   
         console.log("se desplaza");
             this.router.navigate(['/successvalidation'])
   }

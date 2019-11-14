@@ -114,10 +114,18 @@ export class TixDetailComponent implements OnInit {
     this.book.adelanto=(this.book.precioUni*this.ngFormSendBook.value.cant)*(30/100);
     this.book.resto=this.book.monto*70/100;
     this.book.asunto="Nueva reserva";
-    this.book.adminName=this._uw.adminName;
+ 
     this.book.productName=this.tix.productName;
     this.book.fecha=this.selDate.date+" /"+(this.selDate.month+1)+" /"+this.selDate.year;
     this._uw.book=this.book;
+    this._uw.book.adminName=this._uw.info.adminName;
+    this._uw.book.adminEmail=this._uw.info.adminEmail;
+    this._uw.book.men1=this._uw.info.
+    this._uw.book.numeroCuenta=this._uw.info.numeroCuenta;
+    this._uw.book.rut=this._uw.info.rut;
+    this._uw.book.titular=this._uw.info.titular;
+    this._uw.book.emailContacto=this._uw.info.emailContacto;
+    this._uw.book.telefonoContacto=this._uw.info.telefonoContacto;
     this.router.navigate(['/checkout'])
   }
 

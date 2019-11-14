@@ -20,8 +20,8 @@ export class CheckoutComponent implements OnInit {
   	) { }
   
   public sendBook(){
-    this.dataApi.senMail(this._uw.book).subscribe(); 
-    this.dataApi.senMail06(this._uw.book).subscribe();
+    this.dataApi.senMailNewBookAppToUser(this._uw.book).subscribe(); 
+    this.dataApi.senMailNewBookAppToAdmin(this._uw.book).subscribe();
     this.router.navigate(['/successbook'])	    
     }
   

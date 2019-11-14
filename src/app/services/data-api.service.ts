@@ -28,13 +28,26 @@ export class DataApiService {
   	private http: HttpClient, 
   	private authService:AuthService
   	) {}
+   public tixs:TixInterface;
+
 
   	headers : HttpHeaders = new HttpHeaders({
   		"Content-Type":"application/json",
   		Authorization: this.authService.getToken()
   		});
   	// 
-  	getBookPending(){
+
+  // 	  updateTix(tix) {
+  //   const tixI = tix.tixI;
+  //   const token = this.authService.getToken();
+  //   const url_api = `https://db.andesproadventures.com:3003/api/product/${tixI}/?access_token=${token}`;
+  //   return this.http
+  //     .put<TixInterface>(url_api, book, { headers: this.headers })
+  //     .pipe(map(data => data));
+  // }
+
+
+  	getBookPending(){	
 		const url_api='https://db.andesproadventures.com:3003/api/books?filter[where][status]=pending';
 		return (this.books = this.http.get(url_api));
 	}
@@ -152,37 +165,37 @@ export class DataApiService {
 		.post<ValidationInterface>(url_api, validation)
 		.pipe(map(data => data));
 	}
-	senMail(book){
+	senMailNewBookAppToUser(book){
 		const url_api='https://db.andesproadventures.com:3005/newBookAppToUser';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
-	senMail06(book){
+	senMailNewBookAppToAdmin(book){
 		const url_api='https://db.andesproadventures.com:3005/newBookAppToAdmin';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
-	senMail07(validation){
+	senMailNewValidationAppToUser(validation){
 		const url_api='https://db.andesproadventures.com:3005/newValidationAppToUser';
 		return this.http
 		.post(url_api, validation)
 		.pipe(map(data => data));
 	}
-	senMail08(validation){
+	senMailNewValidationAppToAdmin(validation){
 		const url_api='https://db.andesproadventures.com:3005/newValidationAppToAdmin';
 		return this.http
 		.post(url_api, validation)
 		.pipe(map(data => data));
 	}
-	senMail09(book){
+	senMailSuccesValidation(book){
 		const url_api='https://db.andesproadventures.com:3005/succesValidation';
 		return this.http
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
-	senMail10(book){
+	senMailNewContactAppToAdmin(book){
 		const url_api='https://db.andesproadventures.com:3005/newContactAppToAdmin';
 		return this.http
 		.post(url_api, book)
