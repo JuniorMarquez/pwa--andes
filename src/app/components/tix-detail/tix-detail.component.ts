@@ -135,6 +135,7 @@ export class TixDetailComponent implements OnInit {
 
 
  sendTix(id: string){
+    this._uw.images=this.tix.images;
       this.submitted = true;
       if (this.ngFormAddtixs.invalid) {
          this._uw.errorFormAddtixs=true;
