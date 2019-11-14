@@ -23,6 +23,7 @@ export class TreksComponent implements OnInit {
 
 
  	ngOnInit() {
+         this._uw.editingTrek=false;
   if (this._uw.loaded==true){
          this.loadAPI = new Promise(resolve => {
           console.log("resolving promise...");
