@@ -65,25 +65,6 @@ export class TixDetailComponent implements OnInit {
   };
 
   public tix:TixInterface= {
-  	category:'',
-  	description:'',
-  	productName:'',
-  	notes:'',
-  	images: ['', ''],
-    cantD:0,
-    precio:0,
-    capacidad:1,
-    altitud:'',
-    temp:'',
-    duracion:'',
-    disponibilidad:'',
-    distancia:'',
-    dificulty:'',
-    desLg:'',
-    tips:'',
-    address:'',
-    status:'',
-    userd:''
   };
 
   public isError = false;
@@ -165,7 +146,7 @@ export class TixDetailComponent implements OnInit {
       this.tix = this.ngFormAddtixs.value;
       // this.tix.userd="a"+val;
       this.tix.status="activated";
-      this.tix.images=this._uw.images;
+      // this.tix.images=this._uw.images;
 
       return this.dataApi.updateTix(this.tix, id)
         .subscribe(
