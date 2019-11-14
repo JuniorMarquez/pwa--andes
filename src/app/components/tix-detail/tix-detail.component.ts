@@ -236,8 +236,7 @@ export class TixDetailComponent implements OnInit {
   return this.ngFormAddtixs.controls;
   }
   getDetails(id: string){
-  	this.dataApi.getTixById(id).subscribe(tix => (this.tix = tix;
-      
-        this._uw.images=this.tix.images;));
+  	this.dataApi.getTixById(id).subscribe(tix => (this.tix = tix);
+        this._uw.images=this.tix.images);
   }
 }
