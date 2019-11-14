@@ -93,6 +93,8 @@ export class TixDetailComponent implements OnInit {
 
   editTrek(){
     this._uw.editingTrek = true;
+    this._uw.images=this.tix.images;
+
   }
 
   getInfo(){
@@ -151,7 +153,7 @@ export class TixDetailComponent implements OnInit {
   // }
 
 
- sendTix(){
+ sendTix(id: string){
       this.submitted = true;
       if (this.ngFormAddtixs.invalid) {
          this._uw.errorFormAddtixs=true;
@@ -164,7 +166,8 @@ export class TixDetailComponent implements OnInit {
       // this.tix.userd="a"+val;
       this.tix.status="activated";
       this.tix.images=this._uw.images;
-      return this.dataApi.updateTix(this.tix, this.tix.id)
+
+      return this.dataApi.updateTix(this.tix, id)
         .subscribe(
             tix => this.router.navigate(['/treklist'])
         );
@@ -176,9 +179,9 @@ export class TixDetailComponent implements OnInit {
       this.isError = false;
     }, 4000);
   }
- finish(){
+ finish(id: string){
     if (this._uw.errorFormAddtixs){
-      this.sendTix();
+      this.sendTix(id);
     }
     
   }
