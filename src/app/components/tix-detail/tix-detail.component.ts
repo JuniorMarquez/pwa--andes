@@ -146,6 +146,50 @@ export class TixDetailComponent implements OnInit {
     document.getElementsByTagName("head")[0].appendChild(node);
   }
 
+  // sendTix(){
+  //   this.dataApi.updateTix(tix: TixInterface);
+  // }
+
+deleteTix(){
+   return this.dataApi.deleteTix(this.tix.id)
+        .subscribe(
+            tix => this.router.navigate(['/treklist'])
+        );
+}
+ sendTix(){
+      this.submitted = true;
+      if (this.ngFormAddtixs.invalid) {
+         this._uw.errorFormAddtixs=true;
+      return;
+        } 
+      this._uw.errorFormAddtixs=false;
+      // this.user = this.authService.getCurrentUser();
+      // let val=(this.user.id).toString();
+      this.tix = this.ngFormAddtixs.value;
+      // this.tix.userd="a"+val;
+      this.tix.status="activated";
+      this.tix.images=this._uw.images;
+      return this.dataApi.updateTix(this.tix)
+        .subscribe(
+            tix => this.router.navigate(['/treklist'])
+        );
+  }    
+    
+  onIsError(): void {
+    this.isError = true;
+    setTimeout(() => {
+      this.isError = false;
+    }, 4000);
+  }
+ finish(){
+    if (this._uw.errorFormAddtixs){
+      this.sendTix();
+    }
+    
+  }
+
+
+
   public selDate = { date:1, month:1, year:1 };
   
   ngOnInit() {
