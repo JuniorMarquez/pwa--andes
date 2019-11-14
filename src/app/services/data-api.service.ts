@@ -112,13 +112,6 @@ export class DataApiService {
 		const url_api='https://db.andesproadventures.com:3003/api/card?filter[where][and][0][status]=pending&filter[where][and][1][type]=affiliateType';
 		return (this.cards = this.http.get(url_api));
 	}
-	saveTix(tix :TixInterface){
-		let token = this.authService.getToken();
-		const url_api='https://db.andesproadventures.com:3003/api/product?access_token${token}';
-		return this.http
-		.post<TixInterface>(url_api, tix,{headers: this.headers})
-		.pipe(map(data => data));
-	}
 	saveTixFree(tix :TixInterface){
 	//	let token = this.authService.getToken();
 		const url_api='https://db.andesproadventures.com:3003/api/product';
@@ -126,16 +119,23 @@ export class DataApiService {
 		.post<TixInterface>(url_api, tix)
 		.pipe(map(data => data));
 	}
-	updateTix(tix: TixInterface){
+	saveTix(tix :TixInterface){
 		let token = this.authService.getToken();
 		const url_api='https://db.andesproadventures.com:3003/api/product?access_token${token}';
+		return this.http
+		.post<TixInterface>(url_api, tix,{headers: this.headers})
+		.pipe(map(data => data));
+	}
+	updateTix(tix :TixInterface,id){
+		let token = this.authService.getToken();
+		const url_api=`https://db.andesproadventures.com:3003/api/product/${id}/?access_token=${token}`;
 		return this.http
 		.put<TixInterface>(url_api, tix,{headers: this.headers})
 		.pipe(map(data => data));
 	}
 	deleteTix(id: string){
-		let token = this.authService.getToken();
-		const url_api='https://db.andesproadventures.com:3003/api/product?access_token${token}';
+		const token = this.authService.getToken();
+		const url_api=`https://db.andesproadventures.com:3003/api/product/${id}/?access_token$={token}`;
 		return this.http
 		.delete<TixInterface>(url_api, {headers: this.headers})
 		.pipe(map(data => data));

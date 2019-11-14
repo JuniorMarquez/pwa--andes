@@ -150,12 +150,7 @@ export class TixDetailComponent implements OnInit {
   //   this.dataApi.updateTix(tix: TixInterface);
   // }
 
-deleteTix(){
-   return this.dataApi.deleteTix(this.tix.id)
-        .subscribe(
-            tix => this.router.navigate(['/treklist'])
-        );
-}
+
  sendTix(){
       this.submitted = true;
       if (this.ngFormAddtixs.invalid) {
@@ -169,7 +164,7 @@ deleteTix(){
       // this.tix.userd="a"+val;
       this.tix.status="activated";
       this.tix.images=this._uw.images;
-      return this.dataApi.updateTix(this.tix)
+      return this.dataApi.updateTix(this.tix, this.tix.id)
         .subscribe(
             tix => this.router.navigate(['/treklist'])
         );
