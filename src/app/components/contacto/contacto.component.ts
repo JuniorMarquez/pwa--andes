@@ -26,15 +26,30 @@ export class ContactoComponent implements OnInit {
     private formBuilder: FormBuilder
 
   	) { }
-  public contact:ContactInterface;
+  public contact:ContactInterface = {
+    nombre:'',
+    email:'',
+    mensaje:''
+  };
 
-
+getInfo(){
+       this.dataApi
+        .getInfo().subscribe((res:any) => {
+        this._uw.info=res[0];
+        // console.log(this._uw.info.titular);
+      });
+    }
   sendContact(){
     this.contact=this.ngFormSendContact.value;
+    this.contact.asunto="Contacto";
+    this.contact.adminEmail=this._uw.info.adminEmail;
+    this.contact.adminName=this._uw.info.adminName;
+
   	this.dataApi.senMailNewContactAppToAdmin(this.contact).subscribe(); 
   }
 
   ngOnInit() {
+    this.getInfo();
   	 this.ngFormSendContact = this.formBuilder.group({
         nombre: ['', [Validators.required]],
         email: ['', [Validators.required]],

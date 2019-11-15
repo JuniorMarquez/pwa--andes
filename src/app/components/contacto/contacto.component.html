@@ -36,25 +36,26 @@
                                                             </div>
                                                         </div>
                                             </div>
+                                            <div class="col-lg-12">
+                                            <div class="form-group">
+                                                        <label for="mensaje">Mensaje</label>
+                                                        <textarea class="form-control height-70" id="mensaje" formControlName="mensaje" placeholder="Mensaje" [(ngModel)]="contact.mensaje"
+                                                        [ngClass]="{ 'is-invalid': submitted && fval.mensaje.errors }"
+                                                        required></textarea>
+                                                        <div *ngIf="submitted && fval.mensaje.errors" class="invalid-feedback">
+                                                            <div *ngIf="fval.mensaje.errors.required" class="errorLabel">
+                                                            * Cuentanos con mayor detalle 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                             </div>
-                          <!--   <p>Mensaje</p>
-                            <textarea id="messagge" name="messagge" class="input-textarea" placeholder="Escriba su mensaje ..." required></textarea> -->
-                            <!-- <div class="form-checkbox">
-                                <input type="checkbox" id="check" name="check" value="check" required>
-                                <label for="check">Aceptar politicas de </label>
-                            </div> -->
-                            <!-- <button class="btn btn-sm" type="submit">Enviar mensaje</button> -->
-                           <!--  <div class="success-box">
-                                <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
-                            </div>
-                            <div class="error-box">
-                                <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
-                            </div> -->
+                    
 
                                          <hr class="space-xs" />
 
                                             <div class="col-lg-12 align-right">
-                                             <a (click)="sendContact()"class="btn btn-sm btn-circle btn-icon"><i class="fa fa-search"></i>Enviar </a>
+                                             <a (click)="sendContact(ngFormSendContact)"class="btn btn-sm btn-circle btn-icon"><i class="fa fa-search"></i>Enviar </a>
                                          </div>
                         </form>
                     </div>

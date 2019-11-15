@@ -1,5 +1,8 @@
 export interface ContactInterface {
-	id?:string;
 	email?:string;
 	nombre?:string;
+	adminEmail?:string;
+	adminName?:string;
+	mensaje?:string;
+	asunto?:string
 }
