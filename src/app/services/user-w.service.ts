@@ -7,6 +7,8 @@ export class UserWService {
 	admin:boolean;
 	adminName:string;
 	affiliate:boolean;
+	assBook:any={};
+	assValidation:any={};
 	bandera:string;
 	book:any={};
 	card:any={};

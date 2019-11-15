@@ -89,6 +89,7 @@ import { SuccessvalidationComponent } from './components/successvalidation/succe
 import { ValistComponent } from './components/valist/valist.component';
 import { TreklistComponent } from './components/treklist/treklist.component';
 import { TrekeditComponent } from './components/trekedit/trekedit.component';
+import { AssbookComponent } from './components/assbook/assbook.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -140,6 +141,7 @@ import { TrekeditComponent } from './components/trekedit/trekedit.component';
     ValistComponent,
     TreklistComponent,
     TrekeditComponent,
+    AssbookComponent,
 
   ],
   imports: [

@@ -51,6 +51,10 @@ export class DataApiService {
 		const url_api='https://db.andesproadventures.com:3003/api/book?filter[where][status]=pending';
 		return (this.books = this.http.get(url_api));
 	}
+	getBookConf(){	
+		const url_api='https://db.andesproadventures.com:3003/api/book?filter[where][status]=Confirmada';
+		return (this.books = this.http.get(url_api));
+	}
 	getValidationPending(){
 		const url_api='https://db.andesproadventures.com:3003/api/validations?filter[where][status]=pending';
 		return (this.books = this.http.get(url_api));
@@ -80,6 +84,12 @@ export class DataApiService {
 		const url_api=`https://db.andesproadventures.com:3003/api/card/${indice}`;
 		this.card = this.http.get(url_api);
 		return (this.card);
+	}
+	getBookById(id:string){
+		let indice = id;
+		const url_api=`https://db.andesproadventures.com:3003/api/book/${indice}`;
+		this.book = this.http.get(url_api);
+		return (this.book);
 	}
 	getInfo(){
 		// let indice = id;
@@ -132,6 +142,20 @@ export class DataApiService {
 		const url_api=`https://db.andesproadventures.com:3003/api/product/${id}/?access_token$={token}`;
 		return this.http
 		.put<TixInterface>(url_api, tix,{headers: this.headers})
+		.pipe(map(data => data));
+	}
+	updateBook(book :BookInterface, id: string){
+		let token = this.authService.getToken();
+		const url_api=`https://db.andesproadventures.com:3003/api/book/${id}/?access_token$={token}`;
+		return this.http
+		.put<BookInterface>(url_api, book,{headers: this.headers})
+		.pipe(map(data => data));
+	}
+	updateValidation(validation :ValidationInterface, id: string){
+		let token = this.authService.getToken();
+		const url_api=`https://db.andesproadventures.com:3003/api/validations/${id}/?access_token$={token}`;
+		return this.http
+		.put<ValidationInterface>(url_api, validation,{headers: this.headers})
 		.pipe(map(data => data));
 	}
 	deleteTix(id: string){

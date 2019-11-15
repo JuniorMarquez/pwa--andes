@@ -16,14 +16,22 @@ export class BookingComponent implements OnInit {
   	) { }
 
   public books:BookInterface;
+
+  public books2:BookInterface;
  getBookPending(){
         this.dataApi
         .getBookPending()
         .subscribe((books: BookInterface) => (this.books=books));
     }
+    getBookConf(){
+        this.dataApi
+        .getBookConf()
+        .subscribe((books2: BookInterface) => (this.books2=books2));
+    }
 
   ngOnInit() {
   	 this.getBookPending();
+      this.getBookConf();
   }
 
 }

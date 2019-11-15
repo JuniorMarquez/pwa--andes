@@ -11,6 +11,7 @@ export interface BookInterface {
 	productName?:string;
 	resto?:number;
 	status?:string;
+	referencia?:string;
 	nroReserva?:number;
 	asunto?:string;
 	adminName?:string;

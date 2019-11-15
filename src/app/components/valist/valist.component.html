@@ -36,11 +36,11 @@
 													{{validation.nroReserva}}<span></span>
 												</a>
 											</td>
-											<td><b>{{validation.referencia}}</b><br>-<span class="seprate"></span>+</td>                        
+											<td><b>{{validation.referencia}}</b></td>                        
 											<td><b>{{validation.telefono}}</b></td>
 											<td>{{validation.status}}</td>
 											<td>
-												<a href="#" class="tbl-action settings" title="Settings" data-toggle="tooltip"><i class="ti-pencil"></i></a>
+												<a  class="tbl-action settings" title="Asociar reserva" data-toggle="tooltip" (click)="assbook(validation)" ><i class="fa fa-check"></i></a>
 												<a href="#" class="tbl-action bg-danger" title="Delete" data-toggle="tooltip"><i class="ti-trash"></i></a>
 											</td>
 										</tr>

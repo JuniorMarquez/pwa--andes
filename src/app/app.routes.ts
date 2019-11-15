@@ -28,6 +28,7 @@ import {
 	CheckoutComponent,
 	SuccessbookComponent,
 	ValistComponent,
+	AssbookComponent,
 	SuccessvalidationComponent
 	}from "./components/index.paginas";
 
@@ -62,6 +63,7 @@ const app_routes: Routes = [
 	{path:'valist',component:ValistComponent,canActivate:[AuthGuard]},
 	{path:'successbook',component:SuccessbookComponent},
 	{path:'validation',component:ValidationComponent},
+	{path:'assbook',component:AssbookComponent},
 	{path:'successvalidation',component:SuccessvalidationComponent},		
 	{path:'**',pathMatch:'full',redirectTo:''}
 	];

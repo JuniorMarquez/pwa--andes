@@ -26,5 +26,7 @@ export { ValidationComponent } from "./validation/validation.component";
 export { CheckoutComponent } from "./checkout/checkout.component";
 export { ValistComponent } from "./valist/valist.component";
 export { SuccessbookComponent } from "./successbook/successbook.component";
+export { AssbookComponent } from "./assbook/assbook.component";
 export { SuccessvalidationComponent } from "./successvalidation/successvalidation.component";
+
 

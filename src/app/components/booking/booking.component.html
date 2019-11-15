@@ -8,7 +8,7 @@
 						<div class="row mrg-0 mrg-top-20">
 							<div class="tr-single-box">
 								<div class="tr-single-header">
-									<h3 class="dashboard-title">Reservas </h3>
+									<h3 class="dashboard-title">Reservas Pendientes</h3>
 								</div>
 								<div class="tr-single-body">
 									<div class="table-responsive">
@@ -53,9 +53,68 @@
 													<td><b>{{book.email}}</b></td>
 													<td></td>
 													<td>
-														<a href="#" class="tbl-action settings" title="Aprobar" data-toggle="tooltip"><i class="ti-check"></i></a>
-														<a href="#" class="tbl-action bg-danger" title="Denegar" data-toggle="tooltip"><i class="ti-close"></i></a>
+														<!-- <a href="#" class="tbl-action settings" title="Aprobar" data-toggle="tooltip"><i class="ti-check"></i></a> -->
+														<a class="tbl-action bg-danger" title="Cancelar" data-toggle="tooltip"><i class="ti-close"></i></a>
 													</td>
+
+												</tr>
+												
+											
+												
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h3 class="dashboard-title">Reservas Confirmadas</h3>
+								</div>
+								<div class="tr-single-body">
+									<div class="table-responsive">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>			
+													<th>Tour y Fecha</th>
+													<th>Nro Reserva</th>
+													<th>Nombre</th>
+													
+													<th></th>		
+													<th>Estado</th>
+													
+													<th>Ref. de pago</th>
+													<th>Acciones</th>
+													
+												</tr>
+											</thead>
+											
+											<tbody>
+												<!-- tr -->
+												<tr *ngFor="let book of books2">
+													<td><b>{{book.productName}}<br/> ({{book.fecha}})</b></td>
+													<td>
+														<!-- <span class="custom-checkbox">
+															<input type="checkbox" id="ao" value="1">
+															<label for="ao"></label>
+														</span> -->
+														<a href="#">
+															<div class="bk-thumb">
+																<img src="assets/img/booking5.png" class="avatar img-circle" alt="Avatar" />
+																<span class="bk-status approve"><i class="fa fa-check-circle"></i></span>
+															</div>
+															{{book.nroReserva}}<span></span>
+														</a>
+													</td>
+													<td><b>{{book.nombre}}<br/>{{book.email}}</b></td>
+													                        
+													
+													<td><b></b></td>
+													<td><span *ngIf="book.status == 'Confirmada'"><span class="bk-status approve"> <i class="fa fa-check-circle"></i></span> <b> Confirmada</b></span> </td>
+													
+													<td>
+														{{book.referencia}}
+													</td>
+													<td></td>
 
 												</tr>
 												

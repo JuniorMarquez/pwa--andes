@@ -1,0 +1,59 @@
+<main>
+		<section class="dashboard white-bg padd-0 mrg-top-50">
+			<div class="container-fluid">
+				<div class="row">
+					
+					
+					<div class="col-lg-10 col-md-10 col-sm-9 col-lg-push-2 col-md-push-2 col-sm-push-3">
+						<div class="row mrg-0 mrg-top-20">
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h3 class="dashboard-title">Asociar Pago a Reserva</h3>
+								</div>
+								<div class="tr-single-body">
+									
+									<form class="form" [formGroup]="ngFormAssbook" (ngSubmit) ="updates(ngFormAssbook)"
+									>
+									
+										<div class="form-group">
+											<label class="col-md-6 col-sm-12">Nro. Reserva</label>
+											<div class="col-md-6 col-sm-12">
+												<input type="text" class="form-control" disabled="disabled" value="{{_uw.assValidation.nroReserva}}">
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-6 col-sm-12">Seleccione el Nro. de reserva coincidente</label>
+											<div class="col-md-6 col-sm-12">
+												<div class="fl-box">
+
+
+
+													<select class="form-control wide"  id="nroReservaSelected" formControlName="nroReservaSelected"  >
+														<option *ngFor="let book of books" [value]="book.id"> {{book.nroReserva}}</option>
+													
+														
+													</select>
+												</div>
+											</div>
+										</div>
+										
+										
+
+										<div class="form-group">
+											<div class="col-md-12 col-sm-12 text-center">
+												<button type="submit" class="btn theme-btn">Asociar</button>
+											</div>
+										</div>
+										
+									</form>
+										
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+</main>
