@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import {DataApiService} from '../../services/data-api.service';
 import { TixInterface } from '../../models/tix-interface'; 
 import { BookInterface } from '../../models/book-interface'; 
+import { UserWService } from "../../services/user-w.service";
 
 @Component({
   selector: 'app-booking',
@@ -12,10 +14,14 @@ import { BookInterface } from '../../models/book-interface';
 export class BookingComponent implements OnInit {
 
   constructor(
+    private router: Router,
+    private location: Location,
+        public _uw:UserWService,
   	private dataApi: DataApiService
   	) { }
 
   public books:BookInterface;
+   public book:BookInterface;
 
   public books2:BookInterface;
 

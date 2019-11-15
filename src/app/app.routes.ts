@@ -33,6 +33,7 @@ import {
 	AssbookComponent,
 	SuccessvalidationComponent,
 	CancelbookComponent,
+	SuccesscancelbookComponent,
 	}from "./components/index.paginas";
 
 	import { AuthGuard } from './guards/auth.guard';
