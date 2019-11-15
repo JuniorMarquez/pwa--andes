@@ -11,6 +11,7 @@ export class UserWService {
 	assValidation:any={};
 	bandera:string;
 	book:any={};
+	bookToCancel:any={};
 	card:any={};
 	cardsResult:any[]=[];
 	editingTrek:boolean=false;
@@ -37,6 +38,7 @@ export class UserWService {
 	usersPending:boolean;
 	userW:any[]=[];
 	validation:any={};
+	validationEmail:any={};
 	// book:any[]=[];
   constructor() { }
 }

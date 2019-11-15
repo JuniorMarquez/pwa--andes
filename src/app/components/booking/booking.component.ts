@@ -18,6 +18,12 @@ export class BookingComponent implements OnInit {
   public books:BookInterface;
 
   public books2:BookInterface;
+
+ cancelar(book: BookInterface){
+     this._uw.bookToCancel=book;
+      this.router.navigate(['/cancelbook'])
+ }
+
  getBookPending(){
         this.dataApi
         .getBookPending()

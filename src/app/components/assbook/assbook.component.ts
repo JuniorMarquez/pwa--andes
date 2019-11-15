@@ -41,6 +41,10 @@ export class AssbookComponent implements OnInit {
           this._uw.assBook=res;
           this._uw.assBook.status="Confirmada";
           this.updateBook(id);
+          this._uw.validationEmail.nombre=this._uw.assBook.nombre;
+          this._uw.validationEmail.asunto="Reserva Confirmada";
+          this._uw.validationEmail.email=this._uw.assBook.email;
+          this._uw.validationEmail.nroReserva=this._uw.assBook.nroReserva;
           this.updateValidation(this._uw.assValidation.id);
         });
   }
@@ -57,20 +61,16 @@ updateBook(id: string){
 }
 updateValidation(id: string){
    this._uw.assValidation.status="Confirmada";
-   this.dataApi.updateValidation(this._uw.assValidation, id).subscribe(
-            book => this.router.navigate(['/valist'])
-        );
+   this.dataApi.updateValidation(this._uw.assValidation, id).subscribe();
+    this.dataApi.senMailNewValidationAppToUser(this._uw.validationEmail).subscribe(); 
+    
+
 }
   
   updates(){
     let id = this.ngFormAssbook.value.nroReservaSelected;
-       
-        this.getDetailBook(id);
-       
-        // this.updateBook(id);
-    // this.dataApi.updateValidation(this.validation, id)
-    //     .subscribe(
-    //     );       
+    this.getDetailBook(id);
+    this.router.navigate(['/successa']);    
   }
 
   get fval() {

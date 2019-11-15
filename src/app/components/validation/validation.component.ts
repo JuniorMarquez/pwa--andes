@@ -50,7 +50,7 @@ ngFormSendValidation: FormGroup;
        this.dataApiService
         .getInfo().subscribe((res:any) => {
         this._uw.info=res[0];
-        console.log(this._uw.info.titular);
+        // console.log(this._uw.info.titular);
       });
     }
 
