@@ -41,7 +41,7 @@
 											<td>{{validation.status}}</td>
 											<td>
 												<a  class="tbl-action settings" title="Asociar reserva" data-toggle="tooltip" (click)="assbook(validation)" ><i class="fa fa-check"></i></a>
-												<a href="#" class="tbl-action bg-danger" title="Delete" data-toggle="tooltip"><i class="ti-trash"></i></a>
+												<a (click)="delete(validation)" class="tbl-action bg-danger" title="Eliminar Solicitud" data-toggle="tooltip"><i class="ti-trash"></i></a>
 											</td>
 										</tr>
 									</tbody>

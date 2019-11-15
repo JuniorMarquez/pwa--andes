@@ -34,6 +34,8 @@ import {
 	SuccessvalidationComponent,
 	CancelbookComponent,
 	SuccesscancelbookComponent,
+	DeletevalidationComponent,
+	SuccessdeletevalidationComponent,
 	}from "./components/index.paginas";
 
 	import { AuthGuard } from './guards/auth.guard';
@@ -72,7 +74,9 @@ const app_routes: Routes = [
 	{path:'successvalidation',component:SuccessvalidationComponent},	
 	{path:'cancelbook',component:CancelbookComponent},	
 	{path:'successcancelbook',component:SuccesscancelbookComponent},	
-	{path:'successcontact',component:SuccesscontactComponent},	
+	{path:'successcontact',component:SuccesscontactComponent},
+	{path:'deletevalidation',component:DeletevalidationComponent},
+	{path:'successdeletevalidation',component:SuccessdeletevalidationComponent},
 	{path:'**',pathMatch:'full',redirectTo:''}
 	];
 	export const app_routing = RouterModule.forRoot(app_routes);

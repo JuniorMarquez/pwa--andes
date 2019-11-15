@@ -16,8 +16,8 @@ export class BookingComponent implements OnInit {
   constructor(
     private router: Router,
     private location: Location,
-        public _uw:UserWService,
-  	private dataApi: DataApiService
+  	private dataApi: DataApiService,
+      public _uw:UserWService
   	) { }
 
   public books:BookInterface;

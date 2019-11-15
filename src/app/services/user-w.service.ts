@@ -39,6 +39,7 @@ export class UserWService {
 	userW:any[]=[];
 	validation:any={};
 	validationEmail:any={};
+	validationToDelete:any={};
 	// book:any[]=[];
   constructor() { }
 }

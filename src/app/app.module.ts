@@ -94,6 +94,8 @@ import { SuccessaComponent } from './components/successa/successa.component';
 import { SuccesscontactComponent } from './components/successcontact/successcontact.component';
 import { CancelbookComponent } from './components/cancelbook/cancelbook.component';
 import { SuccesscancelbookComponent } from './components/successcancelbook/successcancelbook.component';
+import { DeletevalidationComponent } from './components/deletevalidation/deletevalidation.component';
+import { SuccessdeletevalidationComponent } from './components/successdeletevalidation/successdeletevalidation.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -150,6 +152,8 @@ import { SuccesscancelbookComponent } from './components/successcancelbook/succe
     SuccesscontactComponent,
     CancelbookComponent,
     SuccesscancelbookComponent,
+    DeletevalidationComponent,
+    SuccessdeletevalidationComponent,
 
   ],
   imports: [

@@ -31,6 +31,8 @@ export { SuccesscontactComponent } from "./successcontact/successcontact.compone
 export { CancelbookComponent } from "./cancelbook/cancelbook.component";
 export { SuccesscancelbookComponent } from "./successcancelbook/successcancelbook.component";
 export { AssbookComponent } from "./assbook/assbook.component";
+export { DeletevalidationComponent } from "./deletevalidation/deletevalidation.component";
+export { SuccessdeletevalidationComponent } from "./successdeletevalidation/successdeletevalidation.component";
 export { SuccessvalidationComponent } from "./successvalidation/successvalidation.component";
 
 

@@ -1,0 +1,33 @@
+<main>
+	<section class="cart gray-bg">
+		<div class="container">
+			<div class="row">	
+				<div class="offset-md-4  col-sm-4 cols ">
+					<div class="tr-single-box">
+							
+							
+							<div class="tr-single-body">
+								<div class="booking-price-detail side-list no-border">
+									<!-- <img src="assets/img/check-contact.png"  lass="img-responsive" alt="" /> -->
+									 <div class="icon-box icon-box-top">
+                                                <i class="im-danger"></i>
+                                                <div class="caption">
+                                                   
+                                                </div>
+                                            </div>
+									<ul>
+										
+										<li><h4>Confirma que desea Eliminar la solicitud de reserva Nro. {{_uw.validationToDelete.nroReserva}} </h4><strong class="pull-right"></strong></li>
+									</ul>
+									<a routerLink="/valist" class="btn btn-default full-width">Cancelar</a>
+									<a (click)="eliminar()" class="btn btn-success full-width">Aceptar</a>
+								</div>
+							</div>
+							
+						</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+</main>
+<app-footer></app-footer>

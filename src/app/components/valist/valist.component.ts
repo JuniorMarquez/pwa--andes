@@ -20,11 +20,14 @@ export class ValistComponent implements OnInit {
     private location: Location,
     public _uw:UserWService,
     private dataApi: DataApiService
-  	) { }
-
-
-
+  	){}
   public validations:ValidationInterface;
+  public validation:ValidationInterface;
+  delete(validation: ValidationInterface){
+     this._uw.validationToDelete=validation;
+      this.router.navigate(['/deletevalidation'])
+
+  }
 assbook(validation){
   this._uw.assValidation=validation;
    this.router.navigate(['/assbook'])

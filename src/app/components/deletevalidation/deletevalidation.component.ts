@@ -6,24 +6,27 @@ import { UserWService } from "../../services/user-w.service";
 import { DataApiService } from '../../services/data-api.service';
 
 @Component({
-  selector: 'app-cancelbook',
-  templateUrl: './cancelbook.component.html',
-  styleUrls: ['./cancelbook.component.css']
+  selector: 'app-deletevalidation',
+  templateUrl: './deletevalidation.component.html',
+  styleUrls: ['./deletevalidation.component.css']
 })
-export class CancelbookComponent implements OnInit {
+export class DeletevalidationComponent implements OnInit {
 
   constructor(
-  	private router: Router,
+  		private router: Router,
     private location: Location,
     public _uw:UserWService,
   	private dataApi: DataApiService
   	) { }
+
+
  updateBook(){
-  this._uw.bookToCancel.status="Cancelada";
-   this.dataApi.updateBook(this._uw.bookToCancel,this._uw.bookToCancel.id).subscribe();
-   this.router.navigate(['/successcancelbook']);
+  this._uw.validationToDelete.status="Borrada";
+   this.dataApi.updateValidation(this._uw.validationToDelete,this._uw.validationToDelete.id).subscribe();
+   this.router.navigate(['/successdeletevalidation']);
 }
-cencelar(){
+
+eliminar(){
 this.updateBook();
 }
   ngOnInit() {
