@@ -58,7 +58,7 @@ getInfo(){
         mensaje: ['', [Validators.required]],
         });
   }
- get fval() {
+ get fval2() {
   return this.ngFormSendContact.controls;
   }
 }
