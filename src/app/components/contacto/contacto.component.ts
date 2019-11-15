@@ -18,6 +18,7 @@ import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
 export class ContactoComponent implements OnInit {
 
    ngFormSendContact: FormGroup;
+    submitted = false;
   constructor(
   	 private router: Router, 
     private location: Location,
@@ -57,5 +58,7 @@ getInfo(){
         mensaje: ['', [Validators.required]],
         });
   }
-
+ get fval() {
+  return this.ngFormAddtixs.controls;
+  }
 }

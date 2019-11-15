@@ -40,7 +40,7 @@
                                             <div class="form-group">
                                                         <label for="mensaje">Mensaje</label>
                                                         <textarea class="form-control height-70" id="mensaje" formControlName="mensaje" placeholder="Mensaje" [(ngModel)]="contact.mensaje"
-                                                        [ngClass]="{ 'is-invalid': submitted && fval.mensaje.errors }"
+                                                        [ngClass]="{ 'is-invalid': submitted && fval2.mensaje.errors }"
                                                         required></textarea>
                                                         <div *ngIf="submitted && fval.mensaje.errors" class="invalid-feedback">
                                                             <div *ngIf="fval.mensaje.errors.required" class="errorLabel">
