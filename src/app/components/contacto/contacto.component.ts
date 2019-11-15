@@ -59,6 +59,6 @@ getInfo(){
         });
   }
  get fval() {
-  return this.ngFormAddtixs.controls;
+  return this.ngFormSendContact.controls;
   }
 }
