@@ -91,6 +91,7 @@ import { TreklistComponent } from './components/treklist/treklist.component';
 import { TrekeditComponent } from './components/trekedit/trekedit.component';
 import { AssbookComponent } from './components/assbook/assbook.component';
 import { SuccessaComponent } from './components/successa/successa.component';
+import { SuccesscontactComponent } from './components/successcontact/successcontact.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -144,6 +145,7 @@ import { SuccessaComponent } from './components/successa/successa.component';
     TrekeditComponent,
     AssbookComponent,
     SuccessaComponent,
+    SuccesscontactComponent,
 
   ],
   imports: [

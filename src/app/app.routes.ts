@@ -27,6 +27,7 @@ import {
 	ValidationComponent,
 	CheckoutComponent,
 	SuccessbookComponent,
+	SuccesscontactComponent,
 	ValistComponent,
 	AssbookComponent,
 	SuccessvalidationComponent
@@ -64,7 +65,8 @@ const app_routes: Routes = [
 	{path:'successbook',component:SuccessbookComponent},
 	{path:'validation',component:ValidationComponent},
 	{path:'assbook',component:AssbookComponent},
-	{path:'successvalidation',component:SuccessvalidationComponent},		
+	{path:'successvalidation',component:SuccessvalidationComponent},	
+	{path:'successcontact',component:SuccesscontactComponent},		
 	{path:'**',pathMatch:'full',redirectTo:''}
 	];
 	export const app_routing = RouterModule.forRoot(app_routes);

@@ -45,7 +45,8 @@ getInfo(){
     this.contact.adminEmail=this._uw.info.adminEmail;
     this.contact.adminName=this._uw.info.adminName;
 
-  	this.dataApi.senMailNewContactAppToAdmin(this.contact).subscribe(); 
+  	this.dataApi.senMailNewContactAppToAdmin(this.contact).subscribe();
+     this.router.navigate(['/successcontact']) 
   }
 
   ngOnInit() {
