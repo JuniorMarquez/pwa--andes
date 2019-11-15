@@ -90,6 +90,7 @@ import { ValistComponent } from './components/valist/valist.component';
 import { TreklistComponent } from './components/treklist/treklist.component';
 import { TrekeditComponent } from './components/trekedit/trekedit.component';
 import { AssbookComponent } from './components/assbook/assbook.component';
+import { SuccessaComponent } from './components/successa/successa.component';
 
 
 // import { HttpClientModule } from '@angular/common/http';
@@ -142,6 +143,7 @@ import { AssbookComponent } from './components/assbook/assbook.component';
     TreklistComponent,
     TrekeditComponent,
     AssbookComponent,
+    SuccessaComponent,
 
   ],
   imports: [

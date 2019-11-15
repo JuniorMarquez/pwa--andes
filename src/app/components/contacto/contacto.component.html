@@ -11,30 +11,51 @@
                             <h2>Escríbenos</h2>
                             <p>Consulta tus dudas</p>
                         </div>
-                        <form action="https://templates.themekit.dev/alpins/themekit/scripts/contact-form/contact-form.php" class="form-box form-ajax" method="post" data-email="example@domain.com">
+                       <form  class="form"[formGroup]="ngFormSendContact" (ngSubmit) ="sendContact()">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <p>Nombre</p>
-                                    <input id="name" name="name" placeholder="Ingrese su Nombre" type="text" class="input-text" required>
-                                </div>
+                                                <p>Nombre</p>
+                                                <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Nombre" [(ngModel)]="contact.nombre"
+                                                        [ngClass]="{ 'is-invalid': submitted && fval2.nombre.errors }"
+                                                        required>
+                                                        <div *ngIf="submitted && fval2.nombre.errors" class="invalid-feedback">
+                                                            <div *ngIf="fval2.nombre.errors.required" class="errorLabel">
+                                                            * El nombre es requerido
+                                                            </div>
+
+                                                        </div>
+                                            </div>
                                 <div class="col-lg-6">
-                                    <p>Email</p>
-                                    <input id="email" name="email" placeholder="Ingrese su Email" type="email" class="input-text" required>
-                                </div>
+                                                <p>Email</p>
+                                                <input type="text" class="form-control" id="email" formControlName="email" placeholder="email" [(ngModel)]="contact.email"
+                                                        [ngClass]="{ 'is-invalid': submitted && fval2.email.errors }"
+                                                        required>
+                                                        <div *ngIf="submitted && fval2.email.errors" class="invalid-feedback">
+                                                            <div *ngIf="fval2.email.errors.required" class="errorLabel">
+                                                            * El email es requerido
+                                                            </div>
+                                                        </div>
+                                            </div>
                             </div>
-                            <p>Mensaje</p>
-                            <textarea id="messagge" name="messagge" class="input-textarea" placeholder="Escriba su mensaje ..." required></textarea>
+                          <!--   <p>Mensaje</p>
+                            <textarea id="messagge" name="messagge" class="input-textarea" placeholder="Escriba su mensaje ..." required></textarea> -->
                             <!-- <div class="form-checkbox">
                                 <input type="checkbox" id="check" name="check" value="check" required>
                                 <label for="check">Aceptar politicas de </label>
                             </div> -->
-                            <button class="btn btn-sm" type="submit">Enviar mensaje</button>
-                            <div class="success-box">
+                            <!-- <button class="btn btn-sm" type="submit">Enviar mensaje</button> -->
+                           <!--  <div class="success-box">
                                 <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
                             </div>
                             <div class="error-box">
                                 <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
-                            </div>
+                            </div> -->
+
+                                         <hr class="space-xs" />
+
+                                            <div class="col-lg-12 align-right">
+                                             <a (click)="sendContact()"class="btn btn-sm btn-circle btn-icon"><i class="fa fa-search"></i>Enviar </a>
+                                         </div>
                         </form>
                     </div>
                     <div class="col-lg-4">

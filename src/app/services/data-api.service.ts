@@ -7,6 +7,7 @@ import { TixInterface } from '../models/tix-interface';
 import { BookInterface } from '../models/book-interface';
 import { CardInterface } from '../models/card-interface';
 import { InfoInterface } from '../models/info-interface';
+import { ContactInterface } from '../models/contact-interface';
 import { ValidationInterface } from '../models/validation-interface';
 import { UserWService } from "./user-w.service";
 
@@ -18,6 +19,7 @@ export class DataApiService {
 	tix: Observable<any>;
 	cards: Observable<any>;
 	card: Observable<any>;
+	contact: Observable<any>;
 	info: Observable<any>;
 	books: Observable<any>;
 	book: Observable<any>;
@@ -220,10 +222,10 @@ export class DataApiService {
 		.post(url_api, book)
 		.pipe(map(data => data));
 	}
-	senMailNewContactAppToAdmin(book){
+	senMailNewContactAppToAdmin(contact){
 		const url_api='https://db.andesproadventures.com:3005/newContactAppToAdmin';
 		return this.http
-		.post(url_api, book)
+		.post(url_api, contact)
 		.pipe(map(data => data));
 	}
 
