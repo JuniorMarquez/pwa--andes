@@ -28,7 +28,7 @@
     "@types/jquery": "^3.3.31",
     "@wkoza/ngx-upload": "^8.0.4",
     "angular-archwizard": "^5.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-awesome-uploader": "^8.0.3",
     "ngx-image-uploader": "^6.0.0-beta.1",
     "ngx-owl-carousel-o": "^2.0.1",
