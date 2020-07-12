@@ -538,7 +538,7 @@
 												</div> -->
 											</div>
 									 		<button type="button" awPreviousStep>Anterior</button>
-										    <button type="button"  type="submit"  awNextStep [hidden]="this._uw.images.length<2"> Siguiente</button>
+										    <button type="button"  type="submit"  awNextStep [hidden]="this._uw.images.length<2 && this._uw.editImages"> Siguiente</button>
 										</aw-wizard-step>
 
 										<aw-wizard-step stepTitle="4">
@@ -632,7 +632,7 @@
 												</div>
 											</div>
 										    <button type="button" awPreviousStep>Anterior</button>
-										    <button type="button" (click)="finish(tix.id)" [hidden]="this._uw.images.length<2">Finalizar</button>
+										    <button type="button" (click)="finish(tix.id)" [hidden]="this._uw.images.length<2 && this._uw.editImages">Finalizar</button>
 										</aw-wizard-step>
 									</aw-wizard>
 								</form>
