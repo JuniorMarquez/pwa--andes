@@ -51,7 +51,7 @@ getTixsPending(){
     deleteTix(id: string){
    return this.dataApi.deleteTix(id)
         .subscribe(
-            tix => this.router.navigate(['/treklist'])
+            tix => this.router.navigate(['/'])
         );
 }
     
