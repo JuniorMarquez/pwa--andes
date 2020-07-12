@@ -70,7 +70,7 @@
                        		 <div class="alert alert-warning" role="alert">
                 <!-- <h4 class="alert-heading">!</h4> -->
                 <p></p>
-                 <p class="mb-0"><b>2</b> o más imágenes <b>cuadradas</b> de cualquier tamaño, las anteriores serán sustituidas.</p>
+                 <p class="mb-0" style="text-transform: lowercase;"><b>2</b> o más imágenes <b>cuadradas</b> de cualquier tamaño, las anteriores serán sustituidas.</p>
             </div>
                        		<div  style="
 								padding: 15px 15px 15px 15px; background:#fafbfd!important; border-radius: 10px;
@@ -538,7 +538,7 @@
 												</div> -->
 											</div>
 									 		<button type="button" awPreviousStep>Anterior</button>
-										    <button type="button"  type="submit"  awNextStep>Siguiente</button>
+										    <button type="button"  type="submit"  awNextStep [hidden]="this._uw.images.length<2"> Siguiente</button>
 										</aw-wizard-step>
 
 										<aw-wizard-step stepTitle="4">
@@ -632,7 +632,7 @@
 												</div>
 											</div>
 										    <button type="button" awPreviousStep>Anterior</button>
-										    <button type="button" (click)="finish(tix.id)">Finalizar</button>
+										    <button type="button" (click)="finish(tix.id)" [hidden]="this._uw.images.length<2">Finalizar</button>
 										</aw-wizard-step>
 									</aw-wizard>
 								</form>
