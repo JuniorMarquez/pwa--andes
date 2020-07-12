@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { FilePickerComponent } from '../../../assets/file-picker/src/lib/file-picker.component';
 import { ValidationError } from '../../../assets/file-picker/src/lib/validation-error.model';
+import { FilePreviewModel } from '../../../assets/file-picker/src/lib/file-preview.model';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
 import { ScrollTopService }  from '../../services/scroll-top.service';
 import { DataApiService } from '../../services/data-api.service';
@@ -21,6 +23,8 @@ import { XunkCalendarModule } from '../../../xunk-calendar/xunk-calendar.module'
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
+// import { HttpClient } from  '@angular/common/http';
+import { DemoFilePickerAdapter } from  '../../file-picker.adapter';
 
 @Component({
   selector: 'app-tix-detail',
@@ -29,12 +33,17 @@ import { Location } from '@angular/common';
 })
 export class TixDetailComponent implements OnInit {
 
+    adapter = new DemoFilePickerAdapter(this.http,this._uw);
+  @ViewChild('uploader', { static: true }) uploader: FilePickerComponent;
+   myFiles: FilePreviewModel[] = [];
+
   tituloAlerta:string='';
   ngFormAddtixs: FormGroup;
   ngFormSendBook: FormGroup;
   submitted = false;
 
   constructor(
+      private  http: HttpClient,
     private router: Router, 
     private location: Location,
     public scrollTopService:ScrollTopService,
@@ -66,10 +75,35 @@ export class TixDetailComponent implements OnInit {
 
   public tix:TixInterface;
 
+// public tix : TixInterface ={
+//       address:"",
+//       altitud:"",
+//       cantD:0,
+//       capacidad:0,
+//       category:"",
+//       description:"",
+//       desLg:"",
+//       dificulty:"",
+//       disponibilidad:"",
+//       distancia:"",
+//       duracion:"",
+//       images:[],
+//       notes:"",
+//       precio:0,
+//       productName:"",
+//       status:"",
+//       temp:"",
+//       tips:"",
+//       userd:"",
+//     };
+
   public isError = false;
   public isLogged =false;
 
-
+public editImages(){
+  this._uw.editImages = true;
+  console.log("hoaaaa");
+}
 
   editTrek(){
     this._uw.editingTrek = true;
@@ -135,7 +169,7 @@ export class TixDetailComponent implements OnInit {
 
 
  sendTix(id: string){
-    this._uw.images=this.tix.images;
+    // this._uw.images=this.tix.images;
       this.submitted = true;
       if (this.ngFormAddtixs.invalid) {
          this._uw.errorFormAddtixs=true;
@@ -172,8 +206,9 @@ export class TixDetailComponent implements OnInit {
 
 
   public selDate = { date:1, month:1, year:1 };
-  
+  public images:any[]=[];
   ngOnInit() {
+    
     this.getInfo();
     this.ngFormSendBook = this.formBuilder.group({
         nombre: ['', [Validators.required]],
@@ -208,6 +243,7 @@ export class TixDetailComponent implements OnInit {
       this._uw.loaded=true;
       this.scrollTopService.setScrollTop();
       this.getDetails(this.route.snapshot.paramMap.get('id'));
+      this._uw.editImages=false;
 
     }
   
@@ -222,4 +258,34 @@ export class TixDetailComponent implements OnInit {
   	this.dataApi.getTixById(id).subscribe(tix => (this.tix = tix));
     
   }
+
+  reset():void{
+    this._uw.selectorA=true;
+    this.router.navigate(['/addtixs']);
+  }
+   onValidationError(e: ValidationError) {
+    console.log(e);
+  }
+  onUploadSuccess(e: FilePreviewModel) {
+   // console.log(e);
+  // console.log(this.myFiles);
+  this.images=this._uw.file;
+  }
+  onRemoveSuccess(e: FilePreviewModel) {
+    console.log(e);
+  }
+  onFileAdded(file: FilePreviewModel) {
+    
+    file.fileName="https://db.andesproadventures.com:80/imgApi/server/local-storage/tixsImages/"+file.fileName;
+    this.myFiles.push(file);
+    // this.images.push(file.fileName);
+
+  }
+
+  removeFile() {
+  this.uploader.removeFileFromList(this.myFiles[0].fileName);
+  }
+
+
+
 }

@@ -2,9 +2,9 @@ import { UploaderCaptions } from "./uploader-captions";
 
 export const DefaultCaptions: UploaderCaptions = {
     dropzone: {
-        title: "Drag and drop file here",
-        or: "or",
-        browse: "Browse Files"
+        title: "Arrastre y sulte aquí",
+        or: "o",
+        browse: "Buscar imágenes"
     },
     cropper: {
         crop: "Crop",

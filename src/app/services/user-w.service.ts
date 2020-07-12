@@ -15,6 +15,7 @@ export class UserWService {
 	card:any={};
 	cardsResult:any[]=[];
 	editingTrek:boolean=false;
+	editImages:boolean=false;
 	errorFormAffiliate:boolean;
 	errorFormAddtixs:boolean;
 	errorFormPartner:boolean;

@@ -30,54 +30,66 @@
             <div class="container">
                 <div class="row" >
                     <div class="col-lg-6" *ngIf="tix !== undefined "[hidden]="this._uw.editingTrek">
-                                
-                                <hr class="space-xs" />
-
-
-                                                    <div class="list-thumb-box" *ngFor="let item of tix.images; let i=index;" >
-                                                        <img 
-                                                        src="{{item}}"  *ngIf="i === 0"class="img-responsive" alt="" />
-                                                        
-                                                    </div>
-                                                    <ul class="gallery-list" >
-                                                <li *ngFor="let image of tix.images" >
-                                                    <a data-fancybox="gallery" href="{{image}}">
-                                                        <img src="{{image}}" class="img-responsive" alt="">
-                                                    </a>
-                                                </li>
-                                            </ul>
-
-                                                
-                         
-
-                                
-                            <hr class="space-xs" />
-                           
+                     
+                        <hr class="space-xs" />
+                   
+						<div class="list-thumb-box" *ngFor="let item of tix.images; let i=index;" >
+                             <img src="{{item}}"  *ngIf="i === 0"class="img-responsive" alt="" />
+                         </div>
+                        <ul class="gallery-list" >
+	                        <li *ngFor="let image of tix.images" >
+	                            <a data-fancybox="gallery" href="{{image}}">
+	                                <img src="{{image}}" class="img-responsive" alt="">
+	                            </a>
+	                        </li>
+	                    </ul>
+                        <hr class="space-xs" />
                     </div>
                     <div class="col-lg-4" *ngIf="tix !== undefined" [hidden]="!this._uw.editingTrek">
-                                
-                                <hr class="space-xs" />
-
-
-                                                    <div class="list-thumb-box" *ngFor="let item of tix.images; let i=index;" >
-                                                        <img 
-                                                        src="{{item}}"  *ngIf="i === 0"class="img-responsive" alt="" />
-                                                        
-                                                    </div>
-                                                    <ul class="gallery-list">
-                                                <li *ngFor="let image of tix.images">
-                                                    <a data-fancybox="gallery" href="{{image}}">
-                                                        <img src="{{image}}" class="img-responsive" alt="">
-                                                    </a>
-                                                </li>
-                                            </ul>
-
-                                                
-                         
-
-                                
-                            <hr class="space-xs" />
-                           
+                       	<div [hidden]="this._uw.editImages">
+                    	 <a class="btn btn-circle "  *ngIf="this._uw.isLogged" (click)="editImages()" >
+                        	<i class="fa fa-image"></i> 
+                       	</a>
+                       		
+                        <hr class="space-xs" />
+                        <div class="list-thumb-box" *ngFor="let item of tix.images; let i=index;" >
+                            <img 
+                            src="{{item}}"  *ngIf="i === 0"class="img-responsive" alt="" />
+                            
+                        </div>
+                        <ul class="gallery-list" >
+		                    <li *ngFor="let image of tix.images">
+		                        <a data-fancybox="gallery" href="{{image}}">
+		                            <img src="{{image}}" class="img-responsive" alt="">
+		                        </a>
+		                    </li>
+		                </ul>
+                        <hr class="space-xs" />   
+                       	</div>
+                       	<div [hidden]="!this._uw.editImages">
+                       		 <div class="alert alert-warning" role="alert">
+                <!-- <h4 class="alert-heading">!</h4> -->
+                <p></p>
+                 <p class="mb-0"><b>2</b> o más imágenes <b>cuadradas</b> de cualquier tamaño, las anteriores serán sustituidas.</p>
+            </div>
+                       		<div  style="
+								padding: 15px 15px 15px 15px; background:#fafbfd!important; border-radius: 10px;
+								/*margin-left: 30px;*/
+								">
+								<ngx-file-picker
+								    [uploadType]="'multi'"
+								    (validationError)= "onValidationError($event)"
+								    [adapter]="adapter"
+								    [fileExtensions]="['pdf', 'jpeg','jpg', 'png', 'PNG', 'mp4', 'css', 'docx', 'txt']"
+								    (uploadSuccess)="onUploadSuccess($event)"
+								    (removeSuccess)="onRemoveSuccess($event)"
+								    [showeDragDropZone]="true"
+								    [showPreviewContainer]="true"
+								    [accept]="'image/*'"
+								    (fileAdded)="onFileAdded($event)">
+								</ngx-file-picker>									
+							</div>
+                       	</div>
                     </div>
                     <div class="col-lg-6" *ngIf="tix !== undefined " [hidden]="this._uw.editingTrek">
                     	<a class="btn btn-sm btn-circle btn-icon" (click)="editTrek()" *ngIf="this._uw.isLogged">
